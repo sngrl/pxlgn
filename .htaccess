@@ -1,0 +1,22 @@
+AddDefaultCharset utf-8
+Options +FollowSymLinks
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+
+    RewriteEngine on
+
+	# project.dev.grapheme.ru
+    #RewriteCond %{DOCUMENT_ROOT}/public -d
+	RewriteRule (.*) /public/$1 [L]
+
+</IfModule>
+
+php_value upload_max_filesize 10M
+
+##
+## Disable Apache server authorisation for subdirectory
+## http://www.shkodenko.kiev.ua/index.php?lang_id=1&content_id=223
+##
+#Satisfy Any
+#Allow from all

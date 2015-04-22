@@ -1,6 +1,7 @@
+#.htaccess
+
 /vendor
 /bootstrap/compiled.php
-.htaccess
 
 node_modules
 .tmp
@@ -17,7 +18,7 @@ composer.lock
 _ide_helper.php
 
 /app/config/database.php
-/app/lang/*
+/app/lang/*/*.php
 
 /app/storage/cache/*
 /app/storage/logs/*
@@ -37,5 +38,3 @@ _ide_helper.php
 /!files
 /!info
 app/config/packages/scalia/sphinxsearch/config.php
-
-/forum/*
