@@ -595,10 +595,11 @@ class DicVal extends BaseModel {
             if (count($this->alltextfields)) {
                 $temp = [];
                 foreach ($this->alltextfields as $field) {
-                    if (!isset($temp[$field->language])) {
-                        $temp[$field->language] = [];
+                    $lang = $field->language ? $field->language : Config::get('app.locale');
+                    if (!isset($temp[$lang])) {
+                        $temp[$lang] = [];
                     }
-                    $temp[$field->language][$field->key] = $field->value;
+                    $temp[$lang][$field->key] = $field->value;
                 }
                 unset($this->alltextfields);
                 $this->alltextfields = $temp;

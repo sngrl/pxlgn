@@ -22,7 +22,7 @@ return array(
 
     'locales' => array(
         'ru' => 'Русский',
-        #'en' => 'English',
+        'en' => 'English',
     ),
 	'locale' => 'ru',
 

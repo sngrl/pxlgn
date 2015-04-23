@@ -105,6 +105,9 @@
                     $onsuccess_js = array();
                     ?>
                     <fieldset class="padding-top-10 clearfix">
+                        <?
+                        $absolute_all_fields = array_merge_recursive((array)$element->allfields, (array)$element->alltextfields);
+                        ?>
                         @foreach ($fields_general as $field_name => $field)
                             <?
                             $field['_name'] = $field_name;
@@ -113,7 +116,8 @@
                             if (isset($field['scripts']))
                                 $dicval_edit_scripts[] = $field['scripts'];
 
-                            $value = isset($element->allfields) && isset($element->allfields[Config::get('app.locale')]) && isset($element->allfields[Config::get('app.locale')][$field_name]) ? $element->allfields[Config::get('app.locale')][$field_name] : NULL;
+                            #$value = isset($element->allfields) && isset($element->allfields[Config::get('app.locale')]) && isset($element->allfields[Config::get('app.locale')][$field_name]) ? $element->allfields[Config::get('app.locale')][$field_name] : NULL;
+                            $value = isset($absolute_all_fields[Config::get('app.locale')][$field_name]) ? $absolute_all_fields[Config::get('app.locale')][$field_name] : NULL;
                             #Helper::ta($value);
                             ?>
                             <section>
