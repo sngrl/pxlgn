@@ -7,7 +7,7 @@
 @extends(Helper::layout())
 <?
 $temp = Dic::valueBySlugAndId('equipments', 1);
-Helper::ta($temp);
+#Helper::ta($temp);
 ?>
 
 

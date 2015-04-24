@@ -131,7 +131,7 @@ class CustomUrlGenerator extends UrlGenerator {
             #\Helper::d('=== START URL::get_modified_parameters() ===');
             #\Helper::d($route_name);
             #\Helper::d($params);
-            $this->url_modifiers[$route_name]($params);
+            $this->url_modifiers[$route_name]($route_name, $params);
             #\Helper::d($params);
             #\Helper::d('=== END URL::get_modified_parameters() ===');
         }
