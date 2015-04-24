@@ -211,6 +211,9 @@ class MenuConstructor {
             )
         );
         $return = preg_replace("~\%[^\%]+?\%~is", '', $return);
+        $return = strtr($return, [
+            '//' => '/',
+        ]);
 
         /**
          * Возвращаем текущий уровень меню
@@ -379,7 +382,16 @@ class MenuConstructor {
                 break;
 
             case 'link':
-                return @$element['url'] ?: false;
+                $url = @$element['url'] ?: false;
+                /**
+                 * Сделаем замену паттернов
+                 */
+                $url = strtr($url, [
+                    '%locale%' => Config::get('app.locale'),
+                    '%default_locale%' => Config::get('app.default_locale'),
+                ]);
+                #var_dump($element['active_regexp']);
+                return $url;
                 break;
 
             case 'route':
@@ -450,6 +462,11 @@ class MenuConstructor {
                 }
                 #var_dump($element['active_regexp']);
             }
+
+            $element['active_regexp'] = strtr($element['active_regexp'], [
+                '%locale%' => Config::get('app.locale'),
+                '%default_locale%' => Config::get('app.default_locale'),
+            ]);
 
             /**
              * Замена конструкций вида %_page_sysname_>url%
