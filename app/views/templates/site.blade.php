@@ -1,6 +1,6 @@
 <?
 /**
- * MENU_PLACEMENTS: main_menu=Основное меню|additional_menu=Дополнительное меню|footer_menu=Меню в подвале
+ * MENU_PLACEMENTS: main_menu=Основное меню|about_menu=Меню "Об игре"|media_menu=Медиа меню
  */
 ?>
 <!DOCTYPE html>

@@ -2,7 +2,7 @@
 
 return array(
 
-    'fields' => function() {
+    'fields_i18n' => function() {
 
         return array(
             'published_at' => array(
