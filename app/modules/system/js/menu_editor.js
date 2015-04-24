@@ -141,6 +141,7 @@ var menu_editor = {
         main_block = str_replace('%use_active_regexp%', params.use_active_regexp == '1' ? 'checked' : '', main_block);
         main_block = str_replace('%active_regexp%', typeof params.active_regexp != 'undefined' ? params.active_regexp : '', main_block);
         main_block = str_replace('%is_hidden%', params.hidden == '1' ? 'checked' : '', main_block);
+        main_block = str_replace('%li_class%', typeof params.li_class != 'undefined' ? params.li_class : '', main_block);
 
         var inner_list_block = '';
         if (inner_list) {

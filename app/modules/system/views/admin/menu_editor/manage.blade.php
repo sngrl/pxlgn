@@ -351,6 +351,9 @@
                                         <i></i>
                                         Скрыть
                                     </label>
+                                    <label class="input">
+                                        {{ Form::text('items[%N%][li_class]', '%li_class%', ['placeholder' => 'class для контейнера (li)']) }}
+                                    </label>
                                 </span>
 
                                 <span class="pull-right">

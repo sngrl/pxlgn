@@ -161,6 +161,9 @@ class MenuConstructor {
                  * Небольшой костылек - определим, активен ли элемент или нет
                  */
                 $data = $this->items[$eid];
+                #dd($data);
+                if (isset($data['li_class']) && $data['li_class'] != '')
+                    $attr['class'] = @trim(@trim($attr['class']) . ' ' . $data['li_class']);
                 $is_active = $this->get_active($data);
                 #dd($is_active);
                 if ($is_active)
@@ -178,12 +181,13 @@ class MenuConstructor {
                 /**
                  * Отрисовываем текущий элемент меню
                  */
+                $attributes = trim(Helper::arrayToAttributes($attr));
                 $element = strtr(
                     $this->tpl['element_container'],
                     array(
                         '%element%' => $element,
                         '%children%' => @$child_level ?: '',
-                        '%attr%' => ' ' . trim(Helper::arrayToAttributes($attr)), #$is_active
+                        '%attr%' => $attributes ? ' ' . $attributes : '', #$is_active
                     )
                 );
 
@@ -335,11 +339,12 @@ class MenuConstructor {
         /**
          * Отрисовываем элемент меню
          */
+        $attributes = trim(Helper::arrayToAttributes($attr));
         $return = strtr(
             $this->tpl['element'],
             array(
                 '%url%' => $url,
-                '%attr%' => ' ' . trim(Helper::arrayToAttributes($attr)),
+                '%attr%' => $attributes ? ' ' . $attributes : '',
                 '%text%' => @StringView::force($data['text']),
             )
         );
