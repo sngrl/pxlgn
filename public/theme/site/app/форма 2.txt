@@ -1,0 +1,37 @@
+.form-head
+				h3 Авторизация
+				.button-wrapper
+					button.close-button
+			.form-body
+				.form-block.no-gradient
+					form
+						.main-fields
+							p.info E-mail
+							input(type="text" name="email")
+							p.info Пароль
+							input(type="password" name="password")
+						.remember-options
+							input(type="checkbox" checked name="remember" id="check").checkbox
+							label(for="check")
+							p.info.cheskbox-info Запомнить меня
+							a.forgot(href="#") Забыли пароль?
+						p.info Докажите, что вы не бот
+						.capcha
+							input(type="text" name="capcha").capcha-field
+							.capcha-image
+								.refresh
+									a
+								img(src="../images/capcha.png")
+						.log-in-button
+							button Войти
+
+				.form-block
+					h3.form-block-head Войти с помощью соцсетей:
+					.social-panel
+						a(href="#").vk
+						a(href="#").fb
+						a(href="#").tw
+				.form-block
+					h3.form-block-head Ещё не зарегистрированны?
+					.create-button
+							button Создать

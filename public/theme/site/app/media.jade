@@ -1,0 +1,231 @@
+extends layout
+
+
+block content
+	.login-form-background
+		.login-hack
+		.login-form
+			.form-head
+				h3 Регистрация
+				.button-wrapper
+					button.close-button
+			.form-body
+				.form-fade
+					.form-block.no-gradient
+							form#log-in-form
+								.main-fields
+									p.info E-mail
+									.e-mail
+										input(type="text" required name="email" form="log-in-form")
+										p.warning E-mail уже занят!
+									p.info Пароль
+									.pass
+										input(type="password" required name="password" form="log-in-form")
+										button.spice
+										p.warning Слишком простой пароль
+								//-.remember-options
+									input(type="checkbox" checked name="remember" id="check").checkbox
+									label(for="check")
+									p.info.cheskbox-info Запомнить меня
+									a.forgot(href="#") Забыли пароль?
+								p.info Введите код
+								.capcha
+									input(type="text" required name="capcha" form="log-in-form").capcha-field
+									.capcha-image
+										.refresh
+											a
+										img(src="./images/capcha.png")
+									p.warning Неверный код!
+								.log-in-button-2
+									button(type="submit")
+
+					.form-block
+						h3.form-block-head Войти с помощью соцсетей:
+						.social-panel
+							a(href="#").vk
+							a(href="#").fb
+							a(href="#").tw
+
+					//- SUCCESS
+				.success-fade
+					.form-block
+						.success
+							h3 Аккаунт <span>успешно создан</span>
+							p.congratulation Поздравляем! Вы зарегистрированы в игре  под именем <a href="#">Werewombat</a>.
+							p.verification  На ваш e-mail <a href="#">werewombat15@gmail.com</a> <nobr>отправлено письмо со ссылкой. Перейдите</nobr> <nobr>по ссылке, чтобы зарегистрировать аккаунт</nobr> и получить приятный бонус в игре.
+
+					.form-block
+						p.download Если вы еще не скачали пакет установки  игры, самое время сделать это сейчас.
+
+						.download-button 
+							a Скачать игру <span>(540MB)</span>
+
+				//-.form-block.display-none
+					h3.form-block-head Ещё не зарегистрированны?
+					.create-button
+							button Создать
+
+
+	.header-img-holder
+		.inner-wrapper
+			.header
+
+				ul.main-menu
+					li.main.active
+						a(href="/") PC Главная
+					li.about
+						a(href="#") Об игре
+					li.media
+						a(href="/media.html") Медиа
+					li.forum
+						a(href="#") Форум
+					li.mobile
+						a(href="#") Мобайл
+
+				a.logo(href="/")
+
+				a.play-button(href="/")
+			.inner-page-menu(title="nope")
+				a(href="#" class="button-registration")
+
+			.inner-content
+
+				.video-gallery
+					.gallery-head
+						h3 Видео
+						a.watch-all Все видео
+					ul.gallery-row
+						li.gallery-row-holder
+							a.gallery-block(href="http://www.youtube.com/embed/SCYsskCPM5g" class="fancybox fancybox.iframe" rel="video")
+								.img-wrapper
+									img(src="http://img.youtube.com/vi/SCYsskCPM5g/mqdefault.jpg")
+								p Holding the team on meh back!!!
+						li.gallery-row-holder
+							a.gallery-block(href="http://www.youtube.com/embed/GZvW4v3-T1Y" class="fancybox fancybox.iframe" rel="video")
+								.img-wrapper
+									img(src="http://img.youtube.com/vi/GZvW4v3-T1Y/mqdefault.jpg")
+								p Holding the team on meh back!!!
+						li.gallery-row-holder
+							a.gallery-block(href="http://www.youtube.com/embed/LtLeJE5CijI" class="fancybox fancybox.iframe" rel="video")
+								.img-wrapper
+									img(src="http://img.youtube.com/vi/LtLeJE5CijI/mqdefault.jpg")
+								p Holding the team on meh back!!!
+						li.gallery-row-holder
+							a.gallery-block(href="http://www.youtube.com/embed/wucPJHgus2c" class="fancybox fancybox.iframe" rel="video")
+								.img-wrapper
+									img(src="http://img.youtube.com/vi/wucPJHgus2c/mqdefault.jpg")
+								p Holding the team on meh back!!!
+					ul.gallery-row
+						li.gallery-row-holder
+							a.gallery-block(href="http://www.youtube.com/embed/SCYsskCPM5g" class="fancybox fancybox.iframe" rel="video")
+								.img-wrapper
+									img(src="http://img.youtube.com/vi/SCYsskCPM5g/mqdefault.jpg")
+								p Holding the team on meh back!!!
+						li.gallery-row-holder
+							a.gallery-block(href="http://www.youtube.com/embed/GZvW4v3-T1Y" class="fancybox fancybox.iframe" rel="video")
+								.img-wrapper
+									img(src="http://img.youtube.com/vi/GZvW4v3-T1Y/mqdefault.jpg")
+								p Holding the team on meh back!!!
+						li.gallery-row-holder
+							a.gallery-block(href="http://www.youtube.com/embed/LtLeJE5CijI" class="fancybox fancybox.iframe" rel="video")
+								.img-wrapper
+									img(src="http://img.youtube.com/vi/LtLeJE5CijI/mqdefault.jpg")
+								p Holding the team on meh back!!!
+						li.gallery-row-holder
+							a.gallery-block(href="http://www.youtube.com/embed/wucPJHgus2c" class="fancybox fancybox.iframe" rel="video")
+								.img-wrapper
+									img(src="http://img.youtube.com/vi/wucPJHgus2c/mqdefault.jpg")
+								p Holding the team on meh back!!!
+					
+				.screenshoot-gallery
+					.gallery-head
+						h3 Скриншоты
+						a.watch-all Все скриншоты
+					ul.gallery-row
+						li.gallery-row-holder
+							a.gallery-block.screenshoot(class="fancybox" rel="screen-gall" href="http://img.youtube.com/vi/SCYsskCPM5g/mqdefault.jpg")
+								.img-wrapper
+									img(src="http://img.youtube.com/vi/SCYsskCPM5g/mqdefault.jpg")
+						li.gallery-row-holder
+							a.gallery-block.screenshoot(class="fancybox" rel="screen-gall" href="http://img.youtube.com/vi/GZvW4v3-T1Y/mqdefault.jpg")
+								.img-wrapper
+									img(src="http://img.youtube.com/vi/GZvW4v3-T1Y/mqdefault.jpg")
+						li.gallery-row-holder
+							a.gallery-block.screenshoot(class="fancybox" rel="screen-gall" href="http://img.youtube.com/vi/LtLeJE5CijI/mqdefault.jpg")
+								.img-wrapper
+									img(src="http://img.youtube.com/vi/LtLeJE5CijI/mqdefault.jpg")
+						li.gallery-row-holder
+							a.gallery-block.screenshoot(class="fancybox" rel="screen-gall" href="http://img.youtube.com/vi/wucPJHgus2c/mqdefault.jpg")
+								.img-wrapper
+									img(src="http://img.youtube.com/vi/wucPJHgus2c/mqdefault.jpg")
+					ul.gallery-row
+						li.gallery-row-holder
+							a.gallery-block.screenshoot(class="fancybox" rel="screen-gall" href="http://img.youtube.com/vi/SCYsskCPM5g/mqdefault.jpg")
+								.img-wrapper
+									img(src="http://img.youtube.com/vi/SCYsskCPM5g/mqdefault.jpg")
+						li.gallery-row-holder
+							a.gallery-block.screenshoot(class="fancybox" rel="screen-gall" href="http://img.youtube.com/vi/GZvW4v3-T1Y/mqdefault.jpg")
+								.img-wrapper
+									img(src="http://img.youtube.com/vi/GZvW4v3-T1Y/mqdefault.jpg")
+						li.gallery-row-holder
+							a.gallery-block.screenshoot(class="fancybox" rel="screen-gall" href="http://img.youtube.com/vi/LtLeJE5CijI/mqdefault.jpg")
+								.img-wrapper
+									img(src="http://img.youtube.com/vi/LtLeJE5CijI/mqdefault.jpg")
+						li.gallery-row-holder
+							a.gallery-block.screenshoot(class="fancybox" rel="screen-gall" href="http://img.youtube.com/vi/wucPJHgus2c/mqdefault.jpg")
+								.img-wrapper
+									img(src="http://img.youtube.com/vi/wucPJHgus2c/mqdefault.jpg")
+			
+			.footer.inner-footer 
+				.footer-block
+					h3.orange Pixel Gun 3D
+					
+					ul
+						li
+							a(href="#") Скачать игру
+						li
+							a(href="#") Регистрация
+						li
+							a(href="#") Об игре
+						li
+							a(href="/faq.html") F.A.Q.
+						li
+							a(href="#") Wiki
+
+				.footer-block
+					h3.yellow Сообщество
+					
+					ul
+						li
+							a(href="#").forum Форум
+						li
+							a(href="#").vk Вконтакте
+						li
+							a(href="#").fb Facebook
+						li
+							a(href="#").tw Twitter
+
+				.footer-block
+					h3.green О нас
+					
+					ul
+						li
+							a(href="#") Сайт компании
+						li
+							a(href="#") Вакансии
+
+				.footer-block.help
+					h3.blue Поддержка
+					
+					ul
+						li
+							a(href="#") Центр поддержки
+						li
+							a(href="#") Пользовательское соглашение
+						li
+							a(href="#") Политика конфиденциальности
+				.footer-copyright
+					a(href="#")
+						img(src="./images/logo-copyright.png")
+					p Copyright 2012-2015 LLC Rilisoft ©
+					p Все права защищены.

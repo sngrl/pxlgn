@@ -1,0 +1,45 @@
+doctype html
+html.no-js
+  head
+    meta(charset='utf-8')
+    title Pixel Gun 3D
+    meta(name='description' content='')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    // Place favicon.ico and apple-touch-icon.png in the root directory
+
+    // build:css styles/vendor.css
+    // bower:css
+    link(rel='stylesheet', href='../bower_components/fotorama/fotorama.css')
+    link(rel='stylesheet', href='../bower_components/jquery-ui/themes/smoothness/jquery-ui.min.css')
+    link(rel='stylesheet', href='../bower_components/jquery-ui/themes/base/selectmenu.css')
+    // endbower
+    // endbuild
+
+    // build:css styles/main.css
+    link(rel='stylesheet' href='styles/main.css')
+    link(rel='stylesheet' href='styles/faq.css')
+    link(rel='stylesheet' href='styles/fotorama.css')
+    link(rel='stylesheet' href='scripts/jquery.fancybox.css')
+    // endbuild
+
+    // build:js scripts/vendor/modernizr.js
+    script(src='../bower_components/modernizr/modernizr.js')
+    // endbuild
+
+  body
+    block content     
+
+    // build:js scripts/vendor.js
+    // bower:js
+    script(src='../bower_components/jquery/dist/jquery.js')
+    script(src='../bower_components/fotorama/fotorama.js')
+    script(src='../bower_components/jquery-ui/jquery-ui.js')
+    // endbower
+    // endbuild
+
+    // build:js scripts/main.js
+    script(src='/scripts/jquery.fancybox.pack.js')
+    script(src='scripts/main.js')
+    //-script(src='scripts/fotorama.js')
+    // endbuild
+

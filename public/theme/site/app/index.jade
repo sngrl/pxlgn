@@ -1,0 +1,262 @@
+extends layout
+
+
+block content
+	.login-form-background
+		.login-hack
+		.login-form
+			.form-head
+				h3 Регистрация
+				.button-wrapper
+					button.close-button
+			.form-body
+				.form-fade
+					.form-block.no-gradient
+							form#log-in-form
+								.main-fields
+									p.info E-mail
+									.e-mail
+										input(type="text" required name="email" form="log-in-form")
+										p.warning E-mail уже занят!
+									p.info Пароль
+									.pass
+										input(type="password" required name="password" form="log-in-form")
+										button.spice
+										p.warning Слишком простой пароль
+								//-.remember-options
+									input(type="checkbox" checked name="remember" id="check").checkbox
+									label(for="check")
+									p.info.cheskbox-info Запомнить меня
+									a.forgot(href="#") Забыли пароль?
+								p.info Введите код
+								.capcha
+									input(type="text" required name="capcha" form="log-in-form").capcha-field
+									.capcha-image
+										.refresh
+											a
+										img(src="./images/capcha.png")
+									p.warning Неверный код!
+								.log-in-button-2
+									button(type="submit")
+
+					.form-block
+						h3.form-block-head Войти с помощью соцсетей:
+						.social-panel
+							a(href="#").vk
+							a(href="#").fb
+							a(href="#").tw
+
+					//- SUCCESS
+				.success-fade
+					.form-block
+						.success
+							h3 Аккаунт <span>успешно создан</span>
+							p.congratulation Поздравляем! Вы зарегистрированы в игре  под именем <a href="#">Werewombat</a>.
+							p.verification  На ваш e-mail <a href="#">werewombat15@gmail.com</a> <nobr>отправлено письмо со ссылкой. Перейдите</nobr> <nobr>по ссылке, чтобы зарегистрировать аккаунт</nobr> и получить приятный бонус в игре.
+
+					.form-block
+						p.download Если вы еще не скачали пакет установки  игры, самое время сделать это сейчас.
+
+						.download-button 
+							a Скачать игру <span>(540MB)</span>
+
+				//-.form-block.display-none
+					h3.form-block-head Ещё не зарегистрированны?
+					.create-button
+							button Создать
+
+
+	.header-img-holder
+		.main-wrapper
+			.header
+
+				ul.main-menu
+					li.main.active
+						a(href="/") PC Главная
+					li.about
+						a(href="#") Об игре
+					li.media
+						a(href="/media.html") Медиа
+					li.forum
+						a(href="#") Форум
+					li.mobile
+						a(href="#") Мобайл
+
+				a.logo(href="/")
+
+				a.play-button(href="/")
+
+			.main-content
+
+				.column-left
+					.language-panel
+						select.styled-select
+							option rus
+							option(selected="selected") eng
+
+					.main-slider-wrapper
+						.arrow-left.js-main-left
+						.arrow-right.js-main-right
+						.slider-frame
+						.slider
+
+							.main-fotorama.fotorama
+								.main-fotorana__item
+									iframe(frameborder="0" src="https://www.youtube.com/embed/SCYsskCPM5g")
+								.main-fotorana__item
+									iframe(frameborder="0" src="https://www.youtube.com/embed/GZvW4v3-T1Y")
+								.main-fotorana__item
+									iframe(frameborder="0" src="https://www.youtube.com/embed/LtLeJE5CijI")
+								.main-fotorana__item
+									iframe(frameborder="0" src="https://www.youtube.com/embed/wucPJHgus2c")
+
+					.news-head-panel
+						h3 Новости
+						a.all-news(href="#") Все новости
+
+					.news-feed
+						.news-block
+							a(href="#")
+								h3 Важно: о грядущем большом обновлении
+							p.info
+								span.date 13.05.2005
+								span.time 10:34
+
+							p.post Большое обновление неумолимо приближается с каждым днем. Вы еще не слышали о нем?.. Что ж, возможно, последние месяцы вы провели в бомбоубежище безо всякой связи с внешним миром: только это может послужить вам оправданием. Как бы то ни было, до обновления осталось совсем немного; самое время провести короткий инструктаж и рассказать, что ждет всех нас в ближайшем будущем.
+							a.readmore Подробнее
+
+
+						.news-block
+							a(href="#")
+								h3 Основательно обновленные локации
+							p.info
+								span.date 13.05.2005
+								span.time 10:34
+							a.fancybox(href="./images/post-image-big.jpg")
+								img(src="./images/post-image.jpg")
+							p.post Большое обновление неумолимо приближается с каждым днем. Вы еще не слышали о нем?.. Что ж, возможно, последние месяцы вы провели в бомбоубежище безо всякой связи с внешним миром: только это может послужить вам оправданием. Как бы то ни было, до обновления осталось совсем немного; самое время провести короткий инструктаж и рассказать, что ждет всех нас в ближайшем будущем.
+							a.readmore Подробнее
+
+						.news-block
+							a(href="#")
+								h3 Важно: о грядущем большом обновлении
+							p.info
+								span.date 13.05.2005
+								span.time 10:34
+
+							p.post Большое обновление неумолимо приближается с каждым днем. Вы еще не слышали о нем?.. Что ж, возможно, последние месяцы вы провели в бомбоубежище безо всякой связи с внешним миром: только это может послужить вам оправданием. Как бы то ни было, до обновления осталось совсем немного; самое время провести короткий инструктаж и рассказать, что ждет всех нас в ближайшем будущем.
+							a.readmore Подробнее
+							
+				.column-right
+					a.button-registration(href="#")
+
+					.social
+						h3 Наша игра в соцсетях:
+						.social-buttons-panel
+							.social-button-holder
+								a.soc-vk(href="#")
+							.social-button-holder
+								a.soc-fb(href="#")
+							.social-button-holder
+								a.soc-tw(href="#")
+
+					.store
+						h3 Играйте на мобильных
+						p У нас есть ещё и шутеры для мобильных устройств!
+						.google-play-holder
+							a.google-play(href="#")
+								span Загрузить на
+						.app-store-holder
+							a.app-store(href="#")
+								span Доступно в
+
+					.video
+						a(href="#")
+							h3 Видео
+						.video-box
+							.arrow-left.js-video-left
+							.arrow-right.js-video-right
+							.video-fotorama.fotorama
+								.video-fotorama__item
+									a(href="http://www.youtube.com/embed/SCYsskCPM5g" class="fancybox fancybox.iframe" rel="video")
+										img(src="http://img.youtube.com/vi/SCYsskCPM5g/mqdefault.jpg")
+								.video-fotorama__item
+									a(href="http://www.youtube.com/embed/GZvW4v3-T1Y" class="fancybox fancybox.iframe" rel="video")
+										img(src="http://img.youtube.com/vi/GZvW4v3-T1Y/mqdefault.jpg")
+								.video-fotorama__item
+									a(href="http://www.youtube.com/embed/LtLeJE5CijI" class="fancybox fancybox.iframe" rel="video")
+										img(src="http://img.youtube.com/vi/LtLeJE5CijI/mqdefault.jpg")
+								.video-fotorama__item
+									a(href="http://www.youtube.com/embed/wucPJHgus2c" class="fancybox fancybox.iframe" rel="video")
+										img(src="http://img.youtube.com/vi/wucPJHgus2c/mqdefault.jpg")
+
+					.screenshoots
+						a(href="#")
+							h3 Скриншоты
+						.screenshoot-box
+							.arrow-left.js-screen-left
+							.arrow-right.js-screen-right
+							.screen-fotorama.fotorama
+								div
+									a.fancybox(href="./images/post-image-2.jpg" rel="screen-shoots")
+										img(src="./images/post-image-2.jpg")
+								div
+									a.fancybox(href=".../images/post-image-3.jpg" rel="screen-shoots")
+										img(src="./images/post-image-3.jpg")
+								div
+									a.fancybox(href=".../images/post-image-4.jpg" rel="screen-shoots")
+										img(src="./images/post-image-4.jpg")
+
+			.footer
+				.footer-block
+					h3.orange Pixel Gun 3D
+					
+					ul
+						li
+							a(href="#") Скачать игру
+						li
+							a(href="#") Регистрация
+						li
+							a(href="#") Об игре
+						li
+							a(href="/faq.html") F.A.Q.
+						li
+							a(href="#") Wiki
+
+				.footer-block
+					h3.yellow Сообщество
+					
+					ul
+						li
+							a(href="#").forum Форум
+						li
+							a(href="#").vk Вконтакте
+						li
+							a(href="#").fb Facebook
+						li
+							a(href="#").tw Twitter
+
+				.footer-block
+					h3.green О нас
+					
+					ul
+						li
+							a(href="#") Сайт компании
+						li
+							a(href="#") Вакансии
+
+				.footer-block.help
+					h3.blue Поддержка
+					
+					ul
+						li
+							a(href="#") Центр поддержки
+						li
+							a(href="#") Пользовательское соглашение
+						li
+							a(href="#") Политика конфиденциальности
+				.footer-copyright
+					a(href="#")
+						img(src="./images/logo-copyright.png")
+					p Copyright 2012-2015 LLC Rilisoft ©
+					p Все права защищены.

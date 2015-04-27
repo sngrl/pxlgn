@@ -1,0 +1,141 @@
+extends layout
+
+
+block content
+
+	.header-img-holder
+		.inner-wrapper
+			.header
+
+				ul.main-menu
+					li.main.active
+						a(href="/") PC Главная
+					li.about
+						a(href="#") Об игре
+					li.media
+						a(href="#") Медиа
+					li.forum
+						a(href="#") Форум
+					li.mobile
+						a(href="#") Мобайл
+
+				a.logo(href="/")
+
+				a.play-button(href="/")
+
+
+			.registration-head
+					h3 Регистрация
+			.inner-content
+				.registration-page-block
+					h3.play-free Играйте бесплатно!
+
+					.congratulation-field
+					
+						.button-download-big
+							a
+								span (590 MB)
+
+				.registration-page-block
+					h3 Войдите с помощью соцсетей:
+
+					.socials-big-holder
+						a.fb
+						a.vk
+						a.tw
+
+				.registration-page-block
+					h3 или создайте новый аккаунт:
+					form.page#log-in-form
+						.main-fields
+
+							.e-mail
+								input#e-mail(type="text" required name="email" form="log-in-form")
+								label(for="e-mail") E-mail
+								p.warning E-mail уже занят!
+								p.description Ваш действующий e-mail, будет использоваться для входа в игру
+
+							.pass
+								input(type="password" required name="password" form="log-in-form")
+								label(for="password") Пароль
+								button.spice
+								p.warning Слишком простой пароль
+								p.description От 6 до 20 символов
+							.nickname
+								input#nickname(type="text" required name="password" form="log-in-form")
+								label(for="nickname") Имя в игре
+								p.warning Неподходящее имя
+						//-.remember-options
+							input(type="checkbox" checked name="remember" id="check").checkbox
+							label(for="check")
+							p.info.cheskbox-info Запомнить меня
+							a.forgot(href="#") Забыли пароль?
+
+						.capcha
+							input#capcha(type="text" required name="capcha" form="log-in-form").capcha-field
+							label(for="capcha") Введите код
+							.capcha-image
+								.refresh
+									a
+								img(src="./images/capcha.png")
+							p.warning Неверный код!
+						.confirmation
+							.stylish
+								input(type="checkbox" required name="submit" form="log-in-form")
+							p Я прочитал и принимаю <a href="#">пользовательское соглашение</a> и <a href="#">правила конфиденциальности</a>
+						.log-in-button-3
+							button(type="submit")
+
+			.footer.inner-footer 
+				.footer-block
+					h3.orange Pixel Gun 3D
+					
+					ul
+						li
+							a(href="#") Скачать игру
+						li
+							a(href="#") Регистрация
+						li
+							a(href="#") Об игре
+						li
+							a(href="/faq.html") F.A.Q.
+						li
+							a(href="#") Wiki
+
+				.footer-block
+					h3.yellow Сообщество
+					
+					ul
+						li
+							a(href="#").forum Форум
+						li
+							a(href="#").vk Вконтакте
+						li
+							a(href="#").fb Facebook
+						li
+							a(href="#").tw Twitter
+
+				.footer-block
+					h3.green О нас
+					
+					ul
+						li
+							a(href="#") Сайт компании
+						li
+							a(href="#") Вакансии
+
+				.footer-block.help
+					h3.blue Поддержка
+					
+					ul
+						li
+							a(href="#") Центр поддержки
+						li
+							a(href="#") Пользовательское соглашение
+						li
+							a(href="#") Политика конфиденциальности
+				.footer-copyright
+					a(href="#")
+						img(src="./images/logo-copyright.png")
+					p Copyright 2012-2015 LLC Rilisoft ©
+					p Все права защищены.
