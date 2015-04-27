@@ -17,5 +17,26 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        {{ Menu::placement('main_menu') }}
+
+        @include(Helper::layout('header'))
+
+        @section('content')
+            {{ @$content }}
+        @show
+
+        @section('footer')
+            {{-- @file_get_contents(Helper::inclayout('footer')) --}}
+            @include(Helper::layout('footer'))
+        @show
+
+        @include(Helper::layout('scripts'))
+
+        @section('overlays')
+        @show
+
+        @section('scripts')
+        @show
+
     </body>
 </html>
