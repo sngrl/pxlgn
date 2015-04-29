@@ -76,7 +76,11 @@ $screenshots = DicLib::loadImages($screenshots, ['image']);
                         <div class="main-fotorama fotorama">
                             @foreach ($slider as $slide)
                                 <div class="main-fotorana__item">
-                                    {{ $slide->embed }}
+                                    @if ($slide->embed)
+                                        {{ $slide->embed }}
+                                    @elseif ($slide->is_img('image')))
+                                        <a href="{{ $slide->link ?: '#' }}"><img src="{{ $slide->image->full() }}" /></a>
+                                    @endif
                                 </div>
                             @endforeach
                         </div>
