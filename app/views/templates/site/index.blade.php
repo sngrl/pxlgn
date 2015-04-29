@@ -78,7 +78,7 @@ $screenshots = DicLib::loadImages($screenshots, ['image']);
                                 <div class="main-fotorana__item">
                                     @if ($slide->embed)
                                         {{ $slide->embed }}
-                                    @elseif ($slide->is_img('image')))
+                                    @elseif ($slide->is_img('image'))
                                         <a href="{{ $slide->link ?: '#' }}"><img src="{{ $slide->image->full() }}" /></a>
                                     @endif
                                 </div>
