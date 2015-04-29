@@ -26,7 +26,7 @@ class Helper {
     }
 
     public static function d($array) {
-        echo "<pre style='text-align:left'>" . print_r($array, 1) . "</pre>";
+        echo "\n<pre style='text-align:left'>\n" . trim(print_r($array, 1)) . "\n</pre>\n";
     }
 
     public static function dd($array) {
@@ -1343,5 +1343,20 @@ HTML;
         }
         return $partition;
     }
+
+    public static function is_image($filename) {
+        $is = @getimagesize($filename);
+        if (!$is)
+            return false;
+        elseif ( !in_array($is[2], array(1,2,3)) )
+            return false;
+        else
+            return true;
+    }
 }
 
+if (!function_exists('is_collection')) {
+    function is_collection($obj) {
+        return isset($obj) && is_object($obj) && $obj->count();
+    }
+}

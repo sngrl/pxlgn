@@ -6,8 +6,50 @@
 ?>
 @extends(Helper::layout())
 <?
-#$temp = Dic::valueBySlugAndId('equipments', 1);
-#Helper::ta($temp);
+$slider = Dic::valuesBySlug('slider', function($query) {
+    $query->orderBy('lft', 'ASC');
+});
+$slider = DicLib::loadImages($slider, ['image']);
+#Helper::tad($slider);
+
+$news = Dic::valuesBySlug('news', function($query) {
+    $query->order_by_field('published_at', 'DESC');
+});
+$news = DicLib::loadImages($news, ['image']);
+#Helper::tad($news);
+
+
+$sidebar = Dic::valuesBySlug('sidebar', function($query) {
+    $query->orderBy('lft', 'ASC');
+}, []);
+#Helper::tad($sidebar);
+
+$socials = Dic::valuesBySlug('socials', function($query) {
+    $query->orderBy('lft', 'ASC');
+});
+$socials = DicLib::loadImages($socials, ['image']);
+#Helper::tad($socials);
+
+$shops = Dic::valuesBySlug('shops', function($query) {
+    $query->orderBy('lft', 'ASC');
+});
+$shops = DicLib::loadImages($shops, ['image']);
+#Helper::tad($shops);
+
+$video = Dic::valuesBySlug('video', function($query) {
+    $query->orderBy('lft', 'ASC');
+});
+$video = DicLib::loadImages($video, ['image']);
+#Helper::tad($video);
+
+$screenshots = Dic::valuesBySlug('screenshots', function($query) {
+    $query->orderBy('lft', 'ASC');
+});
+$screenshots = DicLib::loadImages($screenshots, ['image']);
+#Helper::tad($screenshots);
+
+#$options = Config::get('temp.options');
+#Helper::tad(' [ ' . $options . ' ] ');
 ?>
 
 
@@ -20,88 +62,74 @@
     <div class="main-content">
         <div class="column-left">
 
-            <div class="main-slider-wrapper">
-                <div class="arrow-left js-main-left"></div>
-                <div class="arrow-right js-main-right"></div>
-                <div class="slider-frame"></div>
-                <div class="slider">
-                    <div class="main-fotorama fotorama">
-                        <div class="main-fotorana__item">
-                            <iframe frameborder="0" src="https://www.youtube.com/embed/SCYsskCPM5g"></iframe>
-                        </div>
-                        <div class="main-fotorana__item">
-                            <iframe frameborder="0" src="https://www.youtube.com/embed/GZvW4v3-T1Y"></iframe>
-                        </div>
-                        <div class="main-fotorana__item">
-                            <iframe frameborder="0" src="https://www.youtube.com/embed/LtLeJE5CijI"></iframe>
-                        </div>
-                        <div class="main-fotorana__item">
-                            <iframe frameborder="0" src="https://www.youtube.com/embed/wucPJHgus2c"></iframe>
+            @if (is_collection($slider))
+                <div class="main-slider-wrapper">
+                    @if ($slider->count() > 1)
+                        <div class="arrow-left js-main-left"></div>
+                        <div class="arrow-right js-main-right"></div>
+                    @endif
+                    <div class="slider-frame"></div>
+                    <div class="slider">
+                        <div class="main-fotorama fotorama">
+                            @foreach ($slider as $slide)
+                                <div class="main-fotorana__item">
+                                    {{ $slide->embed }}
+                                </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="news-head-panel">
-                <h3>Новости</h3><a href="#" class="all-news">Все новости</a>
-            </div>
-            <div class="news-feed">
-                <div class="news-block"><a href="#">
-                        <h3>Важно: о грядущем большом обновлении</h3></a>
-                    <p class="info"><span class="date">13.05.2005</span><span class="time">10:34</span></p>
-                    <p class="post">Большое обновление неумолимо приближается с каждым днем. Вы еще не слышали о нем?.. Что ж, возможно, последние месяцы вы провели в бомбоубежище безо всякой связи с внешним миром: только это может послужить вам оправданием. Как бы то ни было, до обновления осталось совсем немного; самое время провести короткий инструктаж и рассказать, что ждет всех нас в ближайшем будущем.</p><a class="readmore">Подробнее</a>
+            @endif
+
+            @if (is_collection($news))
+                <div class="news-head-panel">
+                    <h3>Новости</h3>
+                    <a href="{{ URL::route('page', ['slug' => pageslug('news')]) }}" class="all-news">Все новости</a>
                 </div>
-                <div class="news-block"><a href="#">
-                        <h3>Основательно обновленные локации</h3></a>
-                    <p class="info"><span class="date">13.05.2005</span><span class="time">10:34</span></p><a href="{{ Config::get('site.theme_path') }}/images/post-image-big.jpg" class="fancybox"><img src="{{ Config::get('site.theme_path') }}/images/post-image.jpg"></a>
-                    <p class="post">Большое обновление неумолимо приближается с каждым днем. Вы еще не слышали о нем?.. Что ж, возможно, последние месяцы вы провели в бомбоубежище безо всякой связи с внешним миром: только это может послужить вам оправданием. Как бы то ни было, до обновления осталось совсем немного; самое время провести короткий инструктаж и рассказать, что ждет всех нас в ближайшем будущем.</p><a class="readmore">Подробнее</a>
+                <div class="news-feed">
+                    @foreach ($news as $new)
+                        <?
+                        $carbon = Carbon::createFromFormat('Y-m-d', $new->published_at);
+                        #$link = URL::route('app.news_one', $new->slug);
+                        $link = '#';
+                        ?>
+                        <div class="news-block">
+                            <a href="{{ $link }}">
+                                <h3>{{ $new->title }}</h3>
+                            </a>
+                            <p class="info">
+                                <span class="date">{{ $carbon->format('d.m.Y') }}</span>
+                                <span class="time">{{ $carbon->format('H:i') }}</span>
+                            </p>
+                            @if ($new->is_img('image'))
+                                <a href="{{ $new->image->full() }}" class="fancybox"><img src="{{ $new->image->thumb() }}"></a>
+                            @endif
+                            <p class="post">{{ $new->preview }}</p>
+                            @if ($new->preview)
+                                <a href="{{ $link }}" class="readmore">Подробнее</a>
+                            @endif
+                        </div>
+                    @endforeach
                 </div>
-                <div class="news-block"><a href="#">
-                        <h3>Важно: о грядущем большом обновлении</h3></a>
-                    <p class="info"><span class="date">13.05.2005</span><span class="time">10:34</span></p>
-                    <p class="post">Большое обновление неумолимо приближается с каждым днем. Вы еще не слышали о нем?.. Что ж, возможно, последние месяцы вы провели в бомбоубежище безо всякой связи с внешним миром: только это может послужить вам оправданием. Как бы то ни было, до обновления осталось совсем немного; самое время провести короткий инструктаж и рассказать, что ждет всех нас в ближайшем будущем.</p><a class="readmore">Подробнее</a>
-                </div>
-            </div>
+            @endif
         </div>
-        <div class="column-right"><a href="#" class="button-registration"></a>
-            <div class="social">
-                <h3>Наша игра в соцсетях:</h3>
-                <div class="social-buttons-panel">
-                    <div class="social-button-holder"><a href="#" class="soc-vk"></a></div>
-                    <div class="social-button-holder"><a href="#" class="soc-fb"></a></div>
-                    <div class="social-button-holder"><a href="#" class="soc-tw"></a></div>
-                </div>
-            </div>
-            <div class="store">
-                <h3>Играйте на мобильных</h3>
-                <p>У нас есть ещё и шутеры для мобильных устройств!</p>
-                <div class="google-play-holder"><a href="#" class="google-play"><span>Загрузить на</span></a></div>
-                <div class="app-store-holder"><a href="#" class="app-store"><span>Доступно в</span></a></div>
-            </div>
-            <div class="video"><a href="#">
-                    <h3>Видео</h3></a>
-                <div class="video-box">
-                    <div class="arrow-left js-video-left"></div>
-                    <div class="arrow-right js-video-right"></div>
-                    <div class="video-fotorama fotorama">
-                        <div class="video-fotorama__item"><a href="http://www.youtube.com/embed/SCYsskCPM5g" rel="video" class="fancybox fancybox.iframe"><img src="http://img.youtube.com/vi/SCYsskCPM5g/mqdefault.jpg"></a></div>
-                        <div class="video-fotorama__item"><a href="http://www.youtube.com/embed/GZvW4v3-T1Y" rel="video" class="fancybox fancybox.iframe"><img src="http://img.youtube.com/vi/GZvW4v3-T1Y/mqdefault.jpg"></a></div>
-                        <div class="video-fotorama__item"><a href="http://www.youtube.com/embed/LtLeJE5CijI" rel="video" class="fancybox fancybox.iframe"><img src="http://img.youtube.com/vi/LtLeJE5CijI/mqdefault.jpg"></a></div>
-                        <div class="video-fotorama__item"><a href="http://www.youtube.com/embed/wucPJHgus2c" rel="video" class="fancybox fancybox.iframe"><img src="http://img.youtube.com/vi/wucPJHgus2c/mqdefault.jpg"></a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="screenshoots"><a href="#">
-                    <h3>Скриншоты</h3></a>
-                <div class="screenshoot-box">
-                    <div class="arrow-left js-screen-left"></div>
-                    <div class="arrow-right js-screen-right"></div>
-                    <div class="screen-fotorama fotorama">
-                        <div><a href="{{ Config::get('site.theme_path') }}/images/post-image-2.jpg" rel="screen-shoots" class="fancybox"><img src="{{ Config::get('site.theme_path') }}/images/post-image-2.jpg"></a></div>
-                        <div><a href="{{ Config::get('site.theme_path') }}/images/post-image-3.jpg" rel="screen-shoots" class="fancybox"><img src="{{ Config::get('site.theme_path') }}/images/post-image-3.jpg"></a></div>
-                        <div><a href="{{ Config::get('site.theme_path') }}/images/post-image-4.jpg" rel="screen-shoots" class="fancybox"><img src="{{ Config::get('site.theme_path') }}/images/post-image-4.jpg"></a></div>
-                    </div>
-                </div>
-            </div>
+
+
+        <div class="column-right">
+
+            <a href="#" class="button-registration"></a>
+
+            @if (is_collection($sidebar))
+                <?
+                $sdbr = new PixelGunSidebar(compact('socials', 'shops', 'video', 'screenshots'));
+                ?>
+                @foreach ($sidebar as $block)
+                    <?
+                    $method = $block->slug;
+                    ?>
+                    {{ $sdbr->$method() }}
+                @endforeach
+            @endif
         </div>
     </div>
 
@@ -110,3 +138,119 @@
 
 @section('scripts')
 @stop
+
+
+<?
+class PixelGunSidebar {
+
+    private $data;
+
+    public function __construct($data) {
+        #Helper::tad($data);
+        $this->data = $data;
+    }
+
+    public function socials() {
+        if (is_collection($this->data['socials'])) {
+?>
+            <div class="social">
+                <h3>Наша игра в соцсетях:</h3>
+                <div class="social-buttons-panel">
+                    @foreach ($this->data['socials'] as $tmp)
+                        <?
+                        if (!$tmp->slug)
+                            continue;
+                        ?>
+
+                        <div class="social-button-holder" data-img="{{ $tmp->is_img('image') ? $tmp->image->thumb() : '' }}"><a href="#" class="soc-{{ $tmp->slug }}"></a></div>
+                    @endforeach
+                </div>
+            </div>
+<?
+        }
+    }
+
+    public function shops() {
+        if (is_collection($this->data['shops'])) {
+?>
+            <div class="store">
+                <h3>Играйте на мобильных</h3>
+                <p>У нас есть ещё и шутеры для мобильных устройств!</p>
+                @foreach ($this->data['shops'] as $tmp)
+                    <?
+                    if (!$tmp->slug)
+                        continue;
+                    ?>
+                    <div class="{{ $tmp->slug }}-holder" data-img="{{ $tmp->is_img('image') ? $tmp->image->thumb() : '' }}"><a href="#" class="{{ $tmp->slug }}"><span>{{ $tmp->intro }}</span></a></div>
+                @endforeach
+            </div>
+<?
+        }
+    }
+
+    public function video() {
+        if (is_collection($this->data['video'])) {
+?>
+            <div class="video">
+                <a href="{{ URL::route('page', 'video') }}">
+                    <h3>Видео</h3>
+                </a>
+                <div class="video-box">
+                    @if (count($this->data['video']) > 1)
+                        <div class="arrow-left js-video-left"></div>
+                        <div class="arrow-right js-video-right"></div>
+                    @endif
+                    <div class="video-fotorama fotorama">
+                        @foreach ($this->data['video'] as $tmp)
+                            <?
+                            if (!$tmp->embed)
+                                continue;
+                            ?>
+                            <div class="video-fotorama__item">
+                                <a href="#" rel="video" class="fancybox fancybox.iframe">
+                                    <img src="{{ $tmp->is_img('image') ? $tmp->image->thumb() : '' }}">
+                                </a>
+                                <div class="embed">
+                                    {{ $tmp->embed }}
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+<?
+        }
+    }
+
+    public function screenshots() {
+        if (is_collection($this->data['screenshots'])) {
+?>
+            <div class="screenshoots">
+                <a href="{{ URL::route('page', 'screenshoots') }}">
+                    <h3>Скриншоты</h3>
+                </a>
+                <div class="screenshoot-box">
+                    @if (count($this->data['screenshots']) > 1)
+                        <div class="arrow-left js-screen-left"></div>
+                        <div class="arrow-right js-screen-right"></div>
+                    @endif
+                    <div class="screen-fotorama fotorama">
+                        @foreach ($this->data['screenshots'] as $tmp)
+                            <?
+                            if (!$tmp->is_img('image'))
+                                continue;
+                            ?>
+                            <div><a href="{{ $tmp->is_img('image') ? $tmp->image->full() : '' }}" rel="screen-shoots" class="fancybox"><img src="{{ $tmp->is_img('image') ? $tmp->image->thumb() : '' }}"></a></div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+<?
+        }
+    }
+
+    public function __call($method, $arguments) {
+        #
+    }
+}
+?>

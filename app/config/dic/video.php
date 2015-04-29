@@ -9,7 +9,7 @@ return array(
                 'title' => 'Изображение для предпросмотра',
                 'type' => 'image',
             ),
-            'emdeb' => array(
+            'embed' => array(
                 'title' => 'Embed-код',
                 'type' => 'textarea',
             ),

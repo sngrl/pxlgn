@@ -22,17 +22,30 @@ class RedactorUploadsController extends BaseController {
         $uploadPathPublic = Config::get('site.uploads_photo_public_dir');
         $thumbsPathPublic = Config::get('site.uploads_thumb_public_dir');
 
-		$fullList[0] = $fileList = array('thumb' => '', 'image'=> '', 'title' => 'Изображение', 'folder' => 'Миниатюры');
-		if(file_exists($thumbsPath) && is_dir($thumbsPath) && $listDir = scandir($thumbsPath)) {
+        #Helper::dd($thumbsPath);
+
+        #$fullList[0] = $fileList = array('thumb' => '', 'image'=> '', 'title' => 'Изображение', 'folder' => 'Миниатюры');
+        $fullList = [];
+
+        if(file_exists($thumbsPath) && is_dir($thumbsPath) && $listDir = scandir($thumbsPath)) {
+            #Helper::dd($listDir);
             $index = 0;
             foreach ($listDir as $number => $file) {
 
-                $thumbnail = $thumbsPath . '/' . $file;
+                if ($file == '.' || $file == '..')
+                    continue;
 
-                if (file_exists($thumbnail) && is_file($thumbnail) && is_image($thumbnail)) {
+                $thumbnail = $thumbsPath . '/' . $file;
+                $fullimage = $uploadPath . '/' . $file;
+
+                if (
+                    file_exists($thumbnail) && is_file($thumbnail) && Helper::is_image($thumbnail)
+                    && file_exists($fullimage) && is_file($fullimage) && Helper::is_image($fullimage)
+                ) {
 
                     $fileList['thumb'] = $thumbsPathPublic . '/' . $file;
                     $fileList['image'] = $uploadPathPublic . '/' . $file;
+                    $fileList['folder'] = 'Миниатюры';
                     $fullList[$index] = $fileList;
                     ++$index;
                 }

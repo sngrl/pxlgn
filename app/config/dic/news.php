@@ -5,6 +5,10 @@ return array(
     'fields_i18n' => function() {
 
         return array(
+            'title' => array(
+                'title' => 'Заголовок новости',
+                'type' => 'text',
+            ),
             'published_at' => array(
                 'title' => 'Дата публикации',
                 'type' => 'date',

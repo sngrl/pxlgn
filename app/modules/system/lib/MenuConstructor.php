@@ -1,7 +1,7 @@
 <?
 class MenuConstructor {
 
-    private $menu, $items, $order, $tpl, $pages_ids, $pages, $pages_by_sysname;
+    private $menu, $items, $order, $tpl, $pages_ids, $pages, $pages_by_sysname, $temp_items = [];
 
     public function __construct($slug) {
 
@@ -120,6 +120,8 @@ class MenuConstructor {
 
         $level = array();
 
+        #Helper::d($this->items);
+
         /**
          * Перебираем все элементы меню текущего уровня
          */
@@ -130,7 +132,7 @@ class MenuConstructor {
              * Отрисовываем элемент меню
              */
             $element = $this->get_check_element($id);
-            #Helper::dd($element);
+            #Helper::d($element);
             #dd($element);
 
             if (!$element)
@@ -140,34 +142,55 @@ class MenuConstructor {
              * Одиночный элемент или массив элементов
              */
             #Helper::d(' [ ' . $element .' ] ');
-            if (is_string($element))
+            if (is_string($element)) {
+                $items = $this->items;
                 $element = array($id => $element);
+            } else {
+                $items = $this->temp_items;
+            }
+
+            #echo "\n\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n\n";
+            #Helper::d($items);
+            #echo "\n\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n";
+
 
             $elements = $element;
             unset($element);
 
-            #dd($elements);
+            #Helper::d($elements);
 
             foreach ($elements as $eid => $element) {
 
                 if (!$element)
                     continue;
 
-                #Helper::tad($element);
+                #Helper::d($element);
 
                 $attr = [];
 
                 /**
                  * Небольшой костылек - определим, активен ли элемент или нет
                  */
-                $data = $this->items[$eid];
-                #dd($data);
+                $data = @$items[$eid];
+                #Helper::d($data);
                 if (isset($data['li_class']) && $data['li_class'] != '')
                     $attr['class'] = @trim(@trim($attr['class']) . ' ' . $data['li_class']);
                 $is_active = $this->get_active($data);
+                #Helper::d($is_active);
                 #dd($is_active);
                 if ($is_active)
                     $attr['class'] = @trim(@trim($attr['class']) . ' ' . $this->tpl['active_class']);
+
+                /*
+                echo '$eid = ' . $eid . "\n";
+                echo '$element';
+                Helper::d($element);
+                echo '$data';
+                Helper::d($data);
+                echo '$attr';
+                Helper::d($attr);
+                echo "\n\n======================================================================\n\n";
+                */
 
                 /**
                  * Отрисовываем дочерние элементы текущего пункта меню, если они есть
@@ -211,9 +234,12 @@ class MenuConstructor {
             )
         );
         $return = preg_replace("~\%[^\%]+?\%~is", '', $return);
+        /*
+        ## !!! http:// => http:/ !!!
         $return = strtr($return, [
             '//' => '/',
         ]);
+        */
 
         /**
          * Возвращаем текущий уровень меню
@@ -234,9 +260,11 @@ class MenuConstructor {
          * Получаем данные об элементе меню
          */
         $data = $this->items[$element_id];
-        #Helper::dd($data);
+        #Helper::d($data);
 
         if (@$data['type'] == 'function') {
+
+            $this->temp_items = [];
 
             #Helper::d($data);
 
@@ -244,7 +272,6 @@ class MenuConstructor {
             if (isset($function) && is_callable($function)) {
                 $result = $function();
                 #Helper::d($result);
-
 
                 if (isset($result['url']))
                     $result = array($result);
@@ -262,6 +289,9 @@ class MenuConstructor {
                     #@$return .=
                     #return $this->get_element_info_by_data($res);
                     #Helper::d( $this->get_element_info_by_data($res) );
+                    #Helper::d($res);
+
+                    $this->temp_items[] = $res;
 
                     $tmp = $this->get_element_info_by_data($res);
 
@@ -275,8 +305,7 @@ class MenuConstructor {
 
             }
 
-
-            return false;
+            return NULL;
 
         } else {
 
@@ -333,6 +362,7 @@ class MenuConstructor {
             $attr['class'] = @trim(@trim($attr['class']) . ' ' . $this->tpl['active_class']);
 
         #var_dump($this->get_active($data));
+        #Helper::d($attr);
 
         /**
          * Получаем URL ссылки
@@ -447,7 +477,7 @@ class MenuConstructor {
          * Собственное правило для определения активности пункта меню
          * Проверка текущего URL на соответствие шаблону регулярного выражения
          */
-        if (@$element['use_active_regexp'] && @$element['active_regexp']) {
+        if (isset($element) && is_array($element) && @$element['use_active_regexp'] && @$element['active_regexp']) {
 
             /**
              * Сделаем замену в регулярке, если у нас обычная страница
@@ -463,10 +493,16 @@ class MenuConstructor {
                 #var_dump($element['active_regexp']);
             }
 
-            $element['active_regexp'] = strtr($element['active_regexp'], [
-                '%locale%' => Config::get('app.locale'),
-                '%default_locale%' => Config::get('app.default_locale'),
-            ]);
+            try{
+                $element['active_regexp'] = strtr($element['active_regexp'], [
+                    '%locale%' => Config::get('app.locale'),
+                    '%default_locale%' => Config::get('app.default_locale'),
+                ]);
+            } catch (Exception $e) {
+                echo 'Error: ',  $e->getMessage(), "\n";
+                Helper::tad($element);
+                #die;
+            }
 
             /**
              * Замена конструкций вида %_page_sysname_>url%
