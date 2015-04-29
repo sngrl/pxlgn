@@ -14,6 +14,7 @@ $slider = DicLib::loadImages($slider, ['image']);
 
 $news = Dic::valuesBySlug('news', function($query) {
     $query->order_by_field('published_at', 'DESC');
+    $query->take(3);
 });
 $news = DicLib::loadImages($news, ['image']);
 #Helper::tad($news);
@@ -38,12 +39,14 @@ $shops = DicLib::loadImages($shops, ['image']);
 
 $video = Dic::valuesBySlug('video', function($query) {
     $query->orderBy('lft', 'ASC');
+    $query->take(10);
 });
 $video = DicLib::loadImages($video, ['image']);
 #Helper::tad($video);
 
 $screenshots = Dic::valuesBySlug('screenshots', function($query) {
     $query->orderBy('lft', 'ASC');
+    $query->take(10);
 });
 $screenshots = DicLib::loadImages($screenshots, ['image']);
 #Helper::tad($screenshots);

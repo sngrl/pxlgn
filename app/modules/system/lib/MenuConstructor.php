@@ -471,7 +471,7 @@ class MenuConstructor {
     private function get_active($element) {
         #return false;
 
-        #Helper::tad($element);
+        #Helper::ta($element);
 
         /**
          * Собственное правило для определения активности пункта меню
@@ -568,7 +568,7 @@ class MenuConstructor {
             }
 
             #Helper::dd(Request::path());
-            #Helper::dd($element['active_regexp']);
+            #Helper::d($element['active_regexp']);
             #Helper::dd(preg_match($element['active_regexp'], Request::path()));
             return @(bool)preg_match($element['active_regexp'], Request::path());
         }
