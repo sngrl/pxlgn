@@ -24,7 +24,7 @@
 
         </div>
         <div class="features-block">
-            <h3>Особенности</h3>
+            <h3>{{ trans("interface.title.features") }}</h3>
 
             {{ $page->block('features') }}
 

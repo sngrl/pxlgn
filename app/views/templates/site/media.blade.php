@@ -39,8 +39,8 @@ $screenshots = DicLib::loadImages($screenshots, ['image']);
         @if (is_collection($video))
             <div class="video-gallery">
                 <div class="gallery-head">
-                    <h3>Видео</h3>
-                    <a href="{{ URL::route('page', pageslug('video')) }}" class="watch-all">Все видео</a>
+                    <h3>{{ trans("interface.menu.video") }}</h3>
+                    <a href="{{ URL::route('page', pageslug('video')) }}" class="watch-all">{{ trans("interface.tpl.all_videos") }}</a>
                 </div>
                 <ul class="gallery-row">
                     @foreach ($video as $vid)
@@ -67,8 +67,8 @@ $screenshots = DicLib::loadImages($screenshots, ['image']);
         @if (is_collection($screenshots))
             <div class="screenshoot-gallery">
                 <div class="gallery-head">
-                    <h3>Скриншоты</h3>
-                    <a href="{{ URL::route('page', pageslug('screenshots')) }}" class="watch-all">Все скриншоты</a>
+                    <h3>{{ trans("interface.menu.screenshots") }}</h3>
+                    <a href="{{ URL::route('page', pageslug('screenshots')) }}" class="watch-all">{{ trans("interface.tpl.all_screenshots") }}</a>
                 </div>
                 <ul class="gallery-row">
                     @foreach ($screenshots as $screen)

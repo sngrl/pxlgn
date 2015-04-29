@@ -106,6 +106,9 @@ class MenuConstructor {
 
         #echo $menu; die;
 
+        if (is_string($menu) && $menu != '')
+            $menu = StringView::force($menu);
+
         return $menu;
     }
 

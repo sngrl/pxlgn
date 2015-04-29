@@ -86,8 +86,8 @@ $screenshots = DicLib::loadImages($screenshots, ['image']);
 
             @if (is_collection($news))
                 <div class="news-head-panel">
-                    <h3>Новости</h3>
-                    <a href="{{ URL::route('page', ['slug' => pageslug('news')]) }}" class="all-news">Все новости</a>
+                    <h3>{{ trans("interface.menu.news") }}</h3>
+                    <a href="{{ URL::route('page', ['slug' => pageslug('news')]) }}" class="all-news">{{ trans("interface.tpl.all_news") }}</a>
                 </div>
                 <div class="news-feed">
                     @foreach ($news as $new)
@@ -109,7 +109,7 @@ $screenshots = DicLib::loadImages($screenshots, ['image']);
                             @endif
                             <p class="post">{{ $new->preview }}</p>
                             @if ($new->preview)
-                                <a href="{{ $link }}" class="readmore">Подробнее</a>
+                                <a href="{{ $link }}" class="readmore">{{ trans("interface.tpl.read_more") }}</a>
                             @endif
                         </div>
                     @endforeach
@@ -157,14 +157,13 @@ class PixelGunSidebar {
         if (is_collection($this->data['socials'])) {
 ?>
             <div class="social">
-                <h3>Наша игра в соцсетях:</h3>
+                <h3>{{ trans("interface.title.socials") }}</h3>
                 <div class="social-buttons-panel">
                     @foreach ($this->data['socials'] as $tmp)
                         <?
                         if (!$tmp->slug)
                             continue;
                         ?>
-
                         <div class="social-button-holder" data-img="{{ $tmp->is_img('image') ? $tmp->image->thumb() : '' }}"><a href="#" class="soc-{{ $tmp->slug }}"></a></div>
                     @endforeach
                 </div>
@@ -177,14 +176,14 @@ class PixelGunSidebar {
         if (is_collection($this->data['shops'])) {
 ?>
             <div class="store">
-                <h3>Играйте на мобильных</h3>
-                <p>У нас есть ещё и шутеры для мобильных устройств!</p>
+                <h3>{{ trans("interface.title.play_on_mobile") }}</h3>
+                <p>{{ trans("interface.title.play_on_mobile_intro") }}</p>
                 @foreach ($this->data['shops'] as $tmp)
                     <?
                     if (!$tmp->slug)
                         continue;
                     ?>
-                    <div class="{{ $tmp->slug }}-holder" data-img="{{ $tmp->is_img('image') ? $tmp->image->thumb() : '' }}"><a href="#" class="{{ $tmp->slug }}"><span>{{ $tmp->intro }}</span></a></div>
+                    <div class="{{ $tmp->slug }}-holder" data-img="{{ $tmp->is_img('image') ? $tmp->image->thumb() : '' }}"><a href="#" class="{{ $tmp->slug }}"><span>{{ StringView::force($tmp->intro) }}</span></a></div>
                 @endforeach
             </div>
 <?
@@ -196,7 +195,7 @@ class PixelGunSidebar {
 ?>
             <div class="video">
                 <a href="{{ URL::route('page', 'video') }}">
-                    <h3>Видео</h3>
+                    <h3>{{ trans("interface.menu.video") }}</h3>
                 </a>
                 <div class="video-box">
                     @if (count($this->data['video']) > 1)
@@ -230,7 +229,7 @@ class PixelGunSidebar {
 ?>
             <div class="screenshoots">
                 <a href="{{ URL::route('page', 'screenshoots') }}">
-                    <h3>Скриншоты</h3>
+                    <h3>{{ trans("interface.menu.screenshots") }}</h3>
                 </a>
                 <div class="screenshoot-box">
                     @if (count($this->data['screenshots']) > 1)

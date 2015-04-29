@@ -343,7 +343,7 @@
                                         <i></i>
                                         Шаблон активности (regexp)
                                     </label>
-                                    <label class="input">
+                                    <label class="input" style="display: none;">
                                         {{ Form::text('items[%N%][active_regexp]', '%active_regexp%', ['class' => 'active_regexp']) }}
                                     </label>
                                     <label class="checkbox">

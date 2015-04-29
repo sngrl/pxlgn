@@ -294,9 +294,11 @@ foreach ($files as $dir => $dir_files) {
 
     /***************************************************************************/
 
+    var last_name = 'default.name';
+
     $(document).on('click', '.add_parameter', function(){
         //alert('123');
-        var name = prompt('Введите имя переменной', 'default.name');
+        var name = prompt('Введите имя переменной', last_name);
         var file = $(this).data('file');
         var section = $(this).data('section');
         if ( $('[data-file="' + file + '"] [data-name="' + name + '"]').data('name') ) {
@@ -307,6 +309,7 @@ foreach ($files as $dir => $dir_files) {
         if (name) {
             var line = "<tr data-file='" + file + "' data-name='" + name + "'><th class='warning'><span class='copy-button' data-new='1'>" + name + '</span>{{ $buttons }}' + "</td>@foreach($dirs as $dir)<td class='danger'><textarea name='lang[{{ basename($dir) }}][" + file + "][" + name + "]' rows='3' style='width:100%'></textarea></td>@endforeach</tr>";
             $(this).parents('tr').before(line);
+            last_name = name;
         }
         return false;
     });

@@ -6,42 +6,20 @@
 
 <div class="footer">
     <div class="footer-block">
-        <h3 class="orange">Pixel Gun 3D</h3>
-        <ul>
-            <li><a href="#">Скачать игру</a></li>
-            <li><a href="#">Регистрация</a></li>
-            <li><a href="#">Об игре</a></li>
-            <li><a href="/faq.html">F.A.Q.</a></li>
-            <li><a href="#">Wiki</a></li>
-        </ul>
+        {{ Menu::placement('footer_1') }}
     </div>
     <div class="footer-block">
-        <h3 class="yellow">Сообщество</h3>
-        <ul>
-            <li><a href="#" class="forum">Форум</a></li>
-            <li><a href="#" class="vk">Вконтакте</a></li>
-            <li><a href="#" class="fb">Facebook</a></li>
-            <li><a href="#" class="tw">Twitter</a></li>
-        </ul>
+        {{ Menu::placement('footer_2') }}
     </div>
     <div class="footer-block">
-        <h3 class="green">О нас</h3>
-        <ul>
-            <li><a href="#">Сайт компании</a></li>
-            <li><a href="#">Вакансии</a></li>
-        </ul>
+        {{ Menu::placement('footer_3') }}
     </div>
     <div class="footer-block help">
-        <h3 class="blue">Поддержка</h3>
-        <ul>
-            <li><a href="#">Центр поддержки</a></li>
-            <li><a href="#">Пользовательское соглашение</a></li>
-            <li><a href="#">Политика конфиденциальности</a></li>
-        </ul>
+        {{ Menu::placement('footer_4') }}
     </div>
     <div class="footer-copyright"><a href="#"><img src="{{ Config::get('site.theme_path') }}/images/logo-copyright.png"></a>
-        <p>Copyright 2012-2015 LLC Rilisoft ©</p>
-        <p>Все права защищены.</p>
+        <p>Copyright 2012-{{ date('Y') }} {{ trans("interface.tpl.company_name") }} ©</p>
+        <p>{{ trans("interface.tpl.all_rights_reserved") }}</p>
     </div>
 </div>
 

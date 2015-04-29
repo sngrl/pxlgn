@@ -35,6 +35,11 @@ _ide_helper.php
 /public/static/psd
 /usersfiles
 /psd
-/!files
+/!files/
 /!info
 app/config/packages/scalia/sphinxsearch/config.php
+
+
+
+/ru/forum/
+/en/forum/

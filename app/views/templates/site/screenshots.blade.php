@@ -31,8 +31,7 @@ $screenshots = DicLib::loadImages($screenshots, ['image']);
         @if (is_collection($screenshots))
             <div class="screenshoot-gallery">
                 <div class="gallery-head">
-                    <h3>Скриншоты</h3>
-                    <a href="{{ URL::route('page', pageslug('screenshots')) }}" class="watch-all">Все скриншоты</a>
+                    <h3>{{ trans("interface.menu.screenshots") }}</h3>
                 </div>
                 <ul class="gallery-row">
                     @foreach ($screenshots as $screen)

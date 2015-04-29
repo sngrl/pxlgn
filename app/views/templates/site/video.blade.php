@@ -32,7 +32,7 @@ $video = DicLib::loadImages($video, ['image']);
         @if (is_collection($video))
             <div class="video-gallery">
                 <div class="gallery-head">
-                    <h3>Видео</h3>
+                    <h3>{{ trans("interface.menu.video") }}</h3>
                 </div>
                 <ul class="gallery-row">
                     @foreach ($video as $vid)
