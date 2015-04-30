@@ -1928,7 +1928,6 @@ textarea:focus, input:focus, button:focus {
 		    }
 
 			iframe {
-				height: 184px;
 				pointer-events: none;
 			}
 
@@ -1951,10 +1950,7 @@ textarea:focus, input:focus, button:focus {
 			}
 
 			#embed {
-				position: absolute;
-				top: 0px;
-				left: 0px;
-				z-index: 1004;
+				display: none;
 				// width: 100%;
 				// height: 100%
 			}
@@ -2265,20 +2261,20 @@ textarea:focus, input:focus, button:focus {
 	width: 1009px;
 	height: 68px;
 	position: relative;
-	background-image: url(../images/local-menu-fake-holder.png);
 	left: -7px;
     margin-top: -9px;
     display: block;
     background-repeat: no-repeat;
     position: relative;
-    background-color: #00142c;
 
     ul {
     	li {
 			display: inline-block;
+			width: 100px;
+			background: #10AA9B;
     	}
 
-    	li.button-registration {
+    	li.registration-button {
 	  		top: -17px;
 			right: -19px;
 			left: auto;
@@ -2291,7 +2287,19 @@ textarea:focus, input:focus, button:focus {
 			left: -10px;
     	}
     }
+}
 
+.button-registration {
+	  		top: -17px;
+			right: -19px;
+			left: auto;
+			width: 314px;
+			height: 96px;
+			background: url(../images/button-registration.png);
+			display: block;
+			position: absolute;
+			top: -30px;
+			left: -10px;
 }
 
 .registration-head {
