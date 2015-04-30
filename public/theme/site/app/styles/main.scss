@@ -1015,6 +1015,7 @@ textarea:focus, input:focus, button:focus {
 
 .header {
 	height: 355px;
+	position: relative;
 
 	.main-menu {
 		display: block;
@@ -1190,7 +1191,7 @@ textarea:focus, input:focus, button:focus {
 		height: 30px;
 		position: absolute;
 		background: url(../images/bg-language.png);
-		top: -30px;
+		bottom: -6px;
 
 		.ui-selectmenu-button {
 			width: 93px !important;
@@ -1318,6 +1319,7 @@ textarea:focus, input:focus, button:focus {
 
 .column-left {
 	width: 707px;
+	min-height: 900px;
 	float: left;
 	position: relative;
 	z-index: 1;
@@ -1361,7 +1363,7 @@ textarea:focus, input:focus, button:focus {
 		.fotorama__wrap {
 
 			.fotorama__stage{
-				overflow: visible;
+				overflow: block;
 			}
 
 
@@ -1595,6 +1597,7 @@ textarea:focus, input:focus, button:focus {
 	width: 258px;
 	float: left;
 	z-index: 0;
+	min-height: 900px;
 
 	&:after {
 		content: "";
@@ -1924,16 +1927,17 @@ textarea:focus, input:focus, button:focus {
 				height: 183px;
 				right: 0;
 				left: 0;
-				z-index: 1000;
 				-webkit-box-shadow: inset -6px 6px 0px 0px rgba(0,0,0,0.65);
 				-moz-box-shadow: inset -6px 6px 0px 0px rgba(0,0,0,0.65);
 				box-shadow: inset -6px 6px 0px 0px rgba(0,0,0,0.65);
 				z-index: 1001;
+				pointer-events: none;
 				}
 		    }
 
 			iframe {
 				height: 184px;
+				pointer-events: none;
 			}
 
 		}	
@@ -1956,10 +1960,10 @@ textarea:focus, input:focus, button:focus {
 			text-decoration: none;
 			cursor: pointer;
 			color: #000;
-			display: visible !important;
+			display: block !important;
 
 			img {
-				display: visible !important;
+				display: block !important;
 			}
 
 			&:hover {
@@ -2025,6 +2029,7 @@ textarea:focus, input:focus, button:focus {
 				-moz-box-shadow: inset -6px 6px 0px 0px rgba(0,0,0,0.65);
 				box-shadow: inset -6px 6px 0px 0px rgba(0,0,0,0.65);
 				z-index: 1001;
+				pointer-events: none;
 				}
 		    }
 		}	
@@ -2247,7 +2252,7 @@ textarea:focus, input:focus, button:focus {
 	height: 68px;
 	position: relative;
 	background-image: url(../images/local-menu-fake-holder.png);
-	left: -19px;
+	left: -7px;
     margin-top: -9px;
     display: block;
     background-repeat: no-repeat;
@@ -2294,6 +2299,8 @@ textarea:focus, input:focus, button:focus {
     border-right: 3px #000 solid;
 	margin: 0 auto;
 	overflow: hidden;
+	width: 950px;
+	left: -10px;
 
 	.registration-page-block {
 		background: #092951;
