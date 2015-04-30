@@ -109,7 +109,7 @@ $screenshots = DicLib::loadImages($screenshots, ['image']);
                                 <span class="time">{{ $carbon->format('H:i') }}</span>
                             </p>
                             @if ($new->is_img('image'))
-                                <a href="{{ $new->image->full() }}" class="fancybox"><img src="{{ $new->image->thumb() }}"></a>
+                                <a href="{{ $new->image->full() }}" class="fancybox image-prev" style="background-image:url({{ $new->image->thumb() }})"></a>
                             @endif
                             <p class="post">{{ $new->preview }}</p>
                             @if ($new->preview)
