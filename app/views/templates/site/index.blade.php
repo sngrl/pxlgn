@@ -213,10 +213,10 @@ class PixelGunSidebar {
                                 continue;
                             ?>
                             <div class="video-fotorama__item">
-                                <a href="#" rel="video" class="fancybox fancybox.iframe">
+                                <a href="#embed" rel="video" class="fancybox fancybox.iframe">
                                     <img src="{{ $tmp->is_img('image') ? $tmp->image->thumb() : '' }}">
                                 </a>
-                                <div class="embed">
+                                <div id="embed">
                                     {{ $tmp->embed }}
                                 </div>
                             </div>
