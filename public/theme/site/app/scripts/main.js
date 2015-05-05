@@ -1,5 +1,10 @@
 /* jshint devel:true */
-$('.styled-select').selectmenu().selectmenu( "open" ).selectmenu( "close" );
+$('.styled-select').selectmenu({
+	change: function( event, ui ) {
+		var _url = $(ui.item.element).attr('data-url');
+		window.location.href=_url;
+	}
+}).selectmenu( "open" ).selectmenu( "close" );
 
 //Главный слайдер
 
@@ -70,6 +75,7 @@ $(function() {
     $( "#format" ).buttonset();
 
     $(".button-registration").click(function(e){
+    	
         $(".login-form-background").fadeIn(700);
         e.preventDefault();
     });

@@ -21,6 +21,7 @@ $env = $app->detectEnvironment(array(
 	'az' => array('Acer_5742G'),
 	'vkharseev' => array('DNS'),
 	'kd' => array('DobriyMac.local'),
+	'kf' => array('Mac-mini-Admin.local', 'mac-mini-admin'),
 	'at' => array('MacBook-Pro-Tommy.local'),
 ));
 $app->bindInstallPaths(require __DIR__.'/paths.php');
