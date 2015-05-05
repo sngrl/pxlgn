@@ -75,6 +75,7 @@ $(function() {
     $( "#format" ).buttonset();
 
     $(".button-registration").click(function(e){
+    	
         $(".login-form-background").fadeIn(700);
         e.preventDefault();
     });

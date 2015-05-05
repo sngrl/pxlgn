@@ -124,7 +124,7 @@ $screenshots = DicLib::loadImages($screenshots, ['image']);
 
         <div class="column-right">
 
-            <a href="#" class="button-registration"></a>
+            <a href="#" class="button-registration"><span>Регистрация</span></a>
 
             @if (is_collection($sidebar))
                 <?
