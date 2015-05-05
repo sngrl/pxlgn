@@ -49,7 +49,7 @@ $screenshots = DicLib::loadImages($screenshots, ['image']);
                             continue;
                         ?>
                         <li class="gallery-row-holder">
-                            <a href="#embed" rel="video" class="gallery-block fancybox fancybox.iframe">
+                            <a href="#embed" rel="video" class="gallery-block fancybox">
                                 <div class="img-wrapper">
                                     <img src="{{ $vid->image->thumb() }}">
                                 </div>
