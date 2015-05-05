@@ -156,14 +156,14 @@ Route::pattern('lang', implode('|', array_keys(Config::get('app.locales'))))
 Вывести картинку с капчей:
 
 ```php
-<img src="{{ URL::route('captcha_image', [session_name() => session_id()]) }}" />
+<img src="{{ URL::route('kcaptcha_image', [session_name() => session_id()]) }}" />
 ```
 
 Проверка капчи из веб-формы:
 
 AJAX POST-запрос по адресу:
 ```php
-{{ URL::route('captcha_check') }}
+{{ URL::route('kcaptcha_check') }}
 ```
 с передачей двух параметров:
 keystring - введенный пользователем код капчи
@@ -172,7 +172,7 @@ clear - очищать ли код капчи в сессии. Для ajax-за�
 Проверка капчи программно из PHP:
 
 ```php
-$valid = Captcha::check($keystring, $clear);
+$valid = CaptchaController::checkKcaptcha($keystring, $clear);
 ```
 $keystring - введенный пользователем код капчи
 $clear - очищать ли код капчи в сессии. По умолчанию - TRUE. Отключать очистку не рекомендуется!

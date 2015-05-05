@@ -309,6 +309,7 @@ foreach ($files as $dir => $dir_files) {
         if (name) {
             var line = "<tr data-file='" + file + "' data-name='" + name + "'><th class='warning'><span class='copy-button' data-new='1'>" + name + '</span>{{ $buttons }}' + "</td>@foreach($dirs as $dir)<td class='danger'><textarea name='lang[{{ basename($dir) }}][" + file + "][" + name + "]' rows='3' style='width:100%'></textarea></td>@endforeach</tr>";
             $(this).parents('tr').before(line);
+            activate_clipboard();
             last_name = name;
         }
         return false;

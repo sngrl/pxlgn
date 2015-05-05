@@ -41,5 +41,5 @@ app/config/packages/scalia/sphinxsearch/config.php
 
 
 
-/ru/forum/
-/en/forum/
+/public/ru/forum/
+/public/en/forum/

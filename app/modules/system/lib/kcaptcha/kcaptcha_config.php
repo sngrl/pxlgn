@@ -13,16 +13,16 @@ $allowed_symbols = "23456789abcdegikpqsvxyz"; #alphabet without similar symbols 
 $fontsdir = 'fonts';	
 
 # CAPTCHA string length
-$min_length = Config::get('site.captcha.min_length') ?: 4;
-$max_length = Config::get('site.captcha.max_length') ?: 6;
+$min_length = Config::get('site.kcaptcha.min_length') ?: 4;
+$max_length = Config::get('site.kcaptcha.max_length') ?: 6;
 $length = mt_rand($min_length, $max_length); # random length
 //$length = 6;
 
 # CAPTCHA image size (you do not need to change it, this parameters is optimal)
 #$width = 160;
 #$height = 80;
-$default_width = Config::get('site.captcha.default_width') ?: 160;
-$default_height = Config::get('site.captcha.default_height') ?: 80;
+$default_width = Config::get('site.kcaptcha.default_width') ?: 160;
+$default_height = Config::get('site.kcaptcha.default_height') ?: 80;
 $width = Input::get('w') ?: $default_width;
 $height = Input::get('h') ?: $default_height;
 
