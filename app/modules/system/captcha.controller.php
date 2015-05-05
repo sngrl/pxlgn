@@ -64,7 +64,7 @@ class CaptchaController extends BaseController {
         ?>
         <form action="" method="post">
             <p>Enter text shown below:</p>
-            <p><img src="<?php echo URL::route('captcha_image', [session_name() => session_id()]) ?>"></p>
+            <p><img src="<?php echo URL::route('kcaptcha_image', [session_name() => session_id()]) ?>"></p>
             <p><input type="text" name="keystring"></p>
             <p><input type="submit" value="Check"></p>
         </form>
