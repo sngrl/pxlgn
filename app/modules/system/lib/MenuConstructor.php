@@ -410,7 +410,7 @@ class MenuConstructor {
 
             case 'page':
                 if (isset($this->pages[$element['page_id']]) && is_object($this->pages[$element['page_id']]))
-                    return URL::route('page', $this->pages[$element['page_id']]->slug);
+                    return URL::route('page', ['slug' => $this->pages[$element['page_id']]->slug]);
                 return false;
                 break;
 
