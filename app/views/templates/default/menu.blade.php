@@ -6,7 +6,7 @@
 @if(!empty($menu))
 <ul class="nav-list list-unstyled max-width-class text-center">
 	@foreach($menu as $url => $name)
-		<li class="nav-item"><a href="{{ link::to($url) }}">{{$name}}</a>
+		<li class="nav-item"><a href="{{ link::to($url) }}"><span>{{$name}}</span></a>
 	@endforeach
 	</ul>
 @endif
