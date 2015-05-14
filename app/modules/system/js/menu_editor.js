@@ -126,6 +126,7 @@ var menu_editor = {
                 block = str_replace('%function_name%', params.function_name, block);
                 block = str_replace('%text%', params.text, block);
                 block = str_replace('%use_function_data%', params.use_function_data ? 'checked' : '', block);
+                block = str_replace('%as_is%', params.as_is ? 'checked' : '', block);
                 break;
             default:
                 break;
