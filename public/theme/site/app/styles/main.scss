@@ -1068,10 +1068,16 @@ textarea:focus, input:focus, button:focus {
 				background-repeat: no-repeat;
 			}
 
-			a {
+			span {
+				display: block;
 				top: 15px;
 				left: 60px;
+			}
+
+			a {
 				font-size: 21px;
+				width: 100%;
+				height: 100%;
 			}
 
 			&:hover a, &.active a {
@@ -1087,7 +1093,7 @@ textarea:focus, input:focus, button:focus {
 			margin-left: -15px;
 			top: -2px;
 
-			&:hover {
+			&:hover, &.active {
 				background: url(../images/button-active-about.png);
 				background-position: 5px center;
 				background-repeat: no-repeat;
@@ -1108,10 +1114,11 @@ textarea:focus, input:focus, button:focus {
 			height: 56px;
 			z-index: 3;
 			background: url(../images/button-media.png);
+			/*background: url(../images/animation/button-media.png);*/
 			margin-left: -11px;
 			top: -2px;
 
-			&:hover {
+			&:hover, &.active {
 				background: url(../images/button-active-media.png);
 				background-position: 5px center;
 				background-repeat: no-repeat;
@@ -1135,7 +1142,7 @@ textarea:focus, input:focus, button:focus {
 			margin-left: -11px;
 			top: -2px;
 
-			&:hover {
+			&:hover, &.active {
 				background: url(../images/button-active-forum.png);
 				background-position: 5px center;
 				background-repeat: no-repeat;
@@ -1359,7 +1366,9 @@ textarea:focus, input:focus, button:focus {
 
 			iframe {
 				width: 620px !important;
-				height: 360px !importantr;
+				height: 360px !important;
+				min-width: 620px; 
+  				min-height: 360px;
 			}
 
 			a {
@@ -1373,6 +1382,13 @@ textarea:focus, input:focus, button:focus {
 					background-position: center center;
 					background-size: contain;
 				}
+			}
+
+			a.slider-image {
+				width: 620px;
+				height: 360px;
+				background-position: center center;
+				background-size: contain;
 			}
 		}
 
@@ -1561,6 +1577,7 @@ textarea:focus, input:focus, button:focus {
 				float: left;
 				margin: 10px 20px 0 0;
 				border: 3px #144581 solid;
+				background-repeat: no-repeat;
 				box-shadow: 6px 6px 0px 0px rgba(0,20,44,1);
 			}
 
@@ -1620,7 +1637,7 @@ textarea:focus, input:focus, button:focus {
 		width: 269px;
 		height: 119px;
 		position: relative;
-		top: 55px;
+		// top: 55px;
 		background: url(../images/bg-social.png);
 		background-repeat: no-repeat;
 		background-position: 0px 42px;
@@ -1691,7 +1708,7 @@ textarea:focus, input:focus, button:focus {
 		width: 269px;
 		height: 258px;
 		position: relative;
-		top: 48px;
+		// top: 48px;
 		background: url(../images/bg-store.png);
 		background-repeat: no-repeat;
 		background-position: 0px 42px;
@@ -1849,7 +1866,7 @@ textarea:focus, input:focus, button:focus {
 		width: 269px;
 		height: 245px;
 		position: relative;
-		top: 35px;
+		margin-top: -10px;
 		background: url(../images/bg-video.png);
 		background-repeat: no-repeat;
 		background-position: 0px 42px;
@@ -1971,7 +1988,7 @@ textarea:focus, input:focus, button:focus {
 		width: 269px;
 		height: 259px;
 		position: relative;
-		top: 28px;
+		margin-top: -7px;
 		background: url(../images/bg-screensoot.png);
 		background-repeat: no-repeat;
 		background-position: 2px 42px;
@@ -2280,8 +2297,18 @@ textarea:focus, input:focus, button:focus {
     ul {
     	li {
 			display: inline-block;
-			width: 100px;
+			width: 150px;
+			margin-left: 3px; 
 			background: #10AA9B;
+    	}
+
+    	li {
+    		a {
+    			text-decoration: none;
+    			font-family: 'miniregular';
+    			font-size: 22px;
+    			color: #000;
+    		}
     	}
 
     	li.registration-button {
@@ -2297,28 +2324,44 @@ textarea:focus, input:focus, button:focus {
 
 			a {
 				text-decoration: none;
+				font-family: 'miniregular';
+				color: #000;
+				top: 28px;
+				position: relative;
+				left: 19px;
+				font-size: 21px;
+				letter-spacing: 2px;
+				padding: 8px 40px;
 			}
     	}
     }
 }
 
 .button-registration {
-	top: -17px;
+	margin-top: -17px;
 	right: -19px;
 	left: auto;
 	width: 314px;
 	height: 96px;
 	background: url(../images/button-registration.png);
 	display: block;
-	position: absolute;
-	top: -30px;
+	position: relative;
 	left: -10px;
+	text-decoration: none;
 
 	a {
 		text-decoration: none;
+		font-family: 'miniregular';
+		color: #000;
+		top: 28px;
+		position: relative;
+		left: 19px;
+		font-size: 21px;
+		letter-spacing: 2px;
+		padding: 8px 40px;
 
 		span {
-			  display: block;
+			display: block;
 			position: relative;
 			top: 27px;
 			left: 66px;
@@ -2327,6 +2370,31 @@ textarea:focus, input:focus, button:focus {
 			font-size: 22px;
 			letter-spacing: 1px;
 		}
+	}
+}
+
+.button-registration {
+	margin-top: -40px;
+	right: -19px;
+	left: auto;
+	width: 314px;
+	height: 96px;
+	background: url(../images/button-registration.png);
+	display: block;
+	position: relative;
+	left: -10px;
+	text-decoration: none;
+
+	span {
+		text-decoration: none;
+		font-family: 'miniregular';
+		color: #000;
+		top: 28px;
+		position: relative;
+		left: 19px;
+		font-size: 21px;
+		letter-spacing: 2px;
+		padding: 8px 40px;
 	}
 }
 

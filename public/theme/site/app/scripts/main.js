@@ -6,6 +6,10 @@ $('.styled-select').selectmenu({
 	}
 }).selectmenu( "open" ).selectmenu( "close" );
 
+$(function() {
+    $( ".js-selectmenu" ).selectmenu().addClass('ui-hui-pizda-dzigurda');
+});
+
 //Главный слайдер
 
 var mainFotorama = function() {
