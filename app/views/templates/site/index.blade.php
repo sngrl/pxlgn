@@ -53,6 +53,10 @@ $screenshots = DicLib::loadImages($screenshots, ['image']);
 
 #$options = Config::get('temp.options');
 #Helper::tad(' [ ' . $options . ' ] ');
+
+$options = Dic::valuesBySlug('options', NULL, []);
+$options = Dic::makeLists($options, NULL, 'name', 'slug');
+#Helper::tad($options);
 ?>
 
 
@@ -139,6 +143,12 @@ $screenshots = DicLib::loadImages($screenshots, ['image']);
             @endif
         </div>
     </div>
+    <script>
+        var APP;
+        APP.mainpage_slider_timeout = '{{ (int)$options['mainpage_slider_timeout'] }}';
+        APP.sidebar_screenshot_timeout = '{{ (int)$options['sidebar_screenshot_timeout'] }}';
+        APP.sidebar_video_timeout = '{{ (int)$options['sidebar_video_timeout'] }}';
+    </script>
 
 @stop
 
