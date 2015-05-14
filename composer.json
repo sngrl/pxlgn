@@ -12,7 +12,8 @@
 		"scalia/sphinxsearch": "*",
 		"flynsarmy/db-blade-compiler": "1.*",
         "sngrl/string-blade-compiler": "dev-master",
-		"sleeping-owl/with-join": "1.*"
+		"sleeping-owl/with-join": "1.*",
+		"gregwar/captcha": "v1.0.12"
 	},
 	"autoload": {
 		"classmap": [

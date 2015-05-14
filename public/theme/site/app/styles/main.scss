@@ -3,12 +3,12 @@
 // endbower
 
 @font-face {
-    font-family: 'miniregular';
-    src: url('../fonts/MINI-webfont.eot');
-    src: url('../fonts/MINI-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/MINI-webfont.woff') format('woff'),
-         url('../fonts/MINI-webfont.ttf') format('truetype'),
-         url('../fonts/MINI-webfont.svg#miniregular') format('svg');
+	font-family: 'miniregular';
+	src: url('../fonts/MINI-webfont.eot');
+	src: url('../fonts/MINI-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/MINI-webfont.woff') format('woff'),
+	url('../fonts/MINI-webfont.ttf') format('truetype'),
+	url('../fonts/MINI-webfont.svg#miniregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -29,9 +29,9 @@
     font-family: 'playregular';
     src: url('../fonts/Play-Regular-webfont.eot');
     src: url('../fonts/Play-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Play-Regular-webfont.woff') format('woff'),
-         url('../fonts/Play-Regular-webfont.ttf') format('truetype'),
-         url('../fonts/Play-Regular-webfont.svg#playregular') format('svg');
+	url('../fonts/Play-Regular-webfont.woff') format('woff'),
+	url('../fonts/Play-Regular-webfont.ttf') format('truetype'),
+	url('../fonts/Play-Regular-webfont.svg#playregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -41,9 +41,9 @@
     font-family: 'playbold';
     src: url('../fonts/Play-Bold-webfont.eot');
     src: url('../fonts/Play-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Play-Bold-webfont.woff') format('woff'),
-         url('../fonts/Play-Bold-webfont.ttf') format('truetype'),
-         url('../fonts/Play-Bold-webfont.svg#playbold') format('svg');
+	url('../fonts/Play-Bold-webfont.woff') format('woff'),
+	url('../fonts/Play-Bold-webfont.ttf') format('truetype'),
+	url('../fonts/Play-Bold-webfont.svg#playbold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -75,6 +75,8 @@ textarea:focus, input:focus, button:focus {
 	height: 100%;
 	z-index: 999;
 	display: none;
+	top: 0;
+	left: 0;
 	
 	.login-hack {
 		display: inline-block;
@@ -169,8 +171,8 @@ textarea:focus, input:focus, button:focus {
 					font-family: 'miniregular';
 					text-shadow: #000 1px 0px, #000 1px 1px, #000 0px 1px, #000 -1px 1px, #000 -1px 0px, #000 -1px -1px, #000 0px -1px, #000 1px -1px, #000 0 0 2px, #000 0 0 2px, #000 0 0 2px, #000 0 0 2px, #000 0 0 2px, #000 0 0 2px, #000 0 0 2px, #000 0 0 2px;
 					margin: 0;
-  					text-align: center;
-  					padding: 16px;
+					text-align: center;
+					padding: 16px;
 				}
 
 				.create-button {
@@ -199,7 +201,7 @@ textarea:focus, input:focus, button:focus {
 					font-family: 'miniregular';
 					background: none;
 					position: relative;
-  					top: -3px;
+					top: -3px;
 				}
 			}
 
@@ -324,7 +326,7 @@ textarea:focus, input:focus, button:focus {
 
 					.cheskbox-info {
 						position: relative;
-  						top: 7px;
+						top: 7px;
 
 					}
 
@@ -333,9 +335,9 @@ textarea:focus, input:focus, button:focus {
 						position: relative;
 						right: 0px;
 						top: -18px;
-  						color: #fff;
-  						display: block;
-  						text-decoration: none;
+						color: #fff;
+						display: block;
+						text-decoration: none;
 						text-shadow: #000 1px 0px, #000 1px 1px, #000 0px 1px, #000 -1px 1px, #000 -1px 0px, #000 -1px -1px, #000 0px -1px, #000 1px -1px, #000 0 0 2px, #000 0 0 2px, #000 0 0 2px, #000 0 0 2px, #000 0 0 2px, #000 0 0 2px, #000 0 0 2px, #000 0 0 2px;
 						&:hover {
 							color: #7d9ec5;
@@ -440,7 +442,7 @@ textarea:focus, input:focus, button:focus {
 			h3 {
 				display: block;
 				margin: 3px 0 0 145px;
-  				width: 251px;
+				width: 251px;
 				height: 33px;
 				line-height: 33px;
 				font-size: 18px;
@@ -544,7 +546,7 @@ textarea:focus, input:focus, button:focus {
 
 						a {
 							top: 10px;
-  							left: 60px;
+							left: 60px;
 						}
 					}
 
@@ -563,81 +565,81 @@ textarea:focus, input:focus, button:focus {
 
 				.success {
 
-  					h3 {
-  						font-size: 23px;
-  						margin: 0 0 30px 0;
-  						color: #f0f1f1;
-  						text-shadow: #000 1px 0px,
-  						#000 1px 1px,
-  						#000 0px 1px,
-  						#000 -1px 1px,
-  						#000 -1px 0px,
-  						#000 -1px -1px,
-  						#000 0px -1px,
-  						#000 1px -1px,
-  						#000 0 0 3px,
-  						#000 0 0 3px,
-  						#000 0 0 3px,
-  						#000 0 0 3px,
-  						#000 0 0 3px,
-  						#000 0 0 3px, 
-  						#000 0 0 3px,
-  						#000 0 0 3px;
-  						font-family: 'miniregular';
-  						text-align: center;
+					h3 {
+						font-size: 23px;
+						margin: 0 0 30px 0;
+						color: #f0f1f1;
+						text-shadow: #000 1px 0px,
+						#000 1px 1px,
+						#000 0px 1px,
+						#000 -1px 1px,
+						#000 -1px 0px,
+						#000 -1px -1px,
+						#000 0px -1px,
+						#000 1px -1px,
+						#000 0 0 3px,
+						#000 0 0 3px,
+						#000 0 0 3px,
+						#000 0 0 3px,
+						#000 0 0 3px,
+						#000 0 0 3px, 
+						#000 0 0 3px,
+						#000 0 0 3px;
+						font-family: 'miniregular';
+						text-align: center;
 
-  						span {
-  							color: #cbcdce;
-  							width: 240px;
+						span {
+							color: #cbcdce;
+							width: 240px;
 							display: block;
 							margin: -10px auto;
-  						}
-  					}
+						}
+					}
 
-  					.congratulation, .verification {
-  						color: #98b0ce;
-  						text-align: center;
-  						text-shadow: #000 1px 0px,
-  						#000 1px 1px,
-  						#000 0px 1px,
-  						#000 -1px 1px,
-  						#000 -1px 0px,
-  						#000 -1px -1px,
-  						#000 0px -1px,
-  						#000 1px -1px,
-  						#000 0 0 2px,
-  						#000 0 0 2px,
-  						#000 0 0 2px,
-  						#000 0 0 2px,
-  						#000 0 0 2px,
-  						#000 0 0 2px,
-  						#000 0 0 2px,
-  						#000 0 0 2px;
-  						font-size: 18px;
-  						margin-bottom: 18px;
+					.congratulation, .verification {
+						color: #98b0ce;
+						text-align: center;
+						text-shadow: #000 1px 0px,
+						#000 1px 1px,
+						#000 0px 1px,
+						#000 -1px 1px,
+						#000 -1px 0px,
+						#000 -1px -1px,
+						#000 0px -1px,
+						#000 1px -1px,
+						#000 0 0 2px,
+						#000 0 0 2px,
+						#000 0 0 2px,
+						#000 0 0 2px,
+						#000 0 0 2px,
+						#000 0 0 2px,
+						#000 0 0 2px,
+						#000 0 0 2px;
+						font-size: 18px;
+						margin-bottom: 18px;
 
-  						a {
-  							color: #ffca00;
-  							text-decoration: none;
+						a {
+							color: #ffca00;
+							text-decoration: none;
 
-  							&:hover {
-  								text-decoration: underline;
-  							}
-  						}
-  					}
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+					}
 
-  					.verification {
-  							margin-left: -5px;
-  					}
+					.verification {
+							margin-left: -5px;
+					}
 
-  					.congratulation {
-  						margin-bottom: 30px;
+					.congratulation {
+						margin-bottom: 30px;
 
-  						a {
-  							font-size: 23px;
-  						}
-  					}
-  				}
+						a {
+							font-size: 23px;
+						}
+					}
+				}
 
 				&:last-child {
 					border-bottom: none;
@@ -666,8 +668,8 @@ textarea:focus, input:focus, button:focus {
 					#000 0 0 2px,
 					#000 0 0 2px;
 					margin: 0;
-  					text-align: center;
-  					padding: 16px;
+					text-align: center;
+					padding: 16px;
 				}
 
 				.create-button {
@@ -696,9 +698,9 @@ textarea:focus, input:focus, button:focus {
 						font-family: 'miniregular';
 						background: none;
 						position: relative;
-	  					top: -3px;
-	  				}
-  				
+						top: -3px;
+					}
+				
 			}
 
 				.social-panel {
@@ -857,7 +859,7 @@ textarea:focus, input:focus, button:focus {
 
 					.cheskbox-info {
 						position: relative;
-  						top: 7px;
+						top: 7px;
 
 					}
 
@@ -866,9 +868,9 @@ textarea:focus, input:focus, button:focus {
 						position: relative;
 						right: 0px;
 						top: -18px;
-  						color: #fff;
-  						display: block;
-  						text-decoration: none;
+						color: #fff;
+						display: block;
+						text-decoration: none;
 						text-shadow:
 						#000 1px 0px,
 						#000 1px 1px,
@@ -1015,6 +1017,7 @@ textarea:focus, input:focus, button:focus {
 
 .header {
 	height: 355px;
+	position: relative;
 
 	.main-menu {
 		display: block;
@@ -1029,12 +1032,12 @@ textarea:focus, input:focus, button:focus {
 			content: '';
 			position: absolute;
 			display: block;
-			width: 968px;
+			width: 954px;
 			height: 46px;
 			top: -5px;
-  			left: 17px;
-  			box-shadow: 0px 21px 55px 13px rgba(0, 0, 0, 0.75);
-  			background: rgba(0, 0, 0, 0.75);
+			left: 17px;
+			box-shadow: 0px 21px 55px 13px rgba(0, 0, 0, 0.75);
+			background: rgba(0, 0, 0, 0.75);
 		}
 
 		li {
@@ -1066,9 +1069,9 @@ textarea:focus, input:focus, button:focus {
 			}
 
 			a {
-  				top: 15px;
-  				left: 60px;
-  				font-size: 21px;
+				top: 15px;
+				left: 60px;
+				font-size: 21px;
 			}
 
 			&:hover a, &.active a {
@@ -1091,8 +1094,8 @@ textarea:focus, input:focus, button:focus {
 			}
 
 			a {
-  				top: 10px;
-  				left: 35px;
+				top: 10px;
+				left: 35px;
 			}
 
 			&:hover a, &.active a {
@@ -1115,8 +1118,8 @@ textarea:focus, input:focus, button:focus {
 			}
 
 			a {
-  				top: 10px;
-  				left: 35px;
+				top: 10px;
+				left: 35px;
 			}
 
 			&:hover a, &.active a {
@@ -1139,8 +1142,8 @@ textarea:focus, input:focus, button:focus {
 			}
 
 			a {
-  				top: 10px;
-  				left: 35px;
+				top: 10px;
+				left: 35px;
 			}
 
 			&:hover a, &.active a {
@@ -1160,9 +1163,9 @@ textarea:focus, input:focus, button:focus {
 			}
 
 			a {
-  				top: 15px;
-  				left: 60px;
-  				font-size: 21px;
+				top: 15px;
+				left: 60px;
+				font-size: 21px;
 			}
 
 		}
@@ -1183,6 +1186,50 @@ textarea:focus, input:focus, button:focus {
 		height: 128px;
 		margin: 0 auto;
 		background: url(../images/bg-play.png);
+	}
+
+	.language-panel {
+		width: 106px;
+		height: 30px;
+		position: absolute;
+		background: url(../images/bg-language.png);
+		bottom: -6px;
+
+		.ui-selectmenu-button {
+			width: 93px !important;
+			height: 22px;
+			border: none;
+			line-height: 19px;
+			top: 2px;
+			left: 2px;
+			border-radius: 0px;
+
+			.ui-icon-triangle-1-s {
+				background: url(../images/bg-select.png);
+				width: 23px;
+				height: 22px;
+				top: 8px;
+				right: 0px;
+			}
+
+			.ui-selectmenu-text {
+				font-size: 16px;
+				font-family: 'miniregular';
+				color: #000;
+				line-height: 22px;
+				padding: 0px;
+				padding-left: 25px !important;
+				margin: 0px;
+				background: #62b0ff;
+				background: -moz-linear-gradient(top, #62b0ff 0%, #3982cf 100%);
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#62b0ff), color-stop(100%,#3982cf));
+				background: -webkit-linear-gradient(top, #62b0ff 0%,#3982cf 100%);
+				background: -o-linear-gradient(top, #62b0ff 0%,#3982cf 100%);
+				background: -ms-linear-gradient(top, #62b0ff 0%,#3982cf 100%);
+				background: linear-gradient(to bottom, #62b0ff 0%,#3982cf 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#62b0ff', endColorstr='#3982cf',GradientType=0 );
+			}
+		}
 	}
 }
 
@@ -1274,53 +1321,10 @@ textarea:focus, input:focus, button:focus {
 
 .column-left {
 	width: 707px;
+	min-height: 900px;
 	float: left;
 	position: relative;
 	z-index: 1;
-
-	.language-panel {
-		width: 106px;
-		height: 30px;
-		position: absolute;
-		background: url(../images/bg-language.png);
-		top: -30px;
-
-		.ui-selectmenu-button {
-			width: 93px !important;
-			height: 22px;
-			border: none;
-			line-height: 19px;
-			top: 2px;
-			left: 2px;
-			border-radius: 0px;
-
-			.ui-icon-triangle-1-s {
-				background: url(../images/bg-select.png);
-				width: 23px;
-				height: 22px;
-				top: 8px;
-  				right: 0px;
-			}
-
-			.ui-selectmenu-text {
-				font-size: 16px;
-				font-family: 'miniregular';
-				color: #000;
-				line-height: 22px;
-				padding: 0px;
-				padding-left: 25px !important;
-				margin: 0px;
-				background: #62b0ff;
-				background: -moz-linear-gradient(top, #62b0ff 0%, #3982cf 100%);
-				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#62b0ff), color-stop(100%,#3982cf));
-				background: -webkit-linear-gradient(top, #62b0ff 0%,#3982cf 100%);
-				background: -o-linear-gradient(top, #62b0ff 0%,#3982cf 100%);
-				background: -ms-linear-gradient(top, #62b0ff 0%,#3982cf 100%);
-				background: linear-gradient(to bottom, #62b0ff 0%,#3982cf 100%);
-				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#62b0ff', endColorstr='#3982cf',GradientType=0 );
-			}
-		}
-	}
 
 	.main-slider-wrapper {
 		width: 715px;
@@ -1352,16 +1356,30 @@ textarea:focus, input:focus, button:focus {
 			}
 
 		.main-fotorana__item {
+
 			iframe {
-				width: 100%;
+				width: 620px !important;
+				height: 360px !importantr;
+			}
+
+			a {
+				display: block;
+				width: 620px;
 				height: 360px;
+				
+				div {
+					width: 100%;
+					height: 100%;
+					background-position: center center;
+					background-size: contain;
+				}
 			}
 		}
 
 		.fotorama__wrap {
 
 			.fotorama__stage{
-				overflow: visible;
+				overflow: block;
 			}
 
 
@@ -1401,20 +1419,20 @@ textarea:focus, input:focus, button:focus {
 
 				.fotorama__dot {
 					border-radius: 0px;
-  					border: 2px solid #1a457e;
-  					width: 8px;
-  					height: 8px;
+					border: 2px solid #1a457e;
+					width: 8px;
+					height: 8px;
 				}
 
 				.fotorama__active {
 
 					.fotorama__dot {
 					border-radius: 0px;
-  					border: 2px solid #4081d0;
-  					background: #4081d0;
-  					width: 8px;
-  					height: 8px;
-  					}
+					border: 2px solid #4081d0;
+					background: #4081d0;
+					width: 8px;
+					height: 8px;
+					}
 				}
 			}
 		}
@@ -1447,13 +1465,13 @@ textarea:focus, input:focus, button:focus {
 			font-size: 14px;
 			font-family: 'playregular';
 			right: 40px;
-  			top: -5px;
-  			color: #bbc6dc;
-  			text-decoration: none;
+			top: -5px;
+			color: #bbc6dc;
+			text-decoration: none;
 
-  			&:hover {
-  				text-decoration: underline;
-  			}
+			&:hover {
+				text-decoration: underline;
+			}
 
 			&:after {
 				content: '';
@@ -1471,12 +1489,13 @@ textarea:focus, input:focus, button:focus {
 	.news-feed {
 		width: 693px;
 		border: 3px #000 solid;
-  		border-top: none;
-  		border-bottom: none;
-  		position: relative;
-  		left: 12px;
+		border-top: none;
+		border-bottom: none;
+		position: relative;
+		left: 12px;
 
 		.news-block {
+			overflow: hidden;
 			padding: 20px;
 			box-sizing: border-box;
 			border-bottom: 9px #00142c solid;
@@ -1501,6 +1520,20 @@ textarea:focus, input:focus, button:focus {
 					text-decoration: underline;
 					color: #ffca00;
 				}
+			}
+
+			a.image-prev {
+
+				background-image: url(../images/post-image-big.jpg);
+				display: block;
+				width: 190px;
+				float: left;
+				margin: 10px 20px 0 0;
+				border: 3px #144581 solid;
+				box-shadow: 6px 6px 0px 0px #00142c;
+				height: 140px;
+				background-size: 200px;
+				background-position: center center;
 			}
 
 			h3 {
@@ -1541,16 +1574,16 @@ textarea:focus, input:focus, button:focus {
 			.readmore {
 				color: #558acb;
 				position: absolute;
-  				right: 30px;
-  				bottom: 20px;
-  				font-family: 'playregular';
-  				cursor: pointer;
+				right: 30px;
+				bottom: 20px;
+				font-family: 'playregular';
+				cursor: pointer;
 
-  				&:hover {
-  					text-decoration: underline;
-  				}
+				&:hover {
+					text-decoration: underline;
+				}
 
-  				&:after {
+				&:after {
 				content: '';
 				display: block;
 				width: 9px;
@@ -1565,21 +1598,12 @@ textarea:focus, input:focus, button:focus {
 	}
 }
 
-.button-registration  {
-		width: 314px;
-		height: 96px;
-		background: url(../images/button-registration.png);
-		display: block;
-		position: absolute;
-		top: -30px;
-		left: -10px;
-	}
-
 .column-right {
 	position: relative;
 	width: 258px;
 	float: left;
 	z-index: 0;
+	min-height: 900px;
 
 	&:after {
 		content: "";
@@ -1589,17 +1613,17 @@ textarea:focus, input:focus, button:focus {
 		border-right: 3px #000 solid;
 		position: absolute;
 		right: -3px;
-  		z-index: -1;
+		z-index: -1;
 	}
 
 	.social {
 		width: 269px;
 		height: 119px;
 		position: relative;
-  		top: 55px;
-  		background: url(../images/bg-social.png);
-  		background-repeat: no-repeat;
-  		background-position: 0px 42px;
+		top: 55px;
+		background: url(../images/bg-social.png);
+		background-repeat: no-repeat;
+		background-position: 0px 42px;
 
 		h3 {
 			display: block;
@@ -1609,8 +1633,8 @@ textarea:focus, input:focus, button:focus {
 			font-size: 16px;
 			font-family: 'miniregular';
 			box-sizing: border-box;
-  			padding: 10px 0 0 25px;
-  			margin: 0;
+			padding: 10px 0 0 25px;
+			margin: 0;
 
 		}
 
@@ -1669,8 +1693,8 @@ textarea:focus, input:focus, button:focus {
 		position: relative;
 		top: 48px;
 		background: url(../images/bg-store.png);
-  		background-repeat: no-repeat;
-  		background-position: 0px 42px;
+		background-repeat: no-repeat;
+		background-position: 0px 42px;
 
 		h3 {
 			display: block;
@@ -1680,8 +1704,8 @@ textarea:focus, input:focus, button:focus {
 			font-size: 16px;
 			font-family: 'miniregular';
 			box-sizing: border-box;
-  			padding: 10px 0 0 22px;
-  			margin: 0;
+			padding: 10px 0 0 22px;
+			margin: 0;
 		}
 
 		p {
@@ -1697,17 +1721,10 @@ textarea:focus, input:focus, button:focus {
 			display: block;
 			width: 230px;
 			height: 55px;
-			margin: 10px 0 25px 20px;
+			margin: 10px 0 10px 20px;
 			background-repeat: no-repeat;
 			text-decoration: none;
 			position: relative;
-			box-shadow:
-			-1px 0px rgb(13,57,85), -1px 1px rgb(10,34,64),
-			-2px 1px rgb(12,56,84), -2px 2px rgb(9,33,63),
-			-3px 2px rgb(11,55,83), -3px 3px rgb(8,32,62),
-			-4px 3px rgb(10,54,82), -4px 4px rgb(7,31,61),
-			-5px 4px rgb(9,53,81), -5px 5px rgb(6,30,60),
-			-6px 5px rgb(8,52,80), -6px 6px rgb(5,29,59);
 
 			span {
 				color: #0a2240;
@@ -1741,7 +1758,9 @@ textarea:focus, input:focus, button:focus {
 				background-position: 48px 5px;
 
 				span {
-					padding: 6px 0px 0px 80px;
+					position: absolute;
+					top: 7px;
+					left: 85px;
 				}
 
 				/*&:before {
@@ -1751,7 +1770,7 @@ textarea:focus, input:focus, button:focus {
 					width: 67px;
 					height: 84px;
 					left: -6px;
-	  				bottom: -17px;
+					bottom: -17px;
 					background: url(../images/bg-pers1.png);
 				}
 
@@ -1762,7 +1781,7 @@ textarea:focus, input:focus, button:focus {
 					width: 68px;
 					height: 67px;
 					right: -10px;
-	  				bottom: 0px;
+					bottom: 0px;
 					background: url(../images/bg-pers2.png);
 				}*/
 			}
@@ -1786,28 +1805,29 @@ textarea:focus, input:focus, button:focus {
 
 				display: block;
 				width: 240px;
-				height: 77px;
+				height: 75px;
 				display: block;
-				background: #666;
 				background-image: url(../images/anim-app-store.png);
 				background-repeat: no-repeat;
 
 				/*background-color: #13c283;
 				background-image: url(../images/bg-app-store.png);
-				background-position: 53px 10px;
+				background-position: 53px 10px;*/
 
 				span {
-					padding: 10px 0px 0px 80px;
+					position: absolute;
+					top: 22px;
+					left: 85px;
 				}
 
-				&:before {
+				/*&:before {
 					content: '';
 					position: absolute;
 					display: block;
 					width: 66px;
 					height: 75px;
 					left: -3px;
-	  				bottom: -11px;
+					bottom: -11px;
 					background: url(../images/bg-pers3.png);
 				}
 
@@ -1818,7 +1838,7 @@ textarea:focus, input:focus, button:focus {
 					width: 65px;
 					height: 77px;
 					right: -6px;
-	  				bottom: -13px;
+					bottom: -13px;
 					background: url(../images/bg-pers4.png);
 				}*/
 			}
@@ -1831,15 +1851,15 @@ textarea:focus, input:focus, button:focus {
 		position: relative;
 		top: 35px;
 		background: url(../images/bg-video.png);
-  		background-repeat: no-repeat;
-  		background-position: 0px 42px;
+		background-repeat: no-repeat;
+		background-position: 0px 42px;
+		
+		a {
+			text-decoration: none;
+			cursor: pointer;
+			color: #000;
 
-  		a {
-  			text-decoration: none;
-  			cursor: pointer;
-  			color: #000;
-
-  			h3 {
+			h3 {
 			display: block;
 			width: 269px;
 			height: 42px;
@@ -1847,25 +1867,25 @@ textarea:focus, input:focus, button:focus {
 			font-size: 16px;
 			font-family: 'miniregular';
 			box-sizing: border-box;
-  			padding: 10px 0 0 105px;
-  			margin: 0 0 0 3px;
+			padding: 10px 0 0 105px;
+			margin: 0 0 0 3px;
 			}
 
-  			&:hover {
-  				text-decoration: underline;
-  			}
+			&:hover {
+				text-decoration: underline;
+			}
 
-  			img {
-  				width: 325px;
+			img {
+				width: 325px;
 				position: relative;
 				margin: 0 auto;
 				left: -40px;
-  			}
-  		}
+			}
+		}
 
-  		.fullscreen {
-  			display: block;
-  		}
+		.fullscreen {
+			display: block;
+		}
 
 		.arrow-left {
 			width: 26px;
@@ -1898,10 +1918,10 @@ textarea:focus, input:focus, button:focus {
 			height: 187px !important;
 
 		    .fotorama__stage__shaft {
-		    	position: relative;
-		    	z-index: 1000 !important;
+		  	position: relative;
+		  	z-index: 1000 !important;
 
-		    	&:before {
+		  	&:before {
 				content: '';
 				display: block;
 				position: absolute;
@@ -1909,22 +1929,41 @@ textarea:focus, input:focus, button:focus {
 				height: 183px;
 				right: 0;
 				left: 0;
-				z-index: 1000;
 				-webkit-box-shadow: inset -6px 6px 0px 0px rgba(0,0,0,0.65);
 				-moz-box-shadow: inset -6px 6px 0px 0px rgba(0,0,0,0.65);
 				box-shadow: inset -6px 6px 0px 0px rgba(0,0,0,0.65);
 				z-index: 1001;
+				pointer-events: none;
 				}
 		    }
 
 			iframe {
-				height: 184px;
+				pointer-events: none;
 			}
 
 		}	
 
 		.fotorama__nav-wrap {
 				display: none;
+		}
+
+		.video-fotorama__item {
+			position: relative;
+
+			a {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				z-index: 1005;
+				width: 246px;
+				height: 184px;
+			}
+
+			#embed {
+				display: none;
+				// width: 100%;
+				// height: 100%
+			}
 		}
 	}
 
@@ -1934,24 +1973,24 @@ textarea:focus, input:focus, button:focus {
 		position: relative;
 		top: 28px;
 		background: url(../images/bg-screensoot.png);
-  		background-repeat: no-repeat;
-  		background-position: 2px 42px;
+		background-repeat: no-repeat;
+		background-position: 2px 42px;
 
-  		a {
-  			text-decoration: none;
-  			cursor: pointer;
-  			color: #000;
-  			display: visible !important;
+		a {
+			text-decoration: none;
+			cursor: pointer;
+			color: #000;
+			display: block !important;
 
-  			img {
-  				display: visible !important;
-  			}
+			img {
+				display: block !important;
+			}
 
-  			&:hover {
-  				text-decoration: underline;
-  			}
+			&:hover {
+				text-decoration: underline;
+			}
 
-  			h3 {
+			h3 {
 			display: block;
 			width: 269px;
 			height: 42px;
@@ -1959,10 +1998,10 @@ textarea:focus, input:focus, button:focus {
 			font-size: 16px;
 			font-family: 'miniregular';
 			box-sizing: border-box;
-  			  padding: 10px 0 0 83px;
-  			margin: 0 0 0 3px;
+			  padding: 10px 0 0 83px;
+			margin: 0 0 0 3px;
 			}
-  		}
+		}
 
 		.arrow-left {
 			width: 26px;
@@ -1994,10 +2033,10 @@ textarea:focus, input:focus, button:focus {
 			height: 187px !important;
 
 			.fotorama__stage__shaft {
-		    	position: relative;
-		    	z-index: 1000 !important;
+		  	position: relative;
+		  	z-index: 1000 !important;
 
-		    	&:before {
+		  	&:before {
 				content: '';
 				display: block;
 				position: absolute;
@@ -2010,6 +2049,7 @@ textarea:focus, input:focus, button:focus {
 				-moz-box-shadow: inset -6px 6px 0px 0px rgba(0,0,0,0.65);
 				box-shadow: inset -6px 6px 0px 0px rgba(0,0,0,0.65);
 				z-index: 1001;
+				pointer-events: none;
 				}
 		    }
 		}	
@@ -2035,7 +2075,7 @@ textarea:focus, input:focus, button:focus {
     left: -10px;
 
     .help {
-    	width: 185px !important;
+  	width: 185px !important;
     }
 
 	.footer-block {
@@ -2060,7 +2100,7 @@ textarea:focus, input:focus, button:focus {
 				width: 8px;
 				height: 8px;
 				top: 4px;
-  				left: -15px;
+				left: -15px;
 			}
 		}
 
@@ -2231,19 +2271,68 @@ textarea:focus, input:focus, button:focus {
 	width: 1009px;
 	height: 68px;
 	position: relative;
-	background-image: url(../images/local-menu-fake-holder.png);
-	left: -19px;
+	left: -7px;
     margin-top: -9px;
     display: block;
     background-repeat: no-repeat;
     position: relative;
-    background-color: #00142c;
 
-    .button-registration {
-    	top: -17px;
-  		right: -19px;
-  		left: auto;
+    ul {
+    	li {
+			display: inline-block;
+			width: 100px;
+			background: #10AA9B;
+    	}
+
+    	li.registration-button {
+			right: -19px;
+			left: auto;
+			width: 314px;
+			height: 96px;
+			background: url(../images/button-registration.png);
+			display: block;
+			position: absolute;
+			top: -30px;
+			cursor: pointer;
+
+			a {
+				text-decoration: none;
+			}
+    	}
     }
+}
+
+.button-registration {
+	top: -17px;
+	right: -19px;
+	left: auto;
+	width: 314px;
+	height: 96px;
+	background: url(../images/button-registration.png);
+	display: block;
+	position: absolute;
+	top: -30px;
+	left: -10px;
+
+	a {
+		text-decoration: none;
+
+		span {
+			  display: block;
+			position: relative;
+			top: 27px;
+			left: 66px;
+			font-family: 'miniregular';
+			color: #000;
+			font-size: 22px;
+			letter-spacing: 1px;
+		}
+	}
+}
+
+iframe {
+	min-width: 800px;
+	min-height: 600px;
 }
 
 .registration-head {
@@ -2279,6 +2368,8 @@ textarea:focus, input:focus, button:focus {
     border-right: 3px #000 solid;
 	margin: 0 auto;
 	overflow: hidden;
+	width: 950px;
+	left: -10px;
 
 	.registration-page-block {
 		background: #092951;
@@ -2544,22 +2635,22 @@ textarea:focus, input:focus, button:focus {
 			#000 0 0 2px;
 			font-family: 'miniregular';
 			margin: 0px 0px;
-  			line-height: 67px;
+			line-height: 67px;
 		}
 
 		.watch-all {
 			display: block;
 			float: right;
 			position: relative;
-  			top: 26px;
-  			color: #fff;
-  			text-decoration: none;
-  			font-family: 'playregular';
-  			margin-right: 30px;
+			top: 26px;
+			color: #fff;
+			text-decoration: none;
+			font-family: 'playregular';
+			margin-right: 30px;
 
-	  		&:hover {
-	  				text-decoration: underline;
-	  		}
+			&:hover {
+					text-decoration: underline;
+			}
 
 			&:after {
 					content: '';
@@ -2578,6 +2669,12 @@ textarea:focus, input:focus, button:focus {
 	.video-gallery, .screenshoot-gallery {
 		padding: 0 32px 15px;
 		overflow: hidden;
+
+		#embed {
+				display: none;
+				// width: 100%;
+				// height: 100%
+		}
 
 		.gallery-row {
 			padding: 0;

@@ -91,8 +91,8 @@ block content
 				.column-left
 					.language-panel
 						select.styled-select
-							option rus
-							option(selected="selected") eng
+							option(data-url="/ru/") rus
+							option(selected="selected" data-url="/en/") eng
 
 					.main-slider-wrapper
 						.arrow-left.js-main-left
@@ -132,8 +132,7 @@ block content
 							p.info
 								span.date 13.05.2005
 								span.time 10:34
-							a.fancybox(href="./images/post-image-big.jpg")
-								img(src="./images/post-image.jpg")
+							a.fancybox.image-prev(href="./images/post-image-big.jpg")
 							p.post Большое обновление неумолимо приближается с каждым днем. Вы еще не слышали о нем?.. Что ж, возможно, последние месяцы вы провели в бомбоубежище безо всякой связи с внешним миром: только это может послужить вам оправданием. Как бы то ни было, до обновления осталось совсем немного; самое время провести короткий инструктаж и рассказать, что ждет всех нас в ближайшем будущем.
 							a.readmore Подробнее
 

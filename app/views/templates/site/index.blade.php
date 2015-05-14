@@ -78,7 +78,7 @@ $screenshots = DicLib::loadImages($screenshots, ['image']);
                                 <div class="main-fotorana__item">
                                     @if ($slide->embed)
                                         {{ $slide->embed }}
-                                    @elseif ($slide->is_img('image')))
+                                    @elseif ($slide->is_img('image'))
                                         <a href="{{ $slide->link ?: '#' }}"><img src="{{ $slide->image->full() }}" /></a>
                                     @endif
                                 </div>
@@ -109,7 +109,7 @@ $screenshots = DicLib::loadImages($screenshots, ['image']);
                                 <span class="time">{{ $carbon->format('H:i') }}</span>
                             </p>
                             @if ($new->is_img('image'))
-                                <a href="{{ $new->image->full() }}" class="fancybox"><img src="{{ $new->image->thumb() }}"></a>
+                                <a href="{{ $new->image->full() }}" class="fancybox image-prev" style="background-image:url({{ $new->image->thumb() }})"></a>
                             @endif
                             <p class="post">{{ $new->preview }}</p>
                             @if ($new->preview)
@@ -124,7 +124,7 @@ $screenshots = DicLib::loadImages($screenshots, ['image']);
 
         <div class="column-right">
 
-            <a href="#" class="button-registration"></a>
+            <a href="#" class="button-registration"><span>Регистрация</span></a>
 
             @if (is_collection($sidebar))
                 <?
@@ -213,10 +213,10 @@ class PixelGunSidebar {
                                 continue;
                             ?>
                             <div class="video-fotorama__item">
-                                <a href="#" rel="video" class="fancybox fancybox.iframe">
+                                <a href="#embed" rel="video" class="fancybox">
                                     <img src="{{ $tmp->is_img('image') ? $tmp->image->thumb() : '' }}">
                                 </a>
-                                <div class="embed">
+                                <div id="embed">
                                     {{ $tmp->embed }}
                                 </div>
                             </div>
