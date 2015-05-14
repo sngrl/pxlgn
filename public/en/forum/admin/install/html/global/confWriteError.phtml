@@ -1,0 +1,15 @@
+<ips:template parameters="$form, $path" />
+<div class='ipsMessage ipsMessage_error'>
+	Cannot write the '{$path}/conf_global.php' file
+</div>
+{{if ! file_exists( $path . '/conf_global.php')}}
+<p>
+Please create a file in {$path} called conf_global.php.
+<br />Copy and paste the contents of the box above into this new file and CHMOD to 0777.
+</p>
+{{else}}
+<p>
+Please CHMOD to conf_global.php 0777.
+</p>
+{{endif}}
+{$form|raw}
