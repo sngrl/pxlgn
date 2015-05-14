@@ -6,6 +6,9 @@ Options -Indexes
 
     RewriteEngine on
 
+    RewriteCond %{REQUEST_URI} ^/en/forum [NC]
+	RewriteRule ^en/forum/(.*?) /public/common/forum/en/forum/$1 [L]
+
 	# project.dev.grapheme.ru
     #RewriteCond %{DOCUMENT_ROOT}/public -d
 	RewriteRule (.*) /public/$1 [L]
