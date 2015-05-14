@@ -7,7 +7,7 @@ Options -Indexes
     RewriteEngine on
 
     RewriteCond %{REQUEST_URI} ^/en/forum [NC]
-	RewriteRule ^(en|ru)/forum/(.*?) /public/common/$1/forum/$2 [L]
+	RewriteRule ^(en|ru)/forum/(.*) /public/common/$1/forum/$2 [L]
 
 	# project.dev.grapheme.ru
     #RewriteCond %{DOCUMENT_ROOT}/public -d
