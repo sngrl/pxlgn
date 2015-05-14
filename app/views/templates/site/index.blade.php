@@ -56,6 +56,7 @@ $screenshots = DicLib::loadImages($screenshots, ['image']);
 
 $options = Dic::valuesBySlug('options', NULL, []);
 $options = Dic::makeLists($options, NULL, 'name', 'slug');
+Config::set('temp.options', $options);
 #Helper::tad($options);
 ?>
 
@@ -95,7 +96,9 @@ $options = Dic::makeLists($options, NULL, 'name', 'slug');
             @if (is_collection($news))
                 <div class="news-head-panel">
                     <h3>{{ trans("interface.menu.news") }}</h3>
-                    <a href="{{ URL::route('page', ['slug' => pageslug('news')]) }}" class="all-news">{{ trans("interface.tpl.all_news") }}</a>
+                    @if (isset($options['all_news_link']) && $options['all_news_link'])
+                        <a href="{{ strtr($options['all_news_link'], ['%locale%' => Config::get('app.locale')]) }}" class="all-news">{{ trans("interface.tpl.all_news") }}</a>
+                    @endif
                 </div>
                 <div class="news-feed">
                     @foreach ($news as $new)
@@ -128,7 +131,9 @@ $options = Dic::makeLists($options, NULL, 'name', 'slug');
 
         <div class="column-right">
 
-            <a href="#" class="button-registration"><span>Регистрация</span></a>
+            @if (isset($options['show_registration_button']) && $options['show_registration_button'])
+                <a href="#" class="button-registration"><span>Регистрация</span></a>
+            @endif
 
             @if (is_collection($sidebar))
                 <?

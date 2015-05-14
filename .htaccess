@@ -6,9 +6,33 @@ Options -Indexes
 
     RewriteEngine on
 
-	# project.dev.grapheme.ru
+
+    ## Don't work
+    #RewriteCond %{REQUEST_URI} ^/public/(.*)$ [NC]
+    #RewriteRule ^public/(.*)$ http://%{HTTP_HOST}/$1 [L,R=301]
+
+
+    ## If rewrite rule pattern match with real existing directory...
     #RewriteCond %{DOCUMENT_ROOT}/public -d
+    RewriteCond %{REQUEST_URI} ^/(ru|en|de|es)$
+    RewriteRule ^ /public/index.php [L]
+
+    ## Static files
+    RewriteCond %{DOCUMENT_ROOT}/public%{REQUEST_URI} -f [OR]
+    RewriteCond %{DOCUMENT_ROOT}/public%{REQUEST_URI} -d
 	RewriteRule (.*) /public/$1 [L]
+
+    ## Dynamic
+    #RewriteCond %{DOCUMENT_ROOT}/public -d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d [OR]
+    RewriteCond %{REQUEST_URI} ^/$
+    RewriteRule ^ /public/index.php [L]
+
+    ### Old rules ###
+	## project.dev.grapheme.ru
+    #RewriteCond %{DOCUMENT_ROOT}/public -d
+	#RewriteRule (.*) /public/$1 [L]
 
 </IfModule>
 

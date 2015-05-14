@@ -6,14 +6,14 @@
 
     RewriteEngine On
 
+    ### Old rules ###
     # Redirect Trailing Slashes...
 	#RewriteRule ^(.*)/$ /$1 [L,R=301]
 
 	# project.dev.grapheme.ru
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME} !-f
-    #RewriteCond %{REQUEST_FILENAME} !^/en/forum
-    RewriteRule ^ /index.php [L]
+    #RewriteCond %{REQUEST_FILENAME} !-f
+    #RewriteCond %{REQUEST_FILENAME} !-d
+    #RewriteRule ^ /index.php [L]
 
 </IfModule>
 
