@@ -105,12 +105,16 @@ Config::set('temp.options', $options);
                         <?
                         $carbon = Carbon::createFromFormat('Y-m-d', $new->published_at);
                         #$link = URL::route('app.news_one', $new->slug);
-                        $link = '#';
+                        #$link = '#';
                         ?>
                         <div class="news-block">
-                            <a href="{{ $link }}">
+                            @if ($new->link)
+                                <a href="{{ $new->link }}">
+                                    <h3>{{ $new->title }}</h3>
+                                </a>
+                            @else
                                 <h3>{{ $new->title }}</h3>
-                            </a>
+                            @endif
                             <p class="info">
                                 <span class="date">{{ $carbon->format('d.m.Y') }}</span>
                                 <span class="time">{{ $carbon->format('H:i') }}</span>
@@ -119,8 +123,8 @@ Config::set('temp.options', $options);
                                 <a href="{{ $new->image->full() }}" class="fancybox image-prev" style="background-image:url({{ $new->image->thumb() }})"></a>
                             @endif
                             <p class="post">{{ $new->preview }}</p>
-                            @if ($new->preview)
-                                <a href="{{ $link }}" class="readmore">{{ trans("interface.tpl.read_more") }}</a>
+                            @if ($new->link)
+                                <a href="{{ $new->link }}" class="readmore">{{ trans("interface.tpl.read_more") }}</a>
                             @endif
                         </div>
                     @endforeach

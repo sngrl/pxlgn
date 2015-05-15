@@ -28,9 +28,15 @@ return array(
                 'title' => 'Анонс новости',
                 'type' => 'textarea',
             ),
+            /*
             'content' => array(
                 'title' => 'Полный текст новости',
                 'type' => 'textarea_redactor',
+            ),
+            */
+            'link' => array(
+                'title' => 'Ссылка на полный текст новости',
+                'type' => 'text',
             ),
             'image' => array(
                 'title' => 'Изображение',
