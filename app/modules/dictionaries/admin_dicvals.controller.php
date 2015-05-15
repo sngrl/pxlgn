@@ -399,8 +399,10 @@ class AdminDicvalsController extends BaseController {
             $input['slug'] = Helper::translit($input['name']);
         */
 
-        if (!@$input['name'])
+        if (!isset($input['name']) || !mb_strlen($input['name']))
             $input['name'] = '';
+
+        $input['name'] = trim($input['name']);
 
         /**
          * Генерация системного имени в зависимости от настроек словаря
