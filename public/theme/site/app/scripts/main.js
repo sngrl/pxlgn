@@ -97,7 +97,7 @@ $(function() {
     $( "#check" ).button();
     $( "#format" ).buttonset();
 
-    $(".button-registration").click(function(e){
+    $(".button-registration, registration-button").click(function(e){
     	
         $(".login-form-background").fadeIn(700);
         e.preventDefault();

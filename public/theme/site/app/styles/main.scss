@@ -1667,6 +1667,8 @@ textarea:focus, input:focus, button:focus {
 		background: url(../images/bg-social.png);
 		background-repeat: no-repeat;
 		background-position: 0px 42px;
+		margin-top: -10px;
+		margin-bottom: 3px;
 
 		h3 {
 			display: block;
@@ -1806,7 +1808,7 @@ textarea:focus, input:focus, button:focus {
 					left: 85px;
 				}
 
-				/*&:before {
+				&:before {
 					content: '';
 					position: absolute;
 					display: block;
@@ -1826,7 +1828,7 @@ textarea:focus, input:focus, button:focus {
 					right: -10px;
 					bottom: 0px;
 					background: url(../images/bg-pers2.png);
-				}*/
+				}
 			}
 		}
 
@@ -1859,7 +1861,7 @@ textarea:focus, input:focus, button:focus {
 
 				span {
 					position: absolute;
-					top: 22px;
+					top: 10px;
 					left: 85px;
 				}
 
