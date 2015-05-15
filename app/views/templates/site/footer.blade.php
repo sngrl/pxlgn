@@ -28,7 +28,7 @@
     <div class="login-hack"></div>
     <div class="login-form">
         <div class="form-head">
-            <h3>Регистрация</h3>
+            <h3>{{ trans("interface.menu.registration") }}</h3>
             <div class="button-wrapper">
                 <button class="close-button"></button>
             </div>
@@ -38,19 +38,25 @@
                 <div class="form-block no-gradient">
                     <form id="log-in-form">
                         <div class="main-fields">
-                            <p class="info">E-mail</p>
+                            <p class="info">
+                                {{ trans("interface.tpl.email") }}
+                            </p>
                             <div class="e-mail">
                                 <input type="text" required name="email" form="log-in-form">
                                 <p class="warning">E-mail уже занят!</p>
                             </div>
-                            <p class="info">Пароль</p>
+                            <p class="info">
+                                {{ trans("interface.tpl.password") }}
+                            </p>
                             <div class="pass">
                                 <input type="password" required name="password" form="log-in-form">
                                 <button class="spice"></button>
                                 <p class="warning">Слишком простой пароль</p>
                             </div>
                         </div>
-                        <p class="info">Введите код</p>
+                        <p class="info">
+                            {{ trans("interface.tpl.enter_the_code") }}
+                        </p>
                         <div class="capcha">
                             <input type="text" required name="capcha" form="log-in-form" class="capcha-field">
                             <div class="capcha-image">
@@ -59,12 +65,16 @@
                             <p class="warning">Неверный код!</p>
                         </div>
                         <div class="log-in-button-2">
-                            <button type="submit"></button>
+                            <button type="submit">
+                                {{ trans("interface.tpl.create_account") }}
+                            </button>
                         </div>
                     </form>
                 </div>
                 <div class="form-block">
-                    <h3 class="form-block-head">Войти с помощью соцсетей:</h3>
+                    <h3 class="form-block-head">
+                        {{ trans("interface.tpl.enter_via_social") }}
+                    </h3>
                     <div class="social-panel"><a href="#" class="vk"></a><a href="#" class="fb"></a><a href="#" class="tw"></a></div>
                 </div>
             </div>
@@ -72,7 +82,12 @@
                 <div class="form-block">
                     <div class="success">
                         <h3>Аккаунт <span>успешно создан</span></h3>
-                        <p class="congratulation">Поздравляем! Вы зарегистрированы в игре  под именем <a href="#">Werewombat</a>.</p>
+                        <p class="congratulation">
+                            {{ strtr(trans("interface.tpl.registration_success"), [
+                                '%link%' => isset($link) ? $link : '#',
+                                '%nickname%' => isset($nickname) ? $nickname : '&nbsp;',
+                            ]) }}
+                        </p>
                         <p class="verification"> На ваш e-mail <a href="#">werewombat15@gmail.com</a> <nobr>отправлено письмо со ссылкой. Перейдите</nobr> <nobr>по ссылке, чтобы зарегистрировать аккаунт</nobr> и получить приятный бонус в игре.</p>
                     </div>
                 </div>

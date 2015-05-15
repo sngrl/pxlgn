@@ -136,7 +136,7 @@ Config::set('temp.options', $options);
         <div class="column-right">
 
             @if (isset($options['show_registration_button']) && $options['show_registration_button'])
-                <a href="#" class="button-registration"><span>Регистрация</span></a>
+                <a href="#" class="button-registration"><span>{{ trans("interface.menu.registration") }}</span></a>
             @endif
 
             @if (is_collection($sidebar))
