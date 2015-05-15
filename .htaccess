@@ -8,6 +8,7 @@ Options -Indexes
 
     RewriteCond %{REQUEST_URI} ^/en/forum [NC]
 	RewriteRule ^(en|ru)/forum/(.*) /public/common/$1/forum/$2 [L]
+	RewriteRule ^(en|ru)/forum /$1/forum/ [L,R=301]
 
 	# project.dev.grapheme.ru
     #RewriteCond %{DOCUMENT_ROOT}/public -d
