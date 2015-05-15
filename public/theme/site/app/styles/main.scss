@@ -1566,6 +1566,7 @@ textarea:focus, input:focus, button:focus {
 			a.image-prev {
 
 				background-image: url(../images/post-image-big.jpg);
+				background-repeat: no-repeat;
 				display: block;
 				width: 190px;
 				float: left;
@@ -1659,7 +1660,7 @@ textarea:focus, input:focus, button:focus {
 	}
 
 	.social {
-		width: 269px;
+		width: 270px;
 		height: 119px;
 		position: relative;
 		// top: 55px;
@@ -1852,9 +1853,9 @@ textarea:focus, input:focus, button:focus {
 				background-image: url(../images/anim-app-store.png);
 				background-repeat: no-repeat;
 
-				/*background-color: #13c283;
+				background-color: #13c283;
 				background-image: url(../images/bg-app-store.png);
-				background-position: 53px 10px;*/
+				background-position: 53px 10px;
 
 				span {
 					position: absolute;
@@ -1885,7 +1886,7 @@ textarea:focus, input:focus, button:focus {
 					}
 				} */
 
-				/*&:before {
+				&:before {
 					content: '';
 					position: absolute;
 					display: block;
@@ -1905,7 +1906,7 @@ textarea:focus, input:focus, button:focus {
 					right: -6px;
 					bottom: -13px;
 					background: url(../images/bg-pers4.png);
-				}*/
+				}
 			}
 		}
 	}
