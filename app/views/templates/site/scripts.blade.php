@@ -5,4 +5,4 @@
 ?>
 
     {{ HTML::scriptmod(Config::get('site.theme_path').'/scripts/vendor.js') }}
-    {{ HTML::scriptmod(Config::get('site.theme_path').'/scripts/main.js') }}
+    {{ HTML::scriptmod(Config::get('site.theme_path').'/../app/scripts/main.js') }}

@@ -41,11 +41,11 @@ $video = DicLib::loadImages($video, ['image']);
                             continue;
                         ?>
                         <li class="gallery-row-holder">
-                            <a href="#" rel="video" class="gallery-block fancybox fancybox.iframe">
+                            <a href="#embed" rel="video" class="gallery-block fancybox">
                                 <div class="img-wrapper">
                                     <img src="{{ $vid->image->thumb() }}">
                                 </div>
-                                <div class="embed">
+                                <div id="embed">
                                     {{ $vid->embed }}
                                 </div>
                                 <p>{{ isset($vid->seo) && is_object($vid->seo) && $vid->seo->h1 ? $vid->seo->h1 : $vid->name }}</p>

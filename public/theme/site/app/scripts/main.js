@@ -10,6 +10,25 @@ $(function() {
     $( ".js-selectmenu" ).selectmenu().addClass('ui-hui-pizda-dzigurda');
 });
 
+// $('.app-store').mouseover(function(){
+// 	var button = $('.app-store');
+// 	var x = 25;
+//     window.setInterval(function() { 
+//         button.css("backgroundPosition", x + 'px');  
+// 		x--;   
+//     }, 1000);  
+// });
+
+$('.app-store').on('mouseover', function(){
+	$(this).removeClass('animation-reverse');
+	$(this).addClass('animation');
+}).on('mouseout', function(){
+	$(this).removeClass('animation');
+	$(this).addClass('animation-reverse');
+});
+
+
+
 //Главный слайдер
 
 var mainFotorama = function() {

@@ -1057,6 +1057,13 @@ textarea:focus, input:focus, button:focus {
 				color: #000;
 				position: relative;
 				text-transform: uppercase;
+				top: 0px;
+				left: 0px;
+				right: 0px;
+				bottom: 0px;
+				width: 100%;
+				height: 100%;
+				display: block;
 			}
 		}
 
@@ -1074,11 +1081,15 @@ textarea:focus, input:focus, button:focus {
 
 			a {
 				font-size: 21px;
-				top: 15px;
-				left: 60px;
+				
+				span {
+					position: relative;
+					top: 15px;
+					left: 60px;
+				}
 			}
 
-			&:hover a, &.active {
+			&:hover a span, &.active span {
 				top: 30px;
 			}
 		}
@@ -1089,7 +1100,7 @@ textarea:focus, input:focus, button:focus {
 			z-index: 2;
 			background: url(../images/button-about.png);
 			margin-left: -15px;
-			top: -2px;
+			top: -6px;
 
 			&:hover, &.active {
 				background: url(../images/button-active-about.png);
@@ -1098,11 +1109,15 @@ textarea:focus, input:focus, button:focus {
 			}
 
 			a {
-				top: 10px;
-				left: 35px;
+
+				span {
+					position: relative;
+					top: 12px;
+					left: 35px;
+				}
 			}
 
-			&:hover a, &.active a {
+			&:hover a span, &.active a span {
 				top: 22px;
 			}
 		}
@@ -1114,7 +1129,7 @@ textarea:focus, input:focus, button:focus {
 			background: url(../images/button-media.png);
 			/*background: url(../images/animation/button-media.png);*/
 			margin-left: -11px;
-			top: -2px;
+			top: -6px;
 
 			&:hover, &.active {
 				background: url(../images/button-active-media.png);
@@ -1123,11 +1138,15 @@ textarea:focus, input:focus, button:focus {
 			}
 
 			a {
-				top: 10px;
-				left: 35px;
+
+				span {
+					position: relative;
+					top: 14px;
+					left: 35px;
+				}
 			}
 
-			&:hover a, &.active a {
+			&:hover a span, &.active a span {
 				top: 22px;
 			}
 		}
@@ -1138,7 +1157,7 @@ textarea:focus, input:focus, button:focus {
 			z-index: 2;
 			background: url(../images/button-forum.png);
 			margin-left: -11px;
-			top: -2px;
+			top: -6px;
 
 			&:hover, &.active {
 				background: url(../images/button-active-forum.png);
@@ -1147,11 +1166,15 @@ textarea:focus, input:focus, button:focus {
 			}
 
 			a {
-				top: 10px;
-				left: 35px;
+
+				span {
+					position: relative;
+					top: 12px;
+					left: 35px;
+				}
 			}
 
-			&:hover a, &.active a {
+			&:hover a span, &.active a span {
 				top: 22px;
 			}
 		}
@@ -1168,9 +1191,13 @@ textarea:focus, input:focus, button:focus {
 			}
 
 			a {
-				top: 15px;
-				left: 60px;
-				font-size: 21px;
+
+				span {
+					position: relative;
+					top: 15px;
+					left: 60px;
+					font-size: 21px;
+				}
 			}
 
 		}
@@ -1835,6 +1862,29 @@ textarea:focus, input:focus, button:focus {
 					left: 85px;
 				}
 
+				/* .animation {
+					animation-name: appstore;
+					animation-duration: 1s;
+					animation-timing-function: ease;
+					animation-iteration-count: 1;	
+					animation-direction: normal;
+					animation-delay: 0;
+					animation-play-state: running;
+					animation-fill-mode: forwards;
+				}
+
+				@keyframes appstore {
+					0% {
+						background-position: 0px 0px;
+					}
+					50% {
+						background-position: 240px 0px;
+					}
+					100% {
+						background-position: 480px 0px;
+					}
+				} */
+
 				/*&:before {
 					content: '';
 					position: absolute;
@@ -2326,7 +2376,7 @@ textarea:focus, input:focus, button:focus {
 				color: #000;
 				top: 28px;
 				position: relative;
-				left: 19px;
+				left: 25px;
 				font-size: 21px;
 				letter-spacing: 2px;
 				padding: 8px 40px;
@@ -3336,3 +3386,46 @@ form.page {
 	border-left: 3px #000 solid;
     border-right: 3px #000 solid;
 }
+
+// .animation {
+// 	animation: appstore 1s steps(2); 
+// 	// animation-name: appstore;
+// 	// animation-duration: 1s;
+// 	// animation-timing-function: none;
+// 	// animation-iteration-count: 1;	
+// 	// animation-direction: normal;
+// 	// animation-delay: 0;
+// 	// animation-play-state: running;
+// 	// animation-fill-mode: forwards;
+// }
+
+// @keyframes appstore {
+// 	0% {
+// 		background-position: 0px 0px;
+// 	}
+// 	100% {
+// 		background-position: -496px 0px;
+// 	}
+// }
+
+
+// .animation-reverse {
+// 	animation: appstorer 1s steps(2);
+// 	/* animation-name: appstorer;
+// 	animation-duration: 1s;
+// 	animation-timing-function: none; */
+// 	// animation-iteration-count: 1;	
+// 	// animation-direction: normal;
+// 	// animation-delay: 0;
+// 	// animation-play-state: running;
+// 	// animation-fill-mode: forwards;
+// }
+
+// @keyframes appstorer {
+// 	0% {
+// 		background-position: -496px 0px;
+// 	}
+// 	100% {
+// 		background-position: 0px 0px;
+// 	}
+// }
