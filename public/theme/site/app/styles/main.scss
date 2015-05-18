@@ -1120,6 +1120,7 @@ textarea:focus, input:focus, button:focus {
 
 			&:hover a span, &.active a span {
 				top: 24px;
+				left: 42px;
 			}
 		}
 
@@ -2403,6 +2404,7 @@ textarea:focus, input:focus, button:focus {
 				font-size: 21px;
 				letter-spacing: 2px;
 				padding: 8px 40px;
+				transition: top .15s linear;
 			}
 
 			&:hover a {
@@ -2445,6 +2447,7 @@ textarea:focus, input:focus, button:focus {
 			color: #000;
 			font-size: 22px;
 			letter-spacing: 1px;
+			transition: top .15s linear;
 		}
 
 		&:hover span {
@@ -2476,6 +2479,7 @@ textarea:focus, input:focus, button:focus {
 		font-size: 21px;
 		letter-spacing: 2px;
 		padding: 8px 40px;
+		transition: top .15s linear;
 	}
 
 	&:hover span {
