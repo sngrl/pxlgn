@@ -1089,12 +1089,13 @@ textarea:focus, input:focus, button:focus {
 				span {
 					position: relative;
 					top: 15px;
-					left: 60px;
+					left: 52px;
 				}
 			}
 
 			&:hover a span, &.active span {
-				top: 30px;
+				top: 29px;
+				left: 70px;
 			}
 		}
 
@@ -1122,7 +1123,7 @@ textarea:focus, input:focus, button:focus {
 			}
 
 			&:hover a span, &.active a span {
-				top: 22px;
+				top: 24px;
 			}
 		}
 
@@ -1151,7 +1152,7 @@ textarea:focus, input:focus, button:focus {
 			}
 
 			&:hover a span, &.active a span {
-				top: 22px;
+				top: 27px;
 			}
 		}
 
@@ -1179,7 +1180,7 @@ textarea:focus, input:focus, button:focus {
 			}
 
 			&:hover a span, &.active a span {
-				top: 22px;
+				top: 23px;
 			}
 		}
 
@@ -1234,8 +1235,8 @@ textarea:focus, input:focus, button:focus {
 			margin: 0;
 			line-height: 27px;
 			text-align: center;
-			top: 30px;
-			left: 45px;
+			top: 15px;
+			left: 17px;
 			
 		span {
 			font-size: 29px;
@@ -2452,8 +2453,8 @@ textarea:focus, input:focus, button:focus {
 	margin-top: -40px;
 	right: -19px;
 	left: auto;
-	width: 314px;
-	height: 96px;
+	width: 283px;
+	height: 64px;
 	background: url(../images/animation/button-registration.png);
 	display: block;
 	position: relative;
