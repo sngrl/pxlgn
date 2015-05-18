@@ -113,6 +113,10 @@ var ButtonAnimation = function() {
 		// ".main-menu .mobile": {
 		// 	steps: 7
 		// }
+
+		".header .play-button": {
+			steps: 22
+		}
 	};
 	var Animation = function(step, elem, direction) {
 		var this_steps = options[elem].steps;

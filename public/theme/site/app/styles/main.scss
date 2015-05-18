@@ -1218,13 +1218,28 @@ textarea:focus, input:focus, button:focus {
 
 	.play-button {
 		display: block;
-		width: 399px;
+		width: 299px;
 		height: 96px;
 		margin: 0 auto;
 		background: url(../images/animation/bg-play.png);
-
-		span {
+		text-decoration: none;
+		position: relative;
+		
+		p {
+			color: #9D0000;
+			position: absolute;
+			font-family: 'miniregular';
+			font-size: 35px;
+			padding: 0;
+			margin: 0;
+			line-height: 27px;
+			text-align: center;
+			top: 30px;
+			left: 45px;
 			
+		span {
+			font-size: 29px;
+			}
 		}
 	}
 
@@ -2374,8 +2389,8 @@ textarea:focus, input:focus, button:focus {
     	li.registration-button {
 			right: -19px;
 			left: auto;
-			width: 314px;
-			height: 96px;
+			width: 283px;
+			height: 64px;
 			background: url(../images/animation/button-registration.png);
 			display: block;
 			position: absolute;
@@ -2401,9 +2416,9 @@ textarea:focus, input:focus, button:focus {
 	margin-top: -17px;
 	right: -19px;
 	left: auto;
-	width: 314px;
-	height: 96px;
-	background: url(../images/button-registration.png);
+	width: 283px;
+	height: 64px;
+	background: url(../images/animation/button-registration.png);
 	display: block;
 	position: relative;
 	left: -10px;
