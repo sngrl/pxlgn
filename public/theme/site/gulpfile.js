@@ -28,7 +28,7 @@ gulp.task('html', ['views', 'styles'], function () {
 
   return gulp.src('.tmp/*.html')
     .pipe(assets)
-    .pipe($.if('*.js', $.uglify()))
+    //.pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.csso()))
     .pipe(assets.restore())
     .pipe($.useref())

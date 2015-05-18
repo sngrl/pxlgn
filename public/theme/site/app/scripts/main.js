@@ -90,6 +90,65 @@ var screenFotorama = function() {
 }
 screenFotorama();
 
+var ButtonAnimation = function() {
+	var anim_time = 150;
+	var anim_timeout = [];
+	var options = {
+		".main-menu .main": {
+			steps: 7
+		},
+
+		".main-menu .about": {
+			steps: 7
+		},
+
+		".main-menu .media": {
+			steps: 7
+		},
+
+		".main-menu .forum": {
+			steps: 7
+		},
+
+		// ".main-menu .mobile": {
+		// 	steps: 7
+		// }
+	};
+	var Animation = function(step, elem, direction) {
+		var this_steps = options[elem].steps;
+		var this_elem = $(elem);
+		if(direction == 'hover') {
+			step++;
+		} else {
+			step--;
+		}
+		var new_pos = step * this_elem.width() * (-1);
+		this_elem
+			.css('background-position',  new_pos + 'px 0')
+			.attr('data-active-step', step);
+		anim_timeout[elem] = setTimeout(function(){
+			if(step < this_steps - 1 && step > 0) {
+				Animation(step, elem, direction);
+			}
+		}, anim_time/this_steps);
+	}
+	$.each(options, function(index, value){
+		$(index).css('background-size', 100*value.steps + '% 100%');
+		$(index).on('mouseenter', function(){
+			clearTimeout(anim_timeout[index]);
+			var start_step = 0;
+			if($(this).attr('data-active-step')) {
+				start_step = $(this).attr('data-active-step');
+			}
+			Animation(start_step, index, 'hover');
+		}).on('mouseleave', function(){
+			clearTimeout(anim_timeout[index]);
+			Animation($(this).attr('data-active-step'), index, 'hoverout');
+		});
+	});
+}
+ButtonAnimation();
+
 
 //POP-UP окна авторизиции
 

@@ -1064,20 +1064,24 @@ textarea:focus, input:focus, button:focus {
 				width: 100%;
 				height: 100%;
 				display: block;
+
+				span {
+					transition: top .15s linear;
+				}
 			}
 		}
 
 		.main {
-			width: 255px;
+			width: 237px;
 			height: 69px;
 			z-index: 1;
-			background: url(../images/button-main.png);
+			background: url(../images/animation/button-main.png);
 
-			&:hover, &.active {
+			/*&:hover, &.active {
 				background: url(../images/button-active-main.png);
 				background-position: 5px center;
 				background-repeat: no-repeat;
-			}
+			}*/
 
 			a {
 				font-size: 21px;
@@ -1095,18 +1099,18 @@ textarea:focus, input:focus, button:focus {
 		}
 
 		.about {
-			width: 182px;
+			width: 150px;
 			height: 53px;
 			z-index: 2;
-			background: url(../images/button-about.png);
+			background: url(../images/animation/button-about.png);
 			margin-left: -15px;
 			top: -6px;
 
-			&:hover, &.active {
+			/*&:hover, &.active {
 				background: url(../images/button-active-about.png);
 				background-position: 5px center;
 				background-repeat: no-repeat;
-			}
+			}*/
 
 			a {
 
@@ -1123,19 +1127,19 @@ textarea:focus, input:focus, button:focus {
 		}
 
 		.media {
-			width: 167px;
-			height: 56px;
+			width: 141px;
+			height: 57px;
 			z-index: 3;
-			background: url(../images/button-media.png);
+			background: url(../images/animation/button-media.png);
 			/*background: url(../images/animation/button-media.png);*/
-			margin-left: -11px;
+			margin-left: -8px;
 			top: -6px;
 
-			&:hover, &.active {
+			/*&:hover, &.active {
 				background: url(../images/button-active-media.png);
 				background-position: 5px center;
 				background-repeat: no-repeat;
-			}
+			}*/
 
 			a {
 
@@ -1152,18 +1156,18 @@ textarea:focus, input:focus, button:focus {
 		}
 
 		.forum {
-			width: 174px;
-			height: 53px;
+			width: 142px;
+			height: 57px;
 			z-index: 2;
-			background: url(../images/button-forum.png);
-			margin-left: -11px;
+			background: url(../images/animation/button-forum.png);
+			margin-left: -2px;
 			top: -6px;
 
-			&:hover, &.active {
+			/*&:hover, &.active {
 				background: url(../images/button-active-forum.png);
 				background-position: 5px center;
 				background-repeat: no-repeat;
-			}
+			}*/
 
 			a {
 
@@ -1184,7 +1188,7 @@ textarea:focus, input:focus, button:focus {
 			height: 69px;
 			z-index: 1;
 			background: url(../images/button-mobile.png);
-			margin-left: -11px;
+			margin-left: -2px;
 
 			&:hover {
 
@@ -1214,10 +1218,14 @@ textarea:focus, input:focus, button:focus {
 
 	.play-button {
 		display: block;
-		width: 331px;
-		height: 128px;
+		width: 399px;
+		height: 96px;
 		margin: 0 auto;
-		background: url(../images/bg-play.png);
+		background: url(../images/animation/bg-play.png);
+
+		span {
+			
+		}
 	}
 
 	.language-panel {
@@ -1668,7 +1676,7 @@ textarea:focus, input:focus, button:focus {
 		background-repeat: no-repeat;
 		background-position: 0px 42px;
 		margin-top: -10px;
-		margin-bottom: 3px;
+		margin-bottom: -7px;
 
 		h3 {
 			display: block;
@@ -2368,7 +2376,7 @@ textarea:focus, input:focus, button:focus {
 			left: auto;
 			width: 314px;
 			height: 96px;
-			background: url(../images/button-registration.png);
+			background: url(../images/animation/button-registration.png);
 			display: block;
 			position: absolute;
 			top: -30px;
