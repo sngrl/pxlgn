@@ -1229,6 +1229,7 @@ textarea:focus, input:focus, button:focus {
 			text-align: center;
 			top: 15px;
 			left: 17px;
+			transition: top .15s linear;
 			
 		span {
 			font-size: 29px;
@@ -2385,7 +2386,7 @@ textarea:focus, input:focus, button:focus {
 
     	li.li-registration-button {
 			right: -19px;
-			left: auto;
+			left: -4px;
 			width: 283px;
 			height: 64px;
 			background: url(../images/animation/button-registration.png);
@@ -2409,7 +2410,7 @@ textarea:focus, input:focus, button:focus {
 
 			&:hover a {
 				top: 21px;
-				left: 7px;
+				left: 9px;
 			}
     	}
     }
@@ -2424,7 +2425,7 @@ textarea:focus, input:focus, button:focus {
 	background: url(../images/animation/button-registration.png);
 	display: block;
 	position: relative;
-	left: -10px;
+	left: -4px;
 	text-decoration: none;
 
 	a {
@@ -2452,7 +2453,7 @@ textarea:focus, input:focus, button:focus {
 
 		&:hover span {
 		top: 21px;
-		left: 7px;
+		left: 9px;
 	}
 	}
 }
@@ -2466,7 +2467,7 @@ textarea:focus, input:focus, button:focus {
 	background: url(../images/animation/button-registration.png);
 	display: block;
 	position: relative;
-	left: -10px;
+	left: -4px;
 	text-decoration: none;
 
 	span {
@@ -2484,7 +2485,7 @@ textarea:focus, input:focus, button:focus {
 
 	&:hover span {
 		top: 21px;
-		left: 7px;
+		left: 9px;
 	}
 }
 
