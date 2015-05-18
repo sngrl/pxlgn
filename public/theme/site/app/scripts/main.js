@@ -116,6 +116,14 @@ var ButtonAnimation = function() {
 
 		".header .play-button": {
 			steps: 22
+		},
+
+		".column-right .button-registration": {
+			steps: 5
+		}
+
+		".inner-page-menu .li-registration-button": {
+			steps: 5
 		}
 	};
 	var Animation = function(step, elem, direction) {

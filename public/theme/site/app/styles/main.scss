@@ -1025,7 +1025,7 @@ textarea:focus, input:focus, button:focus {
 
 	.main-menu {
 		display: block;
-		width: 986px;
+		width: 885px;
 		margin: 0 auto;
 		padding: 0;
 		height: 70px;
@@ -1036,7 +1036,7 @@ textarea:focus, input:focus, button:focus {
 			content: '';
 			position: absolute;
 			display: block;
-			width: 954px;
+			width: 865px;
 			height: 46px;
 			top: -5px;
 			left: 17px;
@@ -2386,7 +2386,7 @@ textarea:focus, input:focus, button:focus {
     		}
     	}
 
-    	li.registration-button {
+    	li.li-registration-button {
 			right: -19px;
 			left: auto;
 			width: 283px;
@@ -2454,7 +2454,7 @@ textarea:focus, input:focus, button:focus {
 	left: auto;
 	width: 314px;
 	height: 96px;
-	background: url(../images/button-registration.png);
+	background: url(../images/animation/button-registration.png);
 	display: block;
 	position: relative;
 	left: -10px;

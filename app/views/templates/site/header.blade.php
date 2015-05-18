@@ -15,7 +15,7 @@ $options = Config::get('temp.options');
 
     {{--{{ Helper::d(Config::get('temp')) }}--}}
     @if (isset($options['show_play_button']) && $options['show_play_button'])
-        <a href="{{ URL::route('page', pageslug('registration')) }}" class="play-button"></a>
+        <a href="{{ URL::route('page', pageslug('registration')) }}" class="play-button"><p>Играть <span>бесплатно!</span> </p></a>
     @endif
 
 {{--    <div class="language-panel">
