@@ -166,7 +166,7 @@ var ButtonAnimation = function() {
 
 		".column-right .button-registration": {
 			steps: 5
-		}
+		},
 
 		".inner-page-menu .li-registration-button": {
 			steps: 5

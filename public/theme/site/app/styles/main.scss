@@ -1077,11 +1077,9 @@ textarea:focus, input:focus, button:focus {
 			z-index: 1;
 			background: url(../images/animation/button-main.png);
 
-			/*&:hover, &.active {
-				background: url(../images/button-active-main.png);
-				background-position: 5px center;
-				background-repeat: no-repeat;
-			}*/
+			&.active {
+				background-position: right center;
+			}
 
 			a {
 				font-size: 21px;
@@ -1107,11 +1105,9 @@ textarea:focus, input:focus, button:focus {
 			margin-left: -15px;
 			top: -6px;
 
-			/*&:hover, &.active {
-				background: url(../images/button-active-about.png);
-				background-position: 5px center;
-				background-repeat: no-repeat;
-			}*/
+			&.active {
+				background-position: right center;
+			}
 
 			a {
 
@@ -1132,15 +1128,12 @@ textarea:focus, input:focus, button:focus {
 			height: 57px;
 			z-index: 3;
 			background: url(../images/animation/button-media.png);
-			/*background: url(../images/animation/button-media.png);*/
 			margin-left: -8px;
 			top: -6px;
 
-			/*&:hover, &.active {
-				background: url(../images/button-active-media.png);
-				background-position: 5px center;
-				background-repeat: no-repeat;
-			}*/
+		&.active {
+				background-position: right center;
+			}
 
 			a {
 
@@ -1164,11 +1157,9 @@ textarea:focus, input:focus, button:focus {
 			margin-left: -2px;
 			top: -6px;
 
-			/*&:hover, &.active {
-				background: url(../images/button-active-forum.png);
-				background-position: 5px center;
-				background-repeat: no-repeat;
-			}*/
+			&.active {
+				background-position: right center;
+			}
 
 			a {
 
@@ -2402,9 +2393,9 @@ textarea:focus, input:focus, button:focus {
 				text-decoration: none;
 				font-family: 'miniregular';
 				color: #000;
-				top: 28px;
+				top: 12px;
 				position: relative;
-				left: 25px;
+				left: 14px;
 				font-size: 21px;
 				letter-spacing: 2px;
 				padding: 8px 40px;
@@ -2439,8 +2430,8 @@ textarea:focus, input:focus, button:focus {
 		span {
 			display: block;
 			position: relative;
-			top: 27px;
-			left: 66px;
+			top: 13px;
+			left: 14px;
 			font-family: 'miniregular';
 			color: #000;
 			font-size: 22px;
