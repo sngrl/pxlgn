@@ -1233,6 +1233,10 @@ textarea:focus, input:focus, button:focus {
 			font-size: 29px;
 			}
 		}
+
+		&:hover p {
+			top: 20px;
+		}
 	}
 
 	.language-panel {
@@ -2393,12 +2397,17 @@ textarea:focus, input:focus, button:focus {
 				text-decoration: none;
 				font-family: 'miniregular';
 				color: #000;
-				top: 12px;
+				top: 14px;
 				position: relative;
-				left: 14px;
+				left: 15px;
 				font-size: 21px;
 				letter-spacing: 2px;
 				padding: 8px 40px;
+			}
+
+			&:hover a {
+				top: 21px;
+				left: 7px;
 			}
     	}
     }
@@ -2437,6 +2446,11 @@ textarea:focus, input:focus, button:focus {
 			font-size: 22px;
 			letter-spacing: 1px;
 		}
+
+		&:hover span {
+		top: 21px;
+		left: 7px;
+	}
 	}
 }
 
@@ -2456,12 +2470,17 @@ textarea:focus, input:focus, button:focus {
 		text-decoration: none;
 		font-family: 'miniregular';
 		color: #000;
-		top: 28px;
+		top: 14px;
 		position: relative;
-		left: 19px;
+		left: 15px;
 		font-size: 21px;
 		letter-spacing: 2px;
 		padding: 8px 40px;
+	}
+
+	&:hover span {
+		top: 21px;
+		left: 7px;
 	}
 }
 
