@@ -2399,18 +2399,19 @@ textarea:focus, input:focus, button:focus {
 				text-decoration: none;
 				font-family: 'miniregular';
 				color: #000;
-				top: 14px;
+				top: 13px;
 				position: relative;
-				left: 15px;
+				left: 51px;
 				font-size: 21px;
 				letter-spacing: 2px;
-				padding: 8px 40px;
 				transition: top .15s linear;
+				height: 21px;
+				display: block;
 			}
 
 			&:hover a {
-				top: 21px;
-				left: 9px;
+				top: 20px;
+				left: 48px;
 			}
     	}
     }
@@ -2440,20 +2441,22 @@ textarea:focus, input:focus, button:focus {
 		padding: 8px 40px;
 
 		span {
-			display: block;
-			position: relative;
-			top: 13px;
-			left: 14px;
+			text-decoration: none;
 			font-family: 'miniregular';
 			color: #000;
-			font-size: 22px;
-			letter-spacing: 1px;
+			top: 13px;
+			position: relative;
+			left: 51px;
+			font-size: 21px;
+			letter-spacing: 2px;
 			transition: top .15s linear;
+			height: 21px;
+			display: block;
 		}
 
 		&:hover span {
-		top: 21px;
-		left: 9px;
+		top: 20px;
+		left: 48px;
 	}
 	}
 }
@@ -2474,18 +2477,19 @@ textarea:focus, input:focus, button:focus {
 		text-decoration: none;
 		font-family: 'miniregular';
 		color: #000;
-		top: 14px;
+		top: 13px;
 		position: relative;
-		left: 15px;
+		left: 51px;
 		font-size: 21px;
 		letter-spacing: 2px;
-		padding: 8px 40px;
 		transition: top .15s linear;
+		height: 21px;
+		display: block;
 	}
 
 	&:hover span {
-		top: 21px;
-		left: 9px;
+		top: 20px;
+		left: 48px;
 	}
 }
 
