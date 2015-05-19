@@ -217,7 +217,7 @@ class PixelGunSidebar {
         if (is_collection($this->data['video'])) {
 ?>
             <div class="video">
-                <a href="{{ URL::route('page', 'video') }}">
+                <a href="{{ URL::route('page', pageslug('video')) }}">
                     <h3>{{ trans("interface.menu.video") }}</h3>
                 </a>
                 <div class="video-box">
@@ -251,7 +251,7 @@ class PixelGunSidebar {
         if (is_collection($this->data['screenshots'])) {
 ?>
             <div class="screenshoots">
-                <a href="{{ URL::route('page', 'screenshoots') }}">
+                <a href="{{ URL::route('page', pageslug('screenshots')) }}">
                     <h3>{{ trans("interface.menu.screenshots") }}</h3>
                 </a>
                 <div class="screenshoot-box">

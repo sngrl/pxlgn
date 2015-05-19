@@ -17,8 +17,7 @@ class CustomUrlGenerator extends UrlGenerator {
 	##
     ## Custom URL::route() method
     ##
-	public function route($name, $parameters = array(), $absolute = true, $route = null)
-	{
+	public function route($name, $parameters = array(), $absolute = true, $route = null) {
         ##
         ## Call route modifier closure
         ##
@@ -52,6 +51,14 @@ class CustomUrlGenerator extends UrlGenerator {
             var_dump($parameters);
             var_dump($defaults);
             #die;
+        }
+
+        ## URL::route('page', 'news') => parameters: [0 => 'news'] => ['slug' => 'news']
+        ## URL::route('page', ['news', 'lang' => 'en']) => parameters: [0 => 'news', 'lang' => 'en'] => ['slug' => 'news', 'lang' => 'en']
+        if ($route->getName() == 'page' && !isset($parameters['slug']) && isset($parameters[0])) {
+            #\Helper::ta($parameters);
+            $parameters['slug'] = $parameters[0];
+            unset($parameters[0]);
         }
 
         if (NULL !== $route) {
