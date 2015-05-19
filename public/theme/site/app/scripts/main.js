@@ -145,18 +145,20 @@ var ButtonAnimation = function() {
 		}, anim_time/this_steps);
 	}
 	$.each(options, function(index, value){
-		$(index).css('background-size', 100*value.steps + '% 100%');
-		$(index).on('mouseenter', function(){
-			clearTimeout(anim_timeout[index]);
-			var start_step = 0;
-			if($(this).attr('data-active-step')) {
-				start_step = $(this).attr('data-active-step');
-			}
-			Animation(start_step, index, 'hover');
-		}).on('mouseleave', function(){
-			clearTimeout(anim_timeout[index]);
-			Animation($(this).attr('data-active-step'), index, 'hoverout');
-		});
+		if(!$(index).hasClass('active')) {
+			$(index).css('background-size', 100*value.steps + '% 100%');
+			$(index).on('mouseenter', function(){
+				clearTimeout(anim_timeout[index]);
+				var start_step = 0;
+				if($(this).attr('data-active-step')) {
+					start_step = $(this).attr('data-active-step');
+				}
+				Animation(start_step, index, 'hover');
+			}).on('mouseleave', function(){
+				clearTimeout(anim_timeout[index]);
+				Animation($(this).attr('data-active-step'), index, 'hoverout');
+			});
+		}
 	});
 }
 ButtonAnimation();
