@@ -56,7 +56,7 @@ $options = Config::get('temp.options');
                         $class = ($route_lang == $lang_sign
                                   || (is_null($route_lang)
                                       && Config::get('app.locale') == Config::get('app.default_locale')
-                                      && $lang_sign == Config::get('app.locale'))) ? 'active' : '';
+                                      && $lang_sign == Config::get('app.locale'))) ? ' selected="selected"' : '';
 
                     } else {
 
