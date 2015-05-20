@@ -1501,7 +1501,7 @@ textarea:focus, input:focus, button:focus {
 			left: 24px;
 
 			.fotorama {
-				width: 620px;
+				width: 626px;
 				height: 390px;
 				margin: 0px auto;
 				position: relative;
@@ -1512,6 +1512,10 @@ textarea:focus, input:focus, button:focus {
 					border: 2px solid #1a457e;
 					width: 8px;
 					height: 8px;
+				}
+
+				.fotorama__stage {
+					border: #000 3px solid; 
 				}
 
 				.fotorama__active {
@@ -2960,10 +2964,10 @@ iframe {
 
 		.screenshoot {
 			background: #0c6876;
-			height: 156px;
+			height: 152px;
 
 			.img-wrapper {
-				height: 146px;
+				height: 142px;
 				width: 200px;
 
 				&:before {
