@@ -55,7 +55,7 @@ class CustomUrlGenerator extends UrlGenerator {
 
         ## URL::route('page', 'news') => parameters: [0 => 'news'] => ['slug' => 'news']
         ## URL::route('page', ['news', 'lang' => 'en']) => parameters: [0 => 'news', 'lang' => 'en'] => ['slug' => 'news', 'lang' => 'en']
-        if ($route->getName() == 'page' && !isset($parameters['slug']) && isset($parameters[0])) {
+        if (is_object($route) && $route->getName() == 'page' && !isset($parameters['slug']) && isset($parameters[0])) {
             #\Helper::ta($parameters);
             $parameters['slug'] = $parameters[0];
             unset($parameters[0]);
