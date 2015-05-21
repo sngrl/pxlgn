@@ -938,14 +938,17 @@ textarea:focus, input:focus, button:focus {
 					}
 
 					button {
-						border: 0px;
+						border: 0;
 						width: 100%;
 						height: 100%;
-						font-size: 19px;
+						font-size: 23px;
 						font-family: 'miniregular';
-						background: none;
+						background: 0 0;
 						position: relative;
-						top: -2px;
+						top: -3px;
+						color: #BD0000;
+						letter-spacing: 1px;
+						text-shadow: #ffe400 1px 0,#ffe400 1px 1px,#ffe400 0 1px,#ffe400 -1px 1px,#ffe400 -1px 0,#ffe400 -1px -1px,#ffe400 0 -1px,#ffe400 1px -1px,#ffe400 0 0 2px,#ffe400 0 0 2px,#ffe400 0 0 2px,#ffe400 0 0 2px,#ffe400 0 0 2px,#ffe400 0 0 2px,#ffe400 0 0 2px,#ffe400 0 0 2px;
 					}
 				}
 			}
@@ -2909,6 +2912,7 @@ iframe {
 			box-sizing: border-box;
 			text-decoration: none;
 			color: #fff;
+			display: block;
 
 			&:hover {
 
@@ -2965,6 +2969,7 @@ iframe {
 		.screenshoot {
 			background: #0c6876;
 			height: 152px;
+			margin-bottom: 20px;
 
 			.img-wrapper {
 				height: 142px;
