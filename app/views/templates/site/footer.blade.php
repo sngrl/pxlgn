@@ -83,7 +83,7 @@
             <div class="success-fade">
                 <div class="form-block">
                     <div class="success">
-                        <h3>Аккаунт <span>успешно создан</span></h3>
+                        <h3>Аккаунт <span>успешно создан</span></h3>s
                         <p class="congratulation">
                             {{ strtr(trans("interface.tpl.registration_success"), [
                                 '%link%' => isset($link) ? $link : '#',
