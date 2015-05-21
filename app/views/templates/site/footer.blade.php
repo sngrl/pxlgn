@@ -71,12 +71,14 @@
                         </div>
                     </form>
                 </div>
-                <div class="form-block">
-                    <h3 class="form-block-head">
-                        {{ trans("interface.tpl.enter_via_social") }}
-                    </h3>
-                    <div class="social-panel"><a href="#" class="vk"></a><a href="#" class="fb"></a><a href="#" class="tw"></a></div>
-                </div>
+                @if (Config::get('app.settings.main.show_social_on_registration'))
+                    <div class="form-block">
+                        <h3 class="form-block-head">
+                            {{ trans("interface.tpl.enter_via_social") }}
+                        </h3>
+                        <div class="social-panel"><a href="#" class="vk"></a><a href="#" class="fb"></a><a href="#" class="tw"></a></div>
+                    </div>
+                @endif
             </div>
             <div class="success-fade">
                 <div class="form-block">

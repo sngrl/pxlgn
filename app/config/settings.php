@@ -62,6 +62,12 @@ return array(
                         'type' => 'checkbox',
                         'label_class' => 'normal_checkbox',
                     ),
+                    'show_social_on_registration' => array(
+                        'no_label' => true,
+                        'title' => 'Показывать блок соц. сетей на форме регистрации',
+                        'type' => 'checkbox',
+                        'label_class' => 'normal_checkbox',
+                    ),
 
                     ['group_title' => 'Тайминги'],
 

@@ -25,12 +25,14 @@
                 <div class="button-download-big"><a><span>{{ trans("interface.tpl.installer_size") }}</span></a></div>
             </div>
         </div>
-        <div class="registration-page-block">
-            <h3>
-                {{ trans("interface.tpl.enter_via_social") }}
-            </h3>
-            <div class="socials-big-holder"><a class="fb"></a><a class="vk"></a><a class="tw"></a></div>
-        </div>
+        @if (Config::get('app.settings.main.show_social_on_registration'))
+            <div class="registration-page-block">
+                <h3>
+                    {{ trans("interface.tpl.enter_via_social") }}
+                </h3>
+                <div class="socials-big-holder"><a class="fb"></a><a class="vk"></a><a class="tw"></a></div>
+            </div>
+        @endif
         <div class="registration-page-block">
             <h3>
                 {{ trans("interface.tpl.or_create_new_account") }}
