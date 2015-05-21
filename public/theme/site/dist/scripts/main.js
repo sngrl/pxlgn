@@ -126,7 +126,7 @@ var ButtonAnimation = function() {
 			steps: 5
 		},
 
-		"li.registration-button" {
+		".inner-page-menu .registration-button": {
 			steps: 5
 		}
 	};
@@ -174,7 +174,7 @@ $(function() {
     $( "#check" ).button();
     $( "#format" ).buttonset();
 
-    $(".button-registration, registration-button").click(function(e){
+    $(".button-registration, .registration-button").click(function(e){
     	
         $(".login-form-background").fadeIn(700);
         e.preventDefault();
