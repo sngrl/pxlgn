@@ -124,6 +124,10 @@ var ButtonAnimation = function() {
 
 		".inner-page-menu .li-registration-button": {
 			steps: 5
+		},
+
+		"li.registration-button" {
+			steps: 5
 		}
 	};
 	var Animation = function(step, elem, direction) {

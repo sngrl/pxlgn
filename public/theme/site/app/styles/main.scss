@@ -2912,6 +2912,7 @@ iframe {
 			box-sizing: border-box;
 			text-decoration: none;
 			color: #fff;
+			display: block;
 
 			&:hover {
 
@@ -2968,6 +2969,7 @@ iframe {
 		.screenshoot {
 			background: #0c6876;
 			height: 152px;
+			margin-bottom: 20px;
 
 			.img-wrapper {
 				height: 142px;
