@@ -54,10 +54,14 @@ $screenshots = DicLib::loadImages($screenshots, ['image']);
 #$options = Config::get('temp.options');
 #Helper::tad(' [ ' . $options . ' ] ');
 
+/*
 $options = Dic::valuesBySlug('options', NULL, []);
 $options = Dic::makeLists($options, NULL, 'name', 'slug');
 Config::set('temp.options', $options);
 #Helper::tad($options);
+*/
+
+$options = Config::get('app.settings.main');
 ?>
 
 

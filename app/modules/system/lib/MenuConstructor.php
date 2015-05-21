@@ -338,6 +338,22 @@ class MenuConstructor {
         if (@$data['hidden'])
             return false;
 
+        if (@$data['use_display_logic'] && @$data['display_logic'] != '') {
+            #Helper::ta($data['display_logic']);
+            $result = NULL;
+            try {
+
+                $code = '$result = @(bool)(' . $data['display_logic'] . ');';
+                @eval($code);
+                #die;
+
+            } catch (Exception $e) {
+                #
+            }
+            if (!$result)
+                return false;
+        }
+
         return $this->get_element_info_by_data($data);
     }
 
@@ -419,10 +435,7 @@ class MenuConstructor {
                 /**
                  * Сделаем замену паттернов
                  */
-                $url = strtr($url, [
-                    '%locale%' => Config::get('app.locale'),
-                    '%default_locale%' => Config::get('app.default_locale'),
-                ]);
+                $url = $this->replaces($url);
                 #var_dump($element['active_regexp']);
                 return $url;
                 break;
@@ -445,7 +458,9 @@ class MenuConstructor {
                         }
                     }
                 }
-                return URL::route($element['route_name'], $route_params);
+                $url = URL::route($element['route_name'], $route_params);
+                $url = $this->replaces($url);
+                return $url;
                 break;
 
             case 'function':
@@ -453,7 +468,9 @@ class MenuConstructor {
                 $function = Config::get('menu.functions.' . $element['function_name']);
                 if (isset($function) && is_callable($function)) {
                     $result = $function();
-                    return @$result['url'] ?: false;
+                    $url = @$result['url'] ?: '';
+                    $url = $this->replaces($url);
+                    return $url;
                 }
                 return false;
                 break;
@@ -466,6 +483,22 @@ class MenuConstructor {
 
 
     /**
+     * Замены паттернов
+     *
+     * @param $text
+     *
+     * @return string
+     */
+    private function replaces($text) {
+        $text = strtr($text, [
+            '%locale%' => Config::get('app.locale'),
+            '%default_locale%' => Config::get('app.default_locale'),
+        ]);
+        return $text;
+    }
+
+
+    /**
      * Возвращаем пометку об активности текущего пункта меню
      *
      * @param $element
@@ -474,7 +507,7 @@ class MenuConstructor {
     private function get_active($element) {
         #return false;
 
-        #Helper::ta($element);
+        #Helper::tad($element);
 
         /**
          * Собственное правило для определения активности пункта меню
@@ -497,10 +530,7 @@ class MenuConstructor {
             }
 
             try{
-                $element['active_regexp'] = strtr($element['active_regexp'], [
-                    '%locale%' => Config::get('app.locale'),
-                    '%default_locale%' => Config::get('app.default_locale'),
-                ]);
+                $element['active_regexp'] = $this->replaces($element['active_regexp']);
             } catch (Exception $e) {
                 echo 'Error: ',  $e->getMessage(), "\n";
                 Helper::tad($element);
@@ -571,7 +601,7 @@ class MenuConstructor {
             }
 
             #Helper::dd(Request::path());
-            #Helper::d($element['active_regexp']);
+            #Helper::dd($element['active_regexp']);
             #Helper::dd(preg_match($element['active_regexp'], Request::path()));
             return @(bool)preg_match($element['active_regexp'], Request::path());
         }

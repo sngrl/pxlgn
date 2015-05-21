@@ -214,8 +214,9 @@ foreach ($files as $dir => $dir_files) {
                 </table>
                 @endforeach
                 @endif
+                <br/><br/><br/>
 
-                <fieldset class="padding-top-10">
+                <fieldset class="padding-top-10" style="position:fixed; right:20px; bottom:40px;">
                     <button class="btn btn-primary btn-lg submit">
                         <i class="fa fa-save"></i>
                         Сохранить

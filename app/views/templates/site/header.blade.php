@@ -4,7 +4,8 @@
  */
 ?>
 <?
-$options = Config::get('temp.options');
+#$options = Config::get('temp.options');
+$options = Config::get('app.settings.main');
 ?>
 
 <div class="header">

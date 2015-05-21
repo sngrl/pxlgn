@@ -139,9 +139,14 @@ var menu_editor = {
         main_block = str_replace('%attr_title%', params.title || '', main_block);
 
         main_block = str_replace('%target_blank%', params.target == '_blank' ? 'checked' : '', main_block);
+        main_block = str_replace('%is_hidden%', params.hidden == '1' ? 'checked' : '', main_block);
+
         main_block = str_replace('%use_active_regexp%', params.use_active_regexp == '1' ? 'checked' : '', main_block);
         main_block = str_replace('%active_regexp%', typeof params.active_regexp != 'undefined' ? params.active_regexp : '', main_block);
-        main_block = str_replace('%is_hidden%', params.hidden == '1' ? 'checked' : '', main_block);
+
+        main_block = str_replace('%use_display_logic%', params.use_display_logic == '1' ? 'checked' : '', main_block);
+        main_block = str_replace('%display_logic%', typeof params.display_logic != 'undefined' ? params.display_logic : '', main_block);
+
         main_block = str_replace('%li_class%', typeof params.li_class != 'undefined' ? params.li_class : '', main_block);
 
         var inner_list_block = '';
@@ -238,7 +243,7 @@ $(document).on("click", ".delete_menu_item", function(e) {
     e.preventDefault();
 
     //var block = $(this).parents('.menu_item');
-    var block = $(this).parents('.dd-item');
+    var block = $(this).parents('.dd-item').first();
     //console.log(block);
 
     // ask verification
@@ -323,7 +328,8 @@ function showHideActiveRexExp(_this) {
     //var checked = $(this).is(':checked');
     var checked = $(_this).attr('checked');
     checked = (typeof checked !== typeof undefined && checked !== false);
-    var element = $(_this).parent().parent().find(".active_regexp").parent();
+    //var element = $(_this).parent().parent().find(".active_regexp").parent();
+    var element = $(_this).parent().next('label.input');
 
     if (checked) {
         //console.log(checked);
@@ -335,17 +341,18 @@ function showHideActiveRexExp(_this) {
 }
 
 function showHideAllActiveRegExp() {
-    $(".use_active_regexp").each(function(e) {
+    $(".click_hidded_option").each(function(e) {
         showHideActiveRexExp($(this));
     });
 }
 
-$(document).on("click", ".use_active_regexp", function(e) {
+$(document).on("click", ".click_hidded_option", function(e) {
     var _this = $(this);
     var checked = $(_this).is(':checked');
     //var checked = $(_this).attr('checked');
     //checked = (typeof checked !== typeof undefined && checked !== false);
-    var element = $(_this).parent().parent().find(".active_regexp").parent();
+    //var element = $(_this).parent().parent().find(".active_regexp").parent();
+    var element = $(_this).parent().next('label.input');
 
     if (checked) {
         //console.log(checked);

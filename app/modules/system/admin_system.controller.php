@@ -23,6 +23,7 @@ class AdminSystemController extends BaseController {
     public static function returnActions() {
         return array(
             'system'        => 'Глобальный доступ к работе с настройками',
+            'settings'      => 'Доступ к настройкам сайта',
             'modules'       => 'Работа с модулями',
             'groups'        => 'Работа с группами пользователей',
             'users'         => 'Работа с пользователями',
@@ -47,6 +48,13 @@ class AdminSystemController extends BaseController {
 
         $menu = array();
         $menu_child = array();
+
+        if (Allow::action('system', 'settings', false, true))
+            $menu_child[] = array(
+                'title' => 'Настройки',
+                'link' => 'system/settings',
+                'class' => 'fa-gear',
+            );
 
         if (Allow::action('system', 'modules', false, true))
             $menu_child[] = array(
@@ -92,7 +100,7 @@ class AdminSystemController extends BaseController {
 
         if (count($menu_child) && Allow::action('system', 'system', false, true))
             $menu[] = array(
-                'title' => 'Настройки',
+                'title' => 'Система',
                 'link' => '#',
                 'class' => 'fa-gear',
                 'system' => 1,

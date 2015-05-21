@@ -8,41 +8,41 @@
  * META TITLE
  */
 if (isset($page) && is_object($page)) {
-        if (isset($page->seo) && is_object($page->seo) && $page->seo->title) {
-                $page_title = $page->seo->title;
-        } else {
-                $page_title = $page->name;
-        }
+    if (isset($page->seos) && is_object($page->seos) && isset($page->seos[Config::get('app.locale')]) && is_object($page->seos[Config::get('app.locale')]) && $page->seos[Config::get('app.locale')]->title) {
+        $page_title = $page->seos[Config::get('app.locale')]->title;
+    } else {
+        $page_title = $page->name;
+    }
 } elseif (isset($seo) && is_object($seo) && $seo->title) {
-        $page_title = $seo->title;
+    $page_title = $seo->title;
 } elseif (!isset($page_title)) {
-        $page_title = Config::get('site.seo.default_title');
+    $page_title = Config::get('site.seo.default_title');
 }
 /**
  * META DESCRIPTION
  */
-if (isset($page) && is_object($page) && isset($page->seo) && is_object($page->seo) && $page->seo->description) {
-        $page_description = $page->seo->description;
+if (isset($page->seos) && is_object($page->seos) && isset($page->seos[Config::get('app.locale')]) && is_object($page->seos[Config::get('app.locale')]) && $page->seos[Config::get('app.locale')]->description) {
+    $page_description = $page->seos[Config::get('app.locale')]->description;
 } elseif (isset($seo) && is_object($seo) && $seo->description) {
-        $page_description = $seo->description;
+    $page_description = $seo->description;
 } elseif (!isset($page_description)) {
-        $page_description = Config::get('site.seo.default_description');
+    $page_description = Config::get('site.seo.default_description');
 }
 /**
  * META KEYWORDS
  */
-if (isset($page) && is_object($page) && isset($page->seo) && is_object($page->seo) && $page->seo->keywords) {
-        $page_keywords = $page->seo->keywords;
+if (isset($page->seos) && is_object($page->seos) && isset($page->seos[Config::get('app.locale')]) && is_object($page->seos[Config::get('app.locale')]) && $page->seos[Config::get('app.locale')]->keywords) {
+    $page_keywords = $page->seos[Config::get('app.locale')]->keywords;
 } elseif (isset($seo) && is_object($seo) && $seo->keywords) {
-        $page_keywords = $seo->keywords;
+    $page_keywords = $seo->keywords;
 } elseif (!isset($page_keywords)) {
-        $page_keywords = Config::get('site.seo.default_keywords');
+    $page_keywords = Config::get('site.seo.default_keywords');
 }
 /**
  * SEO H1
  */
-if (isset($page) && is_object($page) && isset($page->seo) && is_object($page->seo) && $page->seo->h1) {
-    $page_h1 = $page->seo->h1;
+if (isset($page->seos) && is_object($page->seos) && isset($page->seos[Config::get('app.locale')]) && is_object($page->seos[Config::get('app.locale')]) && $page->seos[Config::get('app.locale')]->h1) {
+    $page_h1 = $page->seos[Config::get('app.locale')]->h1;
 } elseif (isset($seo) && is_object($seo) && $seo->h1) {
     $page_h1 = $seo->h1;
 } elseif (!isset($page_h1) && isset($page) && is_object($page)) {

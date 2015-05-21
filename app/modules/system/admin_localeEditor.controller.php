@@ -121,10 +121,13 @@ class AdminLocaleEditorController extends BaseController {
                         $lines = array('<?php', '', 'return array(');
                         foreach($vars as $key => $val) {
                             if (mb_strpos($val, "'")) {
-                                $val = preg_replace("~'~is", '\'', $val);
+                                #echo $val . "\n\n";
+                                $val = preg_replace("~(|[^'])'~is", "$1\\'", $val);
+                                #echo $val . "\n\n";
                             }
                             $lines[] = "    '" . $key . "' => '" . $val . "',";
                         }
+
                         $lines[] = ');';
                         $lines = implode("\n", $lines);
                         #Helper::dd($lines);
