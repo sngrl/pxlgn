@@ -22,7 +22,7 @@ $news = DicLib::loadImages($news, ['image']);
 
 $sidebar = Dic::valuesBySlug('sidebar', function($query) {
     $query->orderBy('lft', 'ASC');
-}, []);
+}, ['fields']);
 #Helper::tad($sidebar);
 
 $socials = Dic::valuesBySlug('socials', function($query) {
@@ -62,6 +62,7 @@ Config::set('temp.options', $options);
 */
 
 $options = Config::get('app.settings.main');
+#dd($options);
 ?>
 
 
@@ -149,6 +150,8 @@ $options = Config::get('app.settings.main');
                 ?>
                 @foreach ($sidebar as $block)
                     <?
+                    if ($block->hide)
+                        continue;
                     $method = $block->slug;
                     ?>
                     {{ $sdbr->$method() }}
@@ -157,7 +160,7 @@ $options = Config::get('app.settings.main');
         </div>
     </div>
     <script>
-        var APP;
+        var APP = {};
         APP.mainpage_slider_timeout = '{{ (int)$options['mainpage_slider_timeout'] }}';
         APP.sidebar_screenshot_timeout = '{{ (int)$options['sidebar_screenshot_timeout'] }}';
         APP.sidebar_video_timeout = '{{ (int)$options['sidebar_video_timeout'] }}';
