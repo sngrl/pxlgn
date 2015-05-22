@@ -7,7 +7,7 @@ return array(
     'git_path'          => '/usr/bin/',
     'remote'            => 'origin',
     'branch'            => 'master',
-    'repository_name'   => 'netrika',
+    'repository_name'   => 'agrocom',
     'repository_id'     => 24047268,
     'user_group'        => 'www-data',
     'user_name'         => 'www-data',
