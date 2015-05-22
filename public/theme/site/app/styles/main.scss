@@ -988,6 +988,24 @@ textarea:focus, input:focus, button:focus {
 	margin: 0 auto;
 	position: relative;
 
+	.fancybox-skin {
+		position: relative;
+		background: #041427;
+		color: #444;
+		text-shadow: none;
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		border-radius: 0px;
+
+		.fancybox-close {
+			width: 29px;
+			height: 30px;
+			background: url('../images/fancybox-close-button.png');
+			top: 0;
+			right: 0;
+		}
+	}
+
 	&:after {
 		content: '';
 		position: absolute;
@@ -1445,7 +1463,7 @@ textarea:focus, input:focus, button:focus {
 				width: 620px !important;
 				height: 360px !important;
 				min-width: 620px; 
-  				min-height: 360px;
+				min-height: 360px;
 			}
 
 			a {
@@ -3469,6 +3487,8 @@ form.page {
 	border-left: 3px #000 solid;
     border-right: 3px #000 solid;
 }
+
+
 
 // .animation {
 // 	animation: appstore 1s steps(2); 
