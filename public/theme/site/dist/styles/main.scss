@@ -1561,6 +1561,7 @@ textarea:focus, input:focus, button:focus {
 		background: url(../images/bg-news-head.png);
 		z-index: 4;
 		margin-top: -6px;
+		pointer-events: none;
 
 		h3 {
 			text-transform: uppercase;
@@ -1583,6 +1584,7 @@ textarea:focus, input:focus, button:focus {
 			top: -5px;
 			color: #bbc6dc;
 			text-decoration: none;
+			pointer-events: all;
 
 			&:hover {
 				text-decoration: underline;
@@ -1879,7 +1881,7 @@ textarea:focus, input:focus, button:focus {
 				span {
 					position: absolute;
 					top: 7px;
-					left: 85px;
+					left: 80px;
 				}
 
 				&:before {
@@ -1937,7 +1939,7 @@ textarea:focus, input:focus, button:focus {
 				span {
 					position: absolute;
 					top: 10px;
-					left: 85px;
+					left: 80px;
 				}
 
 				/* .animation {
