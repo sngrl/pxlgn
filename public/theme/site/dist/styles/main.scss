@@ -1650,7 +1650,7 @@ textarea:focus, input:focus, button:focus {
 				border: 3px #144581 solid;
 				box-shadow: 6px 6px 0px 0px #00142c;
 				height: 140px;
-				background-size: 200px;
+				background-size: cover;
 				background-position: center center;
 			}
 
@@ -1739,11 +1739,10 @@ textarea:focus, input:focus, button:focus {
 		width: 270px;
 		height: 119px;
 		position: relative;
-		// top: 55px;
 		background: url(../images/bg-social.png);
 		background-repeat: no-repeat;
 		background-position: 0px 42px;
-		margin-top: -10px;
+		margin-top: 0px;
 		margin-bottom: -7px;
 
 		h3 {
@@ -1791,18 +1790,20 @@ textarea:focus, input:focus, button:focus {
 				}
 
 				.soc-vk {
-					background-image: url(../images/soc-vk.png);
-					background-position: 8px 13px;
+					background-image: url(../images/animation/soc-vk.png);
+					/*background-position: 8px 13px;*/
+					background-position: top left;
 				}
 
 				.soc-fb {
-					background-image: url(../images/soc-fb.png);
-					background-position: 23px 5px;
+					background-image: url(../images/animation/soc-fb.png);
+					/*background-position: 23px 5px;*/
 				}
 
 				.soc-tw {
-					background-image: url(../images/soc-tw.png);
-					background-position: 16px 6px;
+					background-image: url(../images/animation/soc-tw.png);
+					/*background-position: 16px 6px;*/
+					background-position: top left;
 				}
 			}
 		}
@@ -1875,7 +1876,7 @@ textarea:focus, input:focus, button:focus {
 
 			.google-play {
 				background-color: #12b1c8;
-				background-image: url(../images/bg-google-play.png);
+				background-image: url(../images/animation/bg-google-play.png);
 				background-position: 48px 5px;
 
 				span {
@@ -1884,7 +1885,7 @@ textarea:focus, input:focus, button:focus {
 					left: 80px;
 				}
 
-				&:before {
+				/*&:before {
 					content: '';
 					position: absolute;
 					display: block;
@@ -1904,7 +1905,7 @@ textarea:focus, input:focus, button:focus {
 					right: -10px;
 					bottom: 0px;
 					background: url(../images/bg-pers2.png);
-				}
+				}*/
 			}
 		}
 
@@ -1929,12 +1930,8 @@ textarea:focus, input:focus, button:focus {
 				margin-top: 25px;
 				height: 55px;
 				display: block;
-				background-image: url(../images/anim-app-store.png);
+				background-image: url(../images/animation/app-store.png);
 				background-repeat: no-repeat;
-
-				background-color: #13c283;
-				background-image: url(../images/bg-app-store.png);
-				background-position: 53px 10px;
 
 				span {
 					position: absolute;
@@ -1965,7 +1962,7 @@ textarea:focus, input:focus, button:focus {
 					}
 				} */
 
-				&:before {
+				/*&:before {
 					content: '';
 					position: absolute;
 					display: block;
@@ -1985,7 +1982,7 @@ textarea:focus, input:focus, button:focus {
 					right: -6px;
 					bottom: -13px;
 					background: url(../images/bg-pers4.png);
-				}
+				}*/
 			}
 		}
 	}
@@ -2440,14 +2437,14 @@ textarea:focus, input:focus, button:focus {
     	}
 
     	li.li-registration-button, li.registration-button {
-			right: 16px;
-			width: 283px;
-			height: 64px;
 			background: url(../images/animation/button-registration.png);
 			display: block;
 			position: absolute;
-			top: -30px;
 			cursor: pointer;
+			margin-top: -13px;
+			width: 283px;
+			height: 64px;
+			left: 7px;
 
 			a {
 				text-decoration: none;
@@ -2472,16 +2469,12 @@ textarea:focus, input:focus, button:focus {
 }
 
 .button-registration {
-	margin-top: -17px;
-	right: -19px;
-	left: auto;
+	margin-top: -13px;
 	width: 283px;
 	height: 64px;
 	background: url(../images/animation/button-registration.png);
-	display: block;
-	position: relative;
-	left: -4px;
-	text-decoration: none;
+	left: 7px;
+	margin-bottom: 4px;
 
 	a {
 		text-decoration: none;
@@ -2515,17 +2508,13 @@ textarea:focus, input:focus, button:focus {
 	}
 }
 
+/*
 .button-registration {
-	margin-top: -40px;
-	right: -19px;
-	left: auto;
+	margin-top: -13px;
 	width: 283px;
 	height: 64px;
 	background: url(../images/animation/button-registration.png);
-	display: block;
-	position: relative;
-	left: -4px;
-	text-decoration: none;
+	left: 7px;
 
 	span {
 		text-decoration: none;
@@ -2546,6 +2535,7 @@ textarea:focus, input:focus, button:focus {
 		left: 48px;
 	}
 }
+*/
 
 iframe {
 	min-width: 800px;

@@ -128,6 +128,18 @@ var ButtonAnimation = function() {
 
 		".inner-page-menu .registration-button": {
 			steps: 5
+		},
+
+		".social-button-holder .soc-vk": {
+			steps: 3
+		},
+
+		".social-button-holder .soc-fb": {
+			steps: 3
+		},
+
+		".social-button-holder .soc-tw": {
+			steps: 3
 		}
 	};
 	var Animation = function(step, elem, direction) {
