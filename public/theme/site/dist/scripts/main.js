@@ -110,6 +110,10 @@ var ButtonAnimation = function() {
 			steps: 7
 		},
 
+		".main-menu .blog": {
+			steps: 7
+		},
+
 		// ".main-menu .mobile": {
 		// 	steps: 7
 		// }
@@ -142,11 +146,11 @@ var ButtonAnimation = function() {
 			steps: 3
 		},
 
-		".google-play-holder .google-play": {
+		".store .google-play-holder": {
 			steps: 3
 		},
 
-		".google-app-store-holder .app-store": {
+		".store .google-app-store-holder": {
 			steps: 3
 		}
 	};
