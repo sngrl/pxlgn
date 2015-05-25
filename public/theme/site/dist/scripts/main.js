@@ -211,6 +211,7 @@ var mediaMenu = function(){
 	}
 	init();
 }
+mediaMenu();
 
 //POP-UP окна авторизиции
 
