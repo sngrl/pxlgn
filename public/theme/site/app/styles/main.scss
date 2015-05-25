@@ -982,15 +982,9 @@ textarea:focus, input:focus, button:focus {
 	position: relative;
 }
 
-
-.main-wrapper {
-	width: 1000px;
-	margin: 0 auto;
-	position: relative;
-
-	.fancybox-skin {
+.fancybox-skin {
 		position: relative;
-		background: #041427;
+		background: #041427 !important;
 		color: #444;
 		text-shadow: none;
 		-webkit-border-radius: 0px;
@@ -1005,6 +999,12 @@ textarea:focus, input:focus, button:focus {
 			right: 0;
 		}
 	}
+
+
+.main-wrapper {
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
 
 	&:after {
 		content: '';
@@ -2372,7 +2372,7 @@ textarea:focus, input:focus, button:focus {
     	li {
 			display: inline-block;
 			width: 150px;
-			margin-left: 3px; 
+			margin-left: 3px;
 			position: relative;
 			background-repeat: no-repeat;
 
