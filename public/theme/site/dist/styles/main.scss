@@ -1861,128 +1861,47 @@ textarea:focus, input:focus, button:focus {
 
 		.google-play-holder {
 
-			a {
-				/*transition: 0.3s;*/
-				left: 0px;
-				bottom: 0px;
-			}
-
-			/*&:hover a {
-					left: -5px;
-					bottom: -5px;
-					box-shadow: -1px 0px rgb(13,57,85), -1px 1px rgb(10,34,64);
-				}*/
-
+			width: 248px;
+			height: 74px;
+			background-image: url(../images/animation/bg-google-play.png);
+			background-position: left top;
+			background-repeat: no-repeat;
 
 			.google-play {
-				background-color: #12b1c8;
-				background-image: url(../images/animation/bg-google-play.png);
-				background-position: 48px 5px;
+				width: 100%;
+				height: 100%;
+				left: 0px;
+				bottom: 0px;
 
 				span {
 					position: absolute;
 					top: 7px;
 					left: 80px;
 				}
-
-				/*&:before {
-					content: '';
-					position: absolute;
-					display: block;
-					width: 67px;
-					height: 84px;
-					left: -6px;
-					bottom: -17px;
-					background: url(../images/bg-pers1.png);
-				}
-
-				&:after {
-					content: '';
-					position: absolute;
-					display: block;
-					width: 68px;
-					height: 67px;
-					right: -10px;
-					bottom: 0px;
-					background: url(../images/bg-pers2.png);
-				}*/
 			}
 		}
 
 		.app-store-holder {
-
-			a {
-				/*transition: 0.3s;*/
-				left: 0px;
-				bottom: 0px;
-			}
-
-			/*&:hover a {
-					box-shadow: -1px 0px rgb(13,57,85), -1px 1px rgb(10,34,64);
-					left: -5px;
-					bottom: -5px;
-			}*/
+			background-image: url(../images/animation/bg-app-store.png);
+			background-position: 48px 5px;
+			width: 239px;
+			margin-top: 25px;
+			height: 74px;
+			background-repeat: no-repeat;
 
 			.app-store {
 
 				display: block;
-				width: 239px;
-				margin-top: 25px;
-				height: 74px;
-				display: block;
-				background-image: url(../images/animation/bg-app-store.png);
-				background-repeat: no-repeat;
+				width: 100%;
+				height: 100%;
+				left: 0px;
+				bottom: 0px;
 
 				span {
 					position: absolute;
 					top: 10px;
 					left: 80px;
 				}
-
-				/* .animation {
-					animation-name: appstore;
-					animation-duration: 1s;
-					animation-timing-function: ease;
-					animation-iteration-count: 1;	
-					animation-direction: normal;
-					animation-delay: 0;
-					animation-play-state: running;
-					animation-fill-mode: forwards;
-				}
-
-				@keyframes appstore {
-					0% {
-						background-position: 0px 0px;
-					}
-					50% {
-						background-position: 240px 0px;
-					}
-					100% {
-						background-position: 480px 0px;
-					}
-				} */
-
-				/*&:before {
-					content: '';
-					position: absolute;
-					display: block;
-					width: 66px;
-					height: 75px;
-					left: -3px;
-					bottom: -11px;
-					background: url(../images/bg-pers3.png);
-				}
-
-				&:after {
-					content: '';
-					position: absolute;
-					display: block;
-					width: 65px;
-					height: 77px;
-					right: -6px;
-					bottom: -13px;
-					background: url(../images/bg-pers4.png);
-				}*/
 			}
 		}
 	}
