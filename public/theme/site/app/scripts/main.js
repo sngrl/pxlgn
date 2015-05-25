@@ -192,6 +192,26 @@ var ButtonAnimation = function() {
 ButtonAnimation();
 
 
+var mediaMenu = function(){
+	var parent = $('.inner-page-menu');
+	var menu_item = parent.find('li');
+	var active_menu_item = menu_item.filter('.active');
+	var menu_height = 60;
+	var setActive = function() {
+		parent.css('background-position', menu_height*(active_menu_item.index()-1));
+	}
+	var init = function() {
+		setActive();
+		menu_item.on('mouseenter', function(){
+			var this_index = $(this).index() - 1;
+			parent.css('background-position', menu_height*this_index);
+		}).on('mouseleave', function(){
+			setActive();
+		}
+	}
+	init();
+}
+
 //POP-UP окна авторизиции
 
 $(function() {
