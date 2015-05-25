@@ -1172,8 +1172,8 @@ textarea:focus, input:focus, button:focus {
 		}
 
 		.forum {
-			width: 142px;
-			height: 57px;
+			width: 133px;
+			height: 53px;
 			z-index: 2;
 			background: url(../images/animation/button-forum.png);
 			margin-left: -2px;
@@ -1194,6 +1194,34 @@ textarea:focus, input:focus, button:focus {
 
 			&:hover a span, &.active a span {
 				top: 23px;
+				left: 35px;
+			}
+		}
+
+		.blog {
+			width: 142px;
+			height: 57px;
+			z-index: 2;
+			background: url(../images/animation/button-blog.png);
+			margin-left: -2px;
+			top: -6px;
+
+			&.active {
+				background-position: right center;
+			}
+
+			a {
+
+				span {
+					position: relative;
+					top: 12px;
+					left: 35px;
+				}
+			}
+
+			&:hover a span, &.active a span {
+				top: 23px;
+				left: 35px;
 			}
 		}
 
@@ -2413,8 +2441,8 @@ textarea:focus, input:focus, button:focus {
 	}
 
 	&:hover span {
-		top: 6px;
-		left: 14px;
+		top: 12px;
+		left: 8px;
 	}
 }
 
