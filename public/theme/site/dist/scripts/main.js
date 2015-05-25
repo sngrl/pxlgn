@@ -130,7 +130,7 @@ var ButtonAnimation = function() {
 			steps: 5
 		},
 
-		".inner-page-menu .registration-button": {
+		"li.registration-button": {
 			steps: 4
 		},
 
