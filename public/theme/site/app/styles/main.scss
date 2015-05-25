@@ -1771,22 +1771,18 @@ textarea:focus, input:focus, button:focus {
 				margin-right: 13px;
 				position: relative;
 
-				&:hover a {
+				/*&:hover a {
 						box-shadow: -1px 0px rgb(2,49,100), -1px 1px rgb(0,20,67);
 						left: -3px;
 						bottom: -3px;
-					}
+					}*/
 
 				a {
 					width: 56px;
 					height: 48px;
-					background-color: #064e85;
 					background-repeat: no-repeat;
 					display: block;
 					position: relative;
-					transition: 0.1s;
-					box-shadow: -1px 0px rgb(2,49,100), -1px 1px rgb(0,20,67), -2px 1px rgb(1,48,99), -2px 2px rgb(0,19,66), -3px 2px rgb(0,47,98), -3px 3px rgb(0,18,65);
-
 				}
 
 				.soc-vk {
@@ -1843,7 +1839,7 @@ textarea:focus, input:focus, button:focus {
 			display: block;
 			/*width: 230px;
 			height: 55px;*/
-			margin: 10px 0 10px 13px;
+			/*margin: 10px 0 10px 13px;*/
 			background-repeat: no-repeat;
 			text-decoration: none;
 			position: relative;
@@ -1860,47 +1856,48 @@ textarea:focus, input:focus, button:focus {
 		}
 
 		.google-play-holder {
-
 			width: 248px;
-			height: 74px;
+			height: 84px;
 			background-image: url(../images/animation/bg-google-play.png);
 			background-position: left top;
 			background-repeat: no-repeat;
+			margin-left: 16px;
 
 			.google-play {
 				width: 100%;
-				height: 100%;
+				height: 90%;
 				left: 0px;
 				bottom: 0px;
 
 				span {
 					position: absolute;
-					top: 7px;
-					left: 80px;
+					top: 19px;
+  					left: 87px;
 				}
 			}
 		}
 
 		.app-store-holder {
 			background-image: url(../images/animation/bg-app-store.png);
-			background-position: 48px 5px;
+			background-position: left top;
 			width: 239px;
-			margin-top: 25px;
 			height: 74px;
+			margin-top: -3px;
 			background-repeat: no-repeat;
+			margin-left: 16px;
 
 			.app-store {
 
 				display: block;
-				width: 100%;
+				width: 90%;
 				height: 100%;
 				left: 0px;
 				bottom: 0px;
 
 				span {
 					position: absolute;
-					top: 10px;
-					left: 80px;
+					top: 22px;
+					left: 85px;
 				}
 			}
 		}
@@ -2400,26 +2397,24 @@ textarea:focus, input:focus, button:focus {
 	span {
 		text-decoration: none;
 		font-family: 'miniregular';
-		color: #000;
-		top: 13px;
 		position: relative;
-		left: 58px;
 		font-size: 21px;
 		letter-spacing: 1px;
 		transition: top .15s linear;
 		height: 21px;
 		display: block;
-		font-family: 'miniregular';
 		color: #000;
 		position: relative;
 		font-size: 21px;
 		letter-spacing: 2px;
 		padding: 8px 40px;
+		top: 4px;
+		left: 11px;
 	}
 
 	&:hover span {
-		top: 20px;
-		left: 48px;
+		top: 6px;
+		left: 14px;
 	}
 }
 
