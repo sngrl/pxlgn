@@ -131,7 +131,7 @@ var ButtonAnimation = function() {
 		},
 
 		".inner-page-menu .registration-button": {
-			steps: 5
+			steps: 4
 		},
 
 		".social-button-holder .soc-vk": {

@@ -2377,11 +2377,52 @@ textarea:focus, input:focus, button:focus {
     			font-family: 'miniregular';
     			font-size: 22px;
     			color: #000;
+    			background-repeat: no-repeat;
+    		}
+
+    		&.about-1 {
+    			width: 343px;
+    			height: 60px;
+    			background: url(../images/menu-about.png);
+    			background-position: 743px 0px;
+
+    			&:hover {
+    				background-position: 0px 0px;
+    			}
+
+    		}
+
+    		&.about-2 {
+    			
+    		}
+
+    		&.about-3 {
+    			
+    		}
+
+    		&.media-1 {
+    			width: 343px;
+    			height: 60px;
+    			background: url(../images/menu-media.png);
+    			background-position: 743px 0px;
+
+    			&:hover {
+    				background-position: 0px 0px;
+    			}
+
+    		}
+
+    		&.media-2 {
+    			
+    		}
+
+    		&.media-3 {
+    			
     		}
     	}
 
     	li.li-registration-button, li.registration-button {
-			background: url(../images/animation/button-registration.png);
+			background: url(../images/animation/registration-local.png);
 			display: block;
 			position: absolute;
 			cursor: pointer;
