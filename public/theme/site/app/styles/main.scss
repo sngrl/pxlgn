@@ -2375,6 +2375,7 @@ textarea:focus, input:focus, button:focus {
 			margin-left: 3px; 
 			background: #10AA9B;
 			position: relative;
+			background-repeat: no-repeat;
 
 			a {
     			text-decoration: none;
@@ -2398,8 +2399,6 @@ textarea:focus, input:focus, button:focus {
     		&.about-1 {
     			width: 343px;
     			height: 60px;
-    			
-    			background-position: 743px 0px;
 
     			span {
     				left: 17px;
