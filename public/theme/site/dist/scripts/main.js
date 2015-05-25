@@ -207,7 +207,7 @@ var mediaMenu = function(){
 			parent.css('background-position', menu_height*this_index);
 		}).on('mouseleave', function(){
 			setActive();
-		};
+		});
 	}
 	init();
 }
