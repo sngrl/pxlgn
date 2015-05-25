@@ -2353,7 +2353,7 @@ textarea:focus, input:focus, button:focus {
 	}
 }
 
-.inner-page-menu{
+.inner-page-menu {
 	width: 1009px;
 	height: 68px;
 	position: relative;
@@ -2373,10 +2373,8 @@ textarea:focus, input:focus, button:focus {
 			margin-left: 3px; 
 			background: #10AA9B;
 			position: relative;
-    	}
 
-    	li {
-    		a {
+			a {
     			text-decoration: none;
     			font-family: 'miniregular';
     			font-size: 22px;
@@ -2410,7 +2408,6 @@ textarea:focus, input:focus, button:focus {
 						top: 8px;
 					}
     			}
-    		}
 
     			&:hover {
     				background-position: 0px 0px;
