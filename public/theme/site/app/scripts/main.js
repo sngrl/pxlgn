@@ -198,12 +198,12 @@ var mediaMenu = function(){
 	var active_menu_item = menu_item.filter('.active');
 	var menu_height = 60;
 	var setActive = function() {
-		parent.css('background-position', '0 ' + menu_height*(active_menu_item.index()-1) + 'px');
+		parent.css('background-position', '0 ' + menu_height*active_menu_item.index() + 'px');
 	}
 	var init = function() {
 		setActive();
 		menu_item.on('mouseenter', function(){
-			var this_index = $(this).index() - 1;
+			var this_index = $(this).index();
 			parent.css('background-position', '0 ' +  menu_height*this_index + 'px');
 		}).on('mouseleave', function(){
 			setActive();
