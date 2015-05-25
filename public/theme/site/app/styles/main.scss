@@ -2364,11 +2364,15 @@ textarea:focus, input:focus, button:focus {
     position: relative;
 
     ul {
+    	padding: 0;
+    	margin-left: -4px;
+
     	li {
 			display: inline-block;
 			width: 150px;
 			margin-left: 3px; 
 			background: #10AA9B;
+			position: relative;
     	}
 
     	li {
@@ -2378,6 +2382,17 @@ textarea:focus, input:focus, button:focus {
     			font-size: 22px;
     			color: #000;
     			background-repeat: no-repeat;
+    			position: relative;
+    			width: 100%;
+    			height: 100%;
+    			top: 0px;
+    			right: 0px;
+    			bottom: 0px;
+    			left: 0px;
+
+    			span {
+    				position: relative;
+    			}
     		}
 
     		&.about-1 {
@@ -2385,6 +2400,17 @@ textarea:focus, input:focus, button:focus {
     			height: 60px;
     			background: url(../images/menu-about.png);
     			background-position: 743px 0px;
+
+    			span {
+    				left: 17px;
+    				top: 12px;
+
+    				&:hover {
+    					left: 20px;
+						top: 8px;
+					}
+    			}
+    		}
 
     			&:hover {
     				background-position: 0px 0px;
