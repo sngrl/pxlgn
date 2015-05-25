@@ -2442,13 +2442,6 @@ textarea:focus, input:focus, button:focus {
     		&.media-1 {
     			width: 343px;
     			height: 60px;
-    			background: url(../images/menu-media.png);
-    			background-position: 743px 0px;
-
-    			&:hover {
-    				background-position: 0px 0px;
-    			}
-
     		}
 
     		&.media-2 {
@@ -2465,10 +2458,10 @@ textarea:focus, input:focus, button:focus {
 			display: block;
 			position: absolute;
 			cursor: pointer;
-			margin-top: -37px;
+			margin-top: -64px;
 			width: 283px;
 			height: 64px;
-			right: 7px;
+			right: 0px;
 
 			a {
 				text-decoration: none;
