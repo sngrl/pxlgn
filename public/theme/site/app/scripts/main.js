@@ -150,7 +150,7 @@ var ButtonAnimation = function() {
 			steps: 3
 		},
 
-		".store .google-app-store-holder": {
+		".store .app-store-holder": {
 			steps: 3
 		}
 	};
