@@ -140,6 +140,14 @@ var ButtonAnimation = function() {
 
 		".social-button-holder .soc-tw": {
 			steps: 3
+		},
+
+		".google-play-holder .google-play": {
+			steps: 3
+		},
+
+		".google-app-store-holder .app-store": {
+			steps: 3
 		}
 	};
 	var Animation = function(step, elem, direction) {
