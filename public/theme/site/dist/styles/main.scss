@@ -1046,7 +1046,7 @@ textarea:focus, input:focus, button:focus {
 
 	.main-menu {
 		display: block;
-		width: 885px;
+		width: 1021px;
 		margin: 0 auto;
 		padding: 0;
 		height: 70px;
@@ -1057,7 +1057,7 @@ textarea:focus, input:focus, button:focus {
 			content: '';
 			position: absolute;
 			display: block;
-			width: 865px;
+			width: 1001px;
 			height: 46px;
 			top: -5px;
 			left: 17px;
@@ -1176,7 +1176,7 @@ textarea:focus, input:focus, button:focus {
 			height: 53px;
 			z-index: 2;
 			background: url(../images/animation/button-forum.png);
-			margin-left: -2px;
+			margin-left: 3px;
 			top: -6px;
 
 			&.active {
