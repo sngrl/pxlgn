@@ -2389,6 +2389,7 @@ textarea:focus, input:focus, button:focus {
     			right: 0px;
     			bottom: 0px;
     			left: 0px;
+    			display: block;
 
     			span {
     				position: relative;
@@ -2402,12 +2403,12 @@ textarea:focus, input:focus, button:focus {
     			span {
     				left: 17px;
     				top: 12px;
+    			}
 
-    				&:hover {
+    			&:hover {
     					left: 20px;
 						top: 8px;
 					}
-    			}
 
     		}
 
@@ -2418,12 +2419,12 @@ textarea:focus, input:focus, button:focus {
     			span {
     				left: 17px;
     				top: 12px;
-
-    				&:hover {
-    					left: 20px;
-						top: 8px;
-					}
     			}
+
+    			&:hover {
+    				left: 20px;
+					top: 8px;
+				}
     		}
 
     		&.about-3 {
@@ -2433,12 +2434,12 @@ textarea:focus, input:focus, button:focus {
     			span {
     				left: 17px;
     				top: 12px;
-
-    				&:hover {
-    					left: 20px;
-						top: 8px;
-					}
     			}
+
+    			&:hover {
+    				left: 20px;
+					top: 8px;
+				}
     			
     		}
 
