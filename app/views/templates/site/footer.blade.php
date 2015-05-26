@@ -103,6 +103,7 @@
                     <div class="download-button"> <a>Скачать игру <span>(540MB)</span></a></div>
                 </div>
             </div>
+            <div class="js-form-error">Ошибка!</div>
         </div>
     </div>
 </div>
