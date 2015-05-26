@@ -302,6 +302,7 @@ $(function() {
 		capcha: 'Неверно введён код'
 	},
  	submitHandler: function(form) {
+ 		alert('[eq];');
      var _url = $(form).attr('action'),
          _data = $(form).serialize(),
          _method = $(form).attr('method')||'POST';
