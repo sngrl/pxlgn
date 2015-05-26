@@ -66,7 +66,7 @@
                         </div>
                         <div class="agreement">
                             <input type="checkbox" required name="agreement" form="log-in-form" checked>
-                            <p class="agreement">Я прочитал и принимаю <a href="#">пользовательское соглашение</a> и <a href="#">правила конфиденциальности</a></p>
+                            <p class="listense">Я прочитал и принимаю <a href="#">пользовательское соглашение</a> и <a href="#">правила конфиденциальности</a></p>
                             <p class="warning">Вы забыли принять пользовательское соглашение</p>
                         </div>
                         <div class="log-in-button-2">
