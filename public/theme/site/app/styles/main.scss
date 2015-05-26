@@ -431,14 +431,17 @@ textarea:focus, input:focus, button:focus {
 
 		.agreement {
 
+			overflow: hidden;
+
 			input {
 				cursor: pointer;
-				width: 31px;
-				height: 31px;
+				width: 31px !important;
+				height: 31px !important;
 				position: relative;
 				display: block;
-				border: none;
-				box-shadow: none;
+				box-shadow: none !important;
+				float: left;
+				margin-right: 10px;
 
 				&:checked:before {
 					background-position: 0px 0px;
@@ -463,9 +466,12 @@ textarea:focus, input:focus, button:focus {
 			font-family: 'playregular';
 			font-size: 14px;
 			color: #8fb5e9;
+			display: block;
+			margin-left: 40px;
 
 				a {
 					color: #fff;
+					text-decoration: none;
 				}
 			}
 		}
@@ -1943,14 +1949,18 @@ textarea:focus, input:focus, button:focus {
 					top: 19px;
   					left: 87px;
 				}
+
+				&:hover span {
+					top: 21px;
+				}
 			}
 		}
 
 		.app-store-holder {
 			background-image: url(../images/animation/bg-app-store.png);
 			background-position: left top;
-			width: 239px;
-			height: 74px;
+			width: 248px;
+			height: 84px;
 			margin-top: -3px;
 			background-repeat: no-repeat;
 			margin-left: 16px;
@@ -1958,15 +1968,19 @@ textarea:focus, input:focus, button:focus {
 			.app-store {
 
 				display: block;
-				width: 90%;
-				height: 100%;
+				width: 100%;
+				height: 90%;
 				left: 0px;
 				bottom: 0px;
 
 				span {
 					position: absolute;
-					top: 22px;
+					top: 18px;
 					left: 85px;
+				}
+
+				&:hover span {
+					top: 21px;
 				}
 			}
 		}
