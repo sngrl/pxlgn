@@ -2415,14 +2415,23 @@ textarea:focus, input:focus, button:focus {
 	left: -7px;
     margin-top: -19px;
     display: block;
-    background-repeat: no-repeat;
+    
     position: relative;
-    background-image: url(../images/menu-about.png);
-    background-position: 0px 0px;
+
+	.about-menu {
+		background-image: url(../images/menu-about.png);
+	}
+
+	.media-menu {
+		background-image: url(../images/menu-media.png);
+	}
+    
 
     ul {
     	padding: 0;
     	margin-left: -4px;
+    	background-repeat: no-repeat;
+    	background-position: 0px 0px;
 
     	li {
 			display: inline-block;

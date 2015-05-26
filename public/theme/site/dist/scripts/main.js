@@ -193,7 +193,7 @@ ButtonAnimation();
 
 
 var mediaMenu = function(){
-	var parent = $('.inner-page-menu');
+	var parent = $('.inner-page-menu ul');
 	var menu_item = parent.find('li');
 	var active_menu_item = menu_item.filter('.active');
 	var menu_height = 60;
