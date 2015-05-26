@@ -549,6 +549,7 @@ textarea:focus, input:focus, button:focus {
 					color: #dd4e1f;
 					padding: 0;
 					margin: 4px 0 0 0;
+					display: none;
 				}
 
 				.download {
@@ -2420,118 +2421,10 @@ textarea:focus, input:focus, button:focus {
 
 	.about-menu {
 		background-image: url(../images/menu-about.png);
-
-		li {
-
-			a {
-
-			}
-		}
-
-		&.about-1 {
-			width: 343px;
-			height: 60px;
-
-			span {
-				left: 17px;
-				top: 12px;
-			}
-
-			&:hover span, &.active span {
-					left: 20px;
-					top: 8px;
-				}
-
-		}
-
-		&.about-2 {
-			width: 167px;
-			height: 60px;
-
-			span {
-				left: 17px;
-				top: 12px;
-			}
-
-			&:hover span, &.active span {
-				left: 20px;
-				top: 8px;
-			}
-		}
-
-		&.about-3 {
-			width: 220px;
-			height: 60px;
-
-			span {
-				left: 17px;
-				top: 12px;
-			}
-
-			&:hover span, &.active span {
-				left: 20px;
-				top: 8px;
-			}
-			
-		}
 	}
 
 	.media-menu {
 		background-image: url(../images/menu-media.png);
-
-				li {
-
-			a {
-
-			}
-		}
-
-		&.media-1 {
-			width: 343px;
-			height: 60px;
-
-			span {
-				left: 17px;
-				top: 12px;
-			}
-
-			&:hover span, &.active span {
-					left: 20px;
-					top: 8px;
-				}
-
-		}
-
-		&.media-2 {
-			width: 167px;
-			height: 60px;
-
-			span {
-				left: 17px;
-				top: 12px;
-			}
-
-			&:hover span, &.active span {
-				left: 20px;
-				top: 8px;
-			}
-		}
-
-		&.media-3 {
-			width: 220px;
-			height: 60px;
-
-			span {
-				left: 17px;
-				top: 12px;
-			}
-
-			&:hover span, &.active span {
-				left: 20px;
-				top: 8px;
-			}
-			
-		}
 	}
     
 
@@ -2540,6 +2433,8 @@ textarea:focus, input:focus, button:focus {
     	margin-left: -4px;
     	background-repeat: no-repeat;
     	background-position: 0px 0px;
+    	width: 1009px;
+		height: 60px;
 
     	li {
 			display: inline-block;
@@ -2566,6 +2461,99 @@ textarea:focus, input:focus, button:focus {
     			span {
     				position: relative;
     			}
+
+    			&.about-1 {
+					width: 343px;
+					height: 60px;
+
+					span {
+						left: 17px;
+						top: 12px;
+					}
+
+					&:hover span, &.active span {
+							left: 20px;
+							top: 8px;
+						}
+
+				}
+
+				&.about-2 {
+					width: 167px;
+					height: 60px;
+
+					span {
+						left: 17px;
+						top: 12px;
+					}
+
+					&:hover span, &.active span {
+						left: 20px;
+						top: 8px;
+					}
+				}
+
+				&.about-3 {
+					width: 220px;
+					height: 60px;
+
+					span {
+						left: 17px;
+						top: 12px;
+					}
+
+					&:hover span, &.active span {
+						left: 20px;
+						top: 8px;
+					}
+					
+				}
+
+				&.media-1 {
+					width: 343px;
+					height: 60px;
+
+					span {
+						left: 17px;
+						top: 12px;
+					}
+
+					&:hover span, &.active span {
+							left: 20px;
+							top: 8px;
+					}
+				}
+
+				&.media-2 {
+					width: 167px;
+					height: 60px;
+
+					span {
+						left: 17px;
+						top: 12px;
+					}
+
+					&:hover span, &.active span {
+						left: 20px;
+						top: 8px;
+					}
+				}
+
+				&.media-3 {
+					width: 220px;
+					height: 60px;
+
+					span {
+						left: 17px;
+						top: 12px;
+					}
+
+					&:hover span, &.active span {
+						left: 20px;
+						top: 8px;
+					}
+					
+				}				
     		}
     	}
 
@@ -2577,7 +2565,7 @@ textarea:focus, input:focus, button:focus {
 			margin-top: -64px;
 			width: 283px;
 			height: 64px;
-			right: 0px;
+			right: 5px;
 
 			a {
 				text-decoration: none;
@@ -3259,6 +3247,11 @@ iframe {
 	}
 }
 
+.js-form-error {
+	display: none;
+	color: #dd4e1f;
+}
+
 form.page {
 
 	width: 435px;
@@ -3323,13 +3316,13 @@ form.page {
 	}
 
 	p.warning {
-		display: block;
 		position: absolute;
 		right: -210px;
 		top: 0px;
 		text-align: left;
 		width: 200px;
 		color: #ff561b;
+		display: none;
 	}
 
 	.confirmation {

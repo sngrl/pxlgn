@@ -7,6 +7,7 @@
     "normalize-scss": "~3.0.2",
     "fotorama": "~4.6.3",
     "jquery-ui": "~1.11.4",
-    "fancybox": "~2.1.5"
+    "fancybox": "~2.1.5",
+    "jquery-validation": "~1.13.1"
   }
 }
