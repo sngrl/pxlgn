@@ -194,7 +194,7 @@ ButtonAnimation();
 
 var mediaMenu = function(){
 	var parent = $('.inner-page-menu ul');
-	var menu_item = parent.find('li');
+	var menu_item = parent.find('li').not('.registration-button');
 	var active_menu_item = menu_item.filter('.active');
 	var menu_height = 60;
 	var setActive = function() {
@@ -250,19 +250,19 @@ $(function() {
 
 	// РАБОТА ФОРМЫ
 
-	$('.log-in-button-2 button').click(function(e){
-		e.preventDefault();
+	// $('.log-in-button-2 button').click(function(e){
+	// 	e.preventDefault();
 
-		$('#log-in-form').toggleClass('log-in-form');
+	// 	$('#log-in-form').toggleClass('log-in-form');
 
-	});
+	// });
 
-	$('.log-in-button-2 button').click(function(e){
-		e.preventDefault();
+	// $('.log-in-button-2 button').click(function(e){
+	// 	e.preventDefault();
 
-		$('.form-fade').hide();
-		$('.success-fade').show();
-	});
+	// 	$('.form-fade').hide();
+	// 	$('.success-fade').show();
+	// });
 
 	$('.download-button a').click(function(e){
 		e.preventDefault();
