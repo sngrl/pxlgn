@@ -331,4 +331,22 @@ $(function() {
  	}
  })
 
+ $('.capcha-image .refresh').click(function(e) {
+ 	e.preventDefault();
+
+ 	var capchaSrc = function() {
+ 		return $('.capcha-image img').attr('src');
+ 	}
+
+ 	var capchaSrcEdit = function() {
+ 		function randomShit() {
+		  return Math.floor((Math.random() * 100) + 1);
+		}
+
+		$('.capcha-image img').attr('src', capchaSrc() + '?' + randomShit());
+ 	}
+
+ 	capchaSrcEdit();
+ })
+
 });
