@@ -429,6 +429,47 @@ textarea:focus, input:focus, button:focus {
 		height: 589px;
 		z-index: 1000;
 
+		.agreement {
+
+			input {
+				cursor: pointer;
+				width: 31px;
+				height: 31px;
+				position: relative;
+				display: block;
+				border: none;
+				box-shadow: none;
+
+				&:checked:before {
+					background-position: 0px 0px;
+				}
+
+				&:before {
+					content: '';
+					display: block;
+					width: 31px;
+					height: 31px;
+					background: url(../images/button-pass-show.png);
+					background-position: 0px -62px;
+					border: none;
+					position: absolute;
+					left: 0px;
+					bottom: 0px;
+					background-repeat: no-repeat;
+				}
+			}
+
+			p.listense {
+			font-family: 'playregular';
+			font-size: 14px;
+			color: #8fb5e9;
+
+				a {
+					color: #fff;
+				}
+			}
+		}
+
 		.form-head {
 			position: relative;
 			width: 433px;
@@ -915,47 +956,6 @@ textarea:focus, input:focus, button:focus {
 
 					.ui-state-active {
 						background: #bac4d9;
-					}
-
-					.agreement {
-		
-						input {
-							cursor: pointer;
-							width: 31px;
-							height: 31px;
-							position: relative;
-							display: block;
-							border: none;
-							box-shadow: none;
-
-							&:checked:before {
-								background-position: 0px 0px;
-							}
-
-							&:before {
-								content: '';
-								display: block;
-								width: 31px;
-								height: 31px;
-								background: url(../images/button-pass-show.png);
-								background-position: 0px -62px;
-								border: none;
-								position: absolute;
-								left: 0px;
-								bottom: 0px;
-								background-repeat: no-repeat;
-							}
-						}
-
-						p.listense {
-						font-family: 'playregular';
-						font-size: 14px;
-						color: #8fb5e9;
-
-							a {
-								color: #fff;
-							}
-						}
 					}
 				}
 
