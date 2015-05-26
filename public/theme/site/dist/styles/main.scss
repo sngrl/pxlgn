@@ -2420,10 +2420,118 @@ textarea:focus, input:focus, button:focus {
 
 	.about-menu {
 		background-image: url(../images/menu-about.png);
+
+		li {
+
+			a {
+
+			}
+		}
+
+		&.about-1 {
+			width: 343px;
+			height: 60px;
+
+			span {
+				left: 17px;
+				top: 12px;
+			}
+
+			&:hover span, &.active span {
+					left: 20px;
+					top: 8px;
+				}
+
+		}
+
+		&.about-2 {
+			width: 167px;
+			height: 60px;
+
+			span {
+				left: 17px;
+				top: 12px;
+			}
+
+			&:hover span, &.active span {
+				left: 20px;
+				top: 8px;
+			}
+		}
+
+		&.about-3 {
+			width: 220px;
+			height: 60px;
+
+			span {
+				left: 17px;
+				top: 12px;
+			}
+
+			&:hover span, &.active span {
+				left: 20px;
+				top: 8px;
+			}
+			
+		}
 	}
 
 	.media-menu {
 		background-image: url(../images/menu-media.png);
+
+				li {
+
+			a {
+
+			}
+		}
+
+		&.media-1 {
+			width: 343px;
+			height: 60px;
+
+			span {
+				left: 17px;
+				top: 12px;
+			}
+
+			&:hover span, &.active span {
+					left: 20px;
+					top: 8px;
+				}
+
+		}
+
+		&.media-2 {
+			width: 167px;
+			height: 60px;
+
+			span {
+				left: 17px;
+				top: 12px;
+			}
+
+			&:hover span, &.active span {
+				left: 20px;
+				top: 8px;
+			}
+		}
+
+		&.media-3 {
+			width: 220px;
+			height: 60px;
+
+			span {
+				left: 17px;
+				top: 12px;
+			}
+
+			&:hover span, &.active span {
+				left: 20px;
+				top: 8px;
+			}
+			
+		}
 	}
     
 
@@ -2458,66 +2566,6 @@ textarea:focus, input:focus, button:focus {
     			span {
     				position: relative;
     			}
-    		}
-
-    		&.about-1 {
-    			width: 343px;
-    			height: 60px;
-
-    			span {
-    				left: 17px;
-    				top: 12px;
-    			}
-
-    			&:hover span, &.active span {
-    					left: 20px;
-						top: 8px;
-					}
-
-    		}
-
-    		&.about-2 {
-    			width: 167px;
-    			height: 60px;
-
-    			span {
-    				left: 17px;
-    				top: 12px;
-    			}
-
-    			&:hover span, &.active span {
-    				left: 20px;
-					top: 8px;
-				}
-    		}
-
-    		&.about-3 {
-    			width: 220px;
-    			height: 60px;
-
-    			span {
-    				left: 17px;
-    				top: 12px;
-    			}
-
-    			&:hover span, &.active span {
-    				left: 20px;
-					top: 8px;
-				}
-    			
-    		}
-
-    		&.media-1 {
-    			width: 343px;
-    			height: 60px;
-    		}
-
-    		&.media-2 {
-    			
-    		}
-
-    		&.media-3 {
-    			
     		}
     	}
 
