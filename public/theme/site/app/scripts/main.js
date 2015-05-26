@@ -334,8 +334,6 @@ $(function() {
  $('.capcha-image .refresh').click(function(e) {
  	e.preventDefault();
 
- 	$('.capcha-image img').removeAttr('src');
-
  	var capchaSrc = function() {
  		return $('.capcha-image img').attr('src');
  	}
@@ -345,6 +343,7 @@ $(function() {
 		  return Math.floor(Math.random() * (9999999+1) );
 		}
 
+		$('.capcha-image img').removeAttr('src');
 		$('.capcha-image img').attr('src', capchaSrc() + '?' + randomShit());
  	}
 
