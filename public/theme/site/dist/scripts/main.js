@@ -331,12 +331,10 @@ $(function() {
  	}
  })
 
+var capchaString = $('.capcha-image img').attr('src');
+
  $('.capcha-image .refresh').click(function(e) {
  	e.preventDefault();
-
- 	var capchaSrc = function() {
- 		return $('.capcha-image img').attr('src');
- 	}
 
  	var capchaSrcEdit = function() {
  		function randomShit() {
@@ -344,7 +342,7 @@ $(function() {
 		}
 
 		$('.capcha-image img').removeAttr('src');
-		$('.capcha-image img').attr('src', capchaSrc() + '?' + randomShit());
+		$('.capcha-image img').attr('src', capchaString + '?' + randomShit());
  	}
 
  	capchaSrcEdit();
