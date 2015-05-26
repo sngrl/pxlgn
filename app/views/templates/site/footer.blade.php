@@ -64,8 +64,8 @@
                             </div>
                             <p class="warning">Неверный код!</p>
                         </div>
-                        <div class="capcha">
-                        <input type="checkbox" name="option1" value="a1" checked>
+                        <div class="agreement">
+                        <input type="checkbox" required name="agreement" form="log-in-form" checked>
                         <p class="agreement">Я прочитал и принимаю <a href="#">пользовательское соглашение</a> и <a href="#">правила конфиденциальности</a></p>
                         <p class="warning">Вы забыли принять пользовательское соглашение</p>
                         </div>
