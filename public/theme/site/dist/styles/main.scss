@@ -2443,6 +2443,99 @@ textarea:focus, input:focus, button:focus {
 			position: relative;
 			background-repeat: no-repeat;
 
+			&.about-1 {
+				width: 343px;
+				height: 60px;
+
+				span {
+					left: 17px;
+					top: 12px;
+				}
+
+				&:hover span, &.active span {
+						left: 20px;
+						top: 8px;
+					}
+
+			}
+
+			&.about-2 {
+				width: 167px;
+				height: 60px;
+
+				span {
+					left: 17px;
+					top: 12px;
+				}
+
+				&:hover span, &.active span {
+					left: 20px;
+					top: 8px;
+				}
+			}
+
+			&.about-3 {
+				width: 220px;
+				height: 60px;
+
+				span {
+					left: 17px;
+					top: 12px;
+				}
+
+				&:hover span, &.active span {
+					left: 20px;
+					top: 8px;
+				}
+				
+			}
+
+			&.media-1 {
+				width: 343px;
+				height: 60px;
+
+				span {
+					left: 17px;
+					top: 12px;
+				}
+
+				&:hover span, &.active span {
+						left: 20px;
+						top: 8px;
+				}
+			}
+
+			&.media-2 {
+				width: 167px;
+				height: 60px;
+
+				span {
+					left: 17px;
+					top: 12px;
+				}
+
+				&:hover span, &.active span {
+					left: 20px;
+					top: 8px;
+				}
+			}
+
+			&.media-3 {
+				width: 220px;
+				height: 60px;
+
+				span {
+					left: 17px;
+					top: 12px;
+				}
+
+				&:hover span, &.active span {
+					left: 20px;
+					top: 8px;
+				}
+				
+			}	
+
 			a {
     			text-decoration: none;
     			font-family: 'miniregular';
@@ -2460,100 +2553,7 @@ textarea:focus, input:focus, button:focus {
 
     			span {
     				position: relative;
-    			}
-
-    			&.about-1 {
-					width: 343px;
-					height: 60px;
-
-					span {
-						left: 17px;
-						top: 12px;
-					}
-
-					&:hover span, &.active span {
-							left: 20px;
-							top: 8px;
-						}
-
-				}
-
-				&.about-2 {
-					width: 167px;
-					height: 60px;
-
-					span {
-						left: 17px;
-						top: 12px;
-					}
-
-					&:hover span, &.active span {
-						left: 20px;
-						top: 8px;
-					}
-				}
-
-				&.about-3 {
-					width: 220px;
-					height: 60px;
-
-					span {
-						left: 17px;
-						top: 12px;
-					}
-
-					&:hover span, &.active span {
-						left: 20px;
-						top: 8px;
-					}
-					
-				}
-
-				&.media-1 {
-					width: 343px;
-					height: 60px;
-
-					span {
-						left: 17px;
-						top: 12px;
-					}
-
-					&:hover span, &.active span {
-							left: 20px;
-							top: 8px;
-					}
-				}
-
-				&.media-2 {
-					width: 167px;
-					height: 60px;
-
-					span {
-						left: 17px;
-						top: 12px;
-					}
-
-					&:hover span, &.active span {
-						left: 20px;
-						top: 8px;
-					}
-				}
-
-				&.media-3 {
-					width: 220px;
-					height: 60px;
-
-					span {
-						left: 17px;
-						top: 12px;
-					}
-
-					&:hover span, &.active span {
-						left: 20px;
-						top: 8px;
-					}
-					
-				}				
+    			}			
     		}
     	}
 
@@ -2562,7 +2562,7 @@ textarea:focus, input:focus, button:focus {
 			display: block;
 			position: absolute;
 			cursor: pointer;
-			margin-top: -64px;
+			margin-top: -35px;
 			width: 283px;
 			height: 64px;
 			right: 5px;
