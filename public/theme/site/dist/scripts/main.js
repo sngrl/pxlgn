@@ -334,13 +334,15 @@ $(function() {
  $('.capcha-image .refresh').click(function(e) {
  	e.preventDefault();
 
+ 	$('.capcha-image img').removeAttr('src');
+
  	var capchaSrc = function() {
  		return $('.capcha-image img').attr('src');
  	}
 
  	var capchaSrcEdit = function() {
  		function randomShit() {
-		  return Math.floor((Math.random() * 100) + 1);
+		  return Math.floor(Math.random() * (9999999+1) );
 		}
 
 		$('.capcha-image img').attr('src', capchaSrc() + '?' + randomShit());
