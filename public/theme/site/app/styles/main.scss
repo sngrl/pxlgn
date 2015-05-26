@@ -2405,7 +2405,7 @@ textarea:focus, input:focus, button:focus {
     				top: 12px;
     			}
 
-    			&:hover span {
+    			&:hover span, &.active span {
     					left: 20px;
 						top: 8px;
 					}
@@ -2421,7 +2421,7 @@ textarea:focus, input:focus, button:focus {
     				top: 12px;
     			}
 
-    			&:hover span {
+    			&:hover span, &.active span {
     				left: 20px;
 					top: 8px;
 				}
@@ -2436,7 +2436,7 @@ textarea:focus, input:focus, button:focus {
     				top: 12px;
     			}
 
-    			&:hover span {
+    			&:hover span, &.active span {
     				left: 20px;
 					top: 8px;
 				}
@@ -3218,6 +3218,46 @@ form.page {
 		text-align: left;
 		width: 200px;
 		color: #ff561b;
+	}
+
+	p.agreement {
+		font-family: 'playregular';
+		font-size: 14px;
+		color: #8fb5e9;
+
+		a {
+			color: #fff;
+		}
+	}
+
+	.agreement {
+		input {
+				cursor: pointer;
+				width: 31px;
+				height: 31px;
+				position: relative;
+				display: block;
+				border: none;
+				box-shadow: none;
+
+				&:checked:before {
+					background-position: 0px 0px;
+				}
+
+				&:before {
+					content: '';
+					display: block;
+					width: 31px;
+					height: 31px;
+					background: url(../images/button-pass-show.png);
+					background-position: 0px -62px;
+					border: none;
+					position: absolute;
+					left: 0px;
+					bottom: 0px;
+					background-repeat: no-repeat;
+				}
+			}
 	}
 
 	.confirmation {

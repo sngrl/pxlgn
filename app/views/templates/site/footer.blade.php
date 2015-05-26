@@ -64,6 +64,11 @@
                             </div>
                             <p class="warning">Неверный код!</p>
                         </div>
+                        <div class="capcha">
+                        <input type="checkbox" name="option1" value="a1" checked>
+                        <p class="agreement">Я прочитал и принимаю <a href="#">пользовательское соглашение</a> и <a href="#">правила конфиденциальности</a></p>
+                        <p class="warning">Вы забыли принять пользовательское соглашение</p>
+                        </div>
                         <div class="log-in-button-2">
                             <button type="submit">
                                 {{ trans("interface.tpl.create_account") }}
