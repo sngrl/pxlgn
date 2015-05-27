@@ -110,6 +110,10 @@ var ButtonAnimation = function() {
 			steps: 7
 		},
 
+		".main-menu .blog": {
+			steps: 7
+		},
+
 		// ".main-menu .mobile": {
 		// 	steps: 7
 		// }
@@ -126,8 +130,28 @@ var ButtonAnimation = function() {
 			steps: 5
 		},
 
-		".inner-page-menu .registration-button": {
-			steps: 5
+		"li.registration-button": {
+			steps: 4
+		},
+
+		".social-button-holder .soc-vk": {
+			steps: 3
+		},
+
+		".social-button-holder .soc-fb": {
+			steps: 3
+		},
+
+		".social-button-holder .soc-tw": {
+			steps: 3
+		},
+
+		".store .google-play-holder": {
+			steps: 3
+		},
+
+		".store .app-store-holder": {
+			steps: 3
 		}
 	};
 	var Animation = function(step, elem, direction) {
@@ -168,6 +192,27 @@ var ButtonAnimation = function() {
 ButtonAnimation();
 
 
+var mediaMenu = function(){
+	var parent = $('.inner-page-menu ul');
+	var menu_item = parent.find('li').not('.registration-button');
+	var active_menu_item = menu_item.filter('.active');
+	var menu_height = 60;
+	var setActive = function() {
+		parent.css('background-position', '0 ' + '-' + menu_height*active_menu_item.index() + 'px');
+	}
+	var init = function() {
+		setActive();
+		menu_item.on('mouseenter', function(){
+			var this_index = $(this).index();
+			parent.css('background-position', '0 ' + '-' + menu_height*this_index + 'px');
+		}).on('mouseleave', function(){
+			setActive();
+		});
+	}
+	init();
+}
+mediaMenu();
+
 //POP-UP окна авторизиции
 
 $(function() {
@@ -186,42 +231,6 @@ $(function() {
     });
 
     $(".fancybox").fancybox({})
-
-    // ВАЛИДАЦИЯ
-
-    /*$("form.review-form").validate({
-	   	rules: {
-	     	name: 'required',
-	     	email: {
-	       		required: true,
-	       		email: true
-	     	},
-	     	review: 'required'
-	   	},
-
-	    messages: {
-	     	name: 'Обязательное поле',
-	     	email: {
-	       		required: 'Обязательное поле',
-	       	email: 'Неверный формат. Попробуйте еще'
-	     	},
-	     	review: 'Обязательное поле'
-	   },
-
-	   submitHandler: function(form) {
-	     	var _url = $(form).attr('action'),
-	        	_data = $(form).serialize(),
-	        	_method = $(form).attr('method')||'POST';
-	     	$.ajax({
-	       		type: _method,
-	       		url: _url,
-	       		data: _data,
-		       	success: function(data) {
-		         	$('.unit.form-holder .final').fadeIn();
-		       	}
-	     	})
-	   	}
- 	});*/
 	
 	// ПОКАЗАТЬ-СКРЫТЬ ПАРОЛЬ
 
@@ -241,19 +250,19 @@ $(function() {
 
 	// РАБОТА ФОРМЫ
 
-	$('.log-in-button-2 button').click(function(e){
-		e.preventDefault();
+	// $('.log-in-button-2 button').click(function(e){
+	// 	e.preventDefault();
 
-		$('#log-in-form').toggleClass('log-in-form');
+	// 	$('#log-in-form').toggleClass('log-in-form');
 
-	});
+	// });
 
-	$('.log-in-button-2 button').click(function(e){
-		e.preventDefault();
+	// $('.log-in-button-2 button').click(function(e){
+	// 	e.preventDefault();
 
-		$('.form-fade').hide();
-		$('.success-fade').show();
-	});
+	// 	$('.form-fade').hide();
+	// 	$('.success-fade').show();
+	// });
 
 	$('.download-button a').click(function(e){
 		e.preventDefault();
@@ -264,6 +273,79 @@ $(function() {
 
 	//$('.app-store').
 
+	// ВАЛИДАЦИЯ
+
+  $("#log-in-form").validate({
+	rules: {
+		email: {
+			required: true,
+			email: true
+		},
+		password: {
+			required: true,
+			minlength: 6,
+		},
+		agreement: 'required',
+		capcha: 'required'
+
+	},
+	messages: {
+		email: {
+			required: 'Обязательное поле!',
+			email: 'Неверный формат!'
+		},
+		password: {
+			required: 'Обязательное поле!',
+			minlength: 'Слишком простой пароль!',
+		},
+		agreement: 'Вы забыли принять пользовательское соглашение',
+		capcha: 'Неверно введён код'
+	},
+ 	submitHandler: function(form) {
+ 		alert('[eq];');
+     var _url = $(form).attr('action'),
+         _data = $(form).serialize(),
+         _method = $(form).attr('method')||'POST';
+         $('.js-form-error').hide();
+         $('.form-holder [type="submit"]').attr('disabled', 'disabled');
+     $.ajax({
+       type: _method,
+       url: _url,
+       data: _data
+ 	 }).done(function(data){
+ 	 	if(data.status == true) {
+       		//$('.js-form-success').html(data.responseText);
+       		$('.success-fade').slideUp();
+       		$('.form-fade').slideDown();
+       	}
+       	if(!data.status && data.responseText) {
+       		$('p.warning').show().html(data.responseText);
+       	}
+       }).fail(function(data){
+       	$('.js-form-error').show().html('Server error');
+       }).always(function(){
+       	$('.form-holder [type="submit"]').removeAttr('disabled');
+       });
+
+       console.log('Бог в помощь!');
+ 	}
+ })
+
+var capchaString = $('.capcha-image img').attr('src');
+
+ $('.capcha-image .refresh').click(function(e) {
+ 	e.preventDefault();
+
+ 	var capchaSrcEdit = function() {
+ 		function randomShit() {
+		  return Math.floor(Math.random() * (9999999+1) );
+		}
+
+		$('.capcha-image img').removeAttr('src');
+		$('.capcha-image img').attr('src', capchaString + '?' + randomShit());
+ 	}
+
+ 	capchaSrcEdit();
+ })
+
 });
-
-

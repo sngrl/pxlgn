@@ -64,6 +64,11 @@
                             </div>
                             <p class="warning">Неверный код!</p>
                         </div>
+                        <div class="agreement">
+                            <input type="checkbox" required name="agreement" form="log-in-form" checked>
+                            <p class="listense">Я прочитал и принимаю <a href="#">пользовательское соглашение</a> и <a href="#">правила конфиденциальности</a></p>
+                            <p class="warning">Вы забыли принять пользовательское соглашение</p>
+                        </div>
                         <div class="log-in-button-2">
                             <button type="submit">
                                 {{ trans("interface.tpl.create_account") }}
@@ -98,6 +103,7 @@
                     <div class="download-button"> <a>Скачать игру <span>(540MB)</span></a></div>
                 </div>
             </div>
+            <div class="js-form-error">Ошибка!</div>
         </div>
     </div>
 </div>
