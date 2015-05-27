@@ -15,7 +15,6 @@ $slider = DicLib::loadImages($slider, ['image']);
 $news = Dic::valuesBySlug('news', function($query) {
     $query->order_by_field('published_at', 'DESC');
     $query->take(3);
-    #$query->remember(1); ## don't work!
 });
 $news = DicLib::loadImages($news, ['image']);
 #Helper::tad($news);
@@ -195,7 +194,8 @@ class PixelGunSidebar {
                         if (!$tmp->slug)
                             continue;
                         ?>
-                        <div class="social-button-holder" data-img="{{ $tmp->is_img('image') ? $tmp->image->thumb() : '' }}"><a href="#" class="soc-{{ $tmp->slug }}"></a></div>
+                        {{--<div class="social-button-holder" data-img="{{ $tmp->is_img('image') ? $tmp->image->thumb() : '' }}"><a href="#" class="soc-{{ $tmp->slug }}"></a></div>--}}
+                        <div class="social-button-holder social-button-holder-{{ $tmp->slug }}"><a href="#" class="soc-{{ $tmp->slug }}"></a></div>
                     @endforeach
                 </div>
             </div>
