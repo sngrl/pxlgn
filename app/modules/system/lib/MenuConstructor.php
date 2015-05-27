@@ -7,7 +7,7 @@ class MenuConstructor {
 
         $menu_item = Storage::where('module', 'menu')->where('name', $slug);
 
-        if (NULL != ($db_remember_timeout = Config::get('app.settings.main.db_remember_timeout')))
+        if (NULL != ($db_remember_timeout = Config::get('app.settings.main.db_remember_timeout')) && $db_remember_timeout > 0)
             $menu_item->remember($db_remember_timeout);
 
         $menu_item = $menu_item->first();
@@ -71,7 +71,7 @@ class MenuConstructor {
 
                 $pages = Page::whereIn('id', $this->pages_ids);
 
-                if (NULL != ($db_remember_timeout = Config::get('app.settings.main.db_remember_timeout')))
+                if (NULL != ($db_remember_timeout = Config::get('app.settings.main.db_remember_timeout')) && $db_remember_timeout > 0)
                     $pages->remember($db_remember_timeout);
 
                 $pages = $pages->get();

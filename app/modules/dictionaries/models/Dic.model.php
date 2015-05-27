@@ -390,7 +390,7 @@ class Dic extends BaseModel {
         ##
         ## Cache query
         ##
-        if (NULL != ($db_remember_timeout = Config::get('app.settings.main.db_remember_timeout')))
+        if (NULL != ($db_remember_timeout = Config::get('app.settings.main.db_remember_timeout')) && $db_remember_timeout > 0)
             $values->remember($db_remember_timeout);
 
         $count = $values->count();
