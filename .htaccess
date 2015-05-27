@@ -6,11 +6,15 @@ Options -Indexes
 
     RewriteEngine on
 
+    ## FORUMS FUNCTIONALITY
+    # Multi language
     RewriteCond %{REQUEST_URI} ^/(en|ru)/forum [NC]
 	RewriteRule ^([^/]+)/forum/(.*) /public/common/$1/forum/$2 [L]
-	RewriteRule ^([^/]+)/forum /$1/forum/ [L,R=301]
+	RewriteRule ^([^/]+)/forum$ /$1/forum/ [L,R=301]
+    # Single language
+    #RewriteCond %{REQUEST_URI} ^/forum [NC]
 	#RewriteRule ^/forum/(.*) /public/common/forum/$1 [L]
-	#RewriteRule ^/forum /forum/ [L,R=301]
+	#RewriteRule ^/forum$ /forum/ [L,R=301]
 
 	# project.dev.grapheme.ru
     #RewriteCond %{DOCUMENT_ROOT}/public -d
