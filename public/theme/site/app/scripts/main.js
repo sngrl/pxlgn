@@ -7,7 +7,7 @@ $('.styled-select').selectmenu({
 }).selectmenu( "open" ).selectmenu( "close" );
 
 $(function() {
-    $( ".js-selectmenu" ).selectmenu().addClass('ui-hui-pizda-dzigurda');
+    //$( ".js-selectmenu" ).selectmenu().addClass('ui-hui-pizda-dzigurda');
 });
 
 // $('.app-store').mouseover(function(){
@@ -292,14 +292,14 @@ $(function() {
 	messages: {
 		email: {
 			required: 'Обязательное поле!',
-			email: 'Неверный формат!'
+			email: api_errors.result_3,
 		},
 		password: {
 			required: 'Обязательное поле!',
-			minlength: 'Слишком простой пароль!',
+			minlength: api_errors.result_7,
 		},
 		agreement: 'Вы забыли принять пользовательское соглашение',
-		capcha: 'Неверно введён код'
+		capcha: api_errors.bad_captcha
 	},
  	submitHandler: function(form) {
      var _url = $(form).attr('action'),
@@ -324,10 +324,13 @@ $(function() {
        		$('.form-fade').slideDown();
        	}
        	if(!data.status && data.responseText) {
+
+
+       		
        		$('p.warning').show().html(data.responseText);
        	}
        }).fail(function(data){
-       	$('.js-form-error').show().html('Server error');
+       	$('.js-form-error').show().html(api_errors.result_2);
        }).always(function(){
        	$('.form-holder [type="submit"]').removeAttr('disabled');
        });
