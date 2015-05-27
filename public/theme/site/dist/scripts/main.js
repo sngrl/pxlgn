@@ -298,7 +298,7 @@ $(function() {
 			required: 'Обязательное поле!',
 			minlength: api_errors.result_7,
 		},
-		agreement: 'Вы забыли принять пользовательское соглашение',
+		agreement: api_errors.accept_rules,
 		capcha: api_errors.bad_captcha
 	},
  	submitHandler: function(form) {
@@ -312,10 +312,11 @@ $(function() {
        url: _url,
        data: _data
  	 }).done(function(data){
- 	 	
+ 	 	alert(1);
  	 	console.log(data);
-
+ 	 	alert(data.status)
  	 	if(data.status == true) {
+ 	 		alert(2);
        		//$('.js-form-success').html(data.responseText);
 
 
