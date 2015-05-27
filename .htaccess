@@ -7,8 +7,8 @@ Options -Indexes
     RewriteEngine on
 
     RewriteCond %{REQUEST_URI} ^/(en|ru)/forum [NC]
-	RewriteRule ^(en|ru)/forum/(.*) /public/common/$1/forum/$2 [L]
-	RewriteRule ^(en|ru)/forum /$1/forum/ [L,R=301]
+	RewriteRule ^([^/]+)/forum/(.*) /public/common/$1/forum/$2 [L]
+	RewriteRule ^([^/]+)/forum /$1/forum/ [L,R=301]
 	#RewriteRule ^/forum/(.*) /public/common/forum/$1 [L]
 	#RewriteRule ^/forum /forum/ [L,R=301]
 
