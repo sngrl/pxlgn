@@ -154,3 +154,20 @@ require app_path().'/filters.php';
 #*/
 
 #Event::listen('illuminate.query', function($query){ echo $query . "<br/>\n"; });
+#Event::listen('*', function($query){
+#Event::listen('eloquent.booting: *', function($query){
+#Event::listen('eloquent.booting', function($query){
+#/*
+Event::listen('illuminate.query', function($query){
+    #Helper::ta(Event::firing());
+    #if (is_string($query))
+    #    echo $query . "<br/>\n";
+    if (mb_strtolower(mb_substr($query, 0, 7)) == 'select ') {
+        #Helper::ta($query);
+        #if (NULL != ($cache = Cache::get('db_query_cache.' . $query))) {
+        #    return $cache;
+        #}
+    }
+});
+#*/
+

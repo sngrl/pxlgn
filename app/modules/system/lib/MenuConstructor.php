@@ -5,7 +5,12 @@ class MenuConstructor {
 
     public function __construct($slug) {
 
-        $menu_item = Storage::where('module', 'menu')->where('name', $slug)->first();
+        $menu_item = Storage::where('module', 'menu')->where('name', $slug);
+
+        if (NULL != ($db_remember_timeout = Config::get('app.settings.main.db_remember_timeout')))
+            $menu_item->remember($db_remember_timeout);
+
+        $menu_item = $menu_item->first();
         if (!is_object($menu_item) || !$menu_item->value)
             return false;
 
@@ -64,7 +69,12 @@ class MenuConstructor {
              */
             if (count($this->pages_ids)) {
 
-                $pages = Page::whereIn('id', $this->pages_ids)->get();
+                $pages = Page::whereIn('id', $this->pages_ids);
+
+                if (NULL != ($db_remember_timeout = Config::get('app.settings.main.db_remember_timeout')))
+                    $pages->remember($db_remember_timeout);
+
+                $pages = $pages->get();
                 #Helper::tad($pages);
                 $pages_by_sysname = new Collection();
                 if (count($pages)) {

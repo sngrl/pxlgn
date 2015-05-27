@@ -176,3 +176,33 @@ $valid = CaptchaController::checkKcaptcha($keystring, $clear);
 ```
 $keystring - введенный пользователем код капчи
 $clear - очищать ли код капчи в сессии. По умолчанию - TRUE. Отключать очистку не рекомендуется!
+
+## Работа с GIT
+
+Система умеет работать с GIT (github).
+Подготовка к работе:
+
+Репозиторий должен иметь имя вида: git@github.com:_USER_/_PROJECT_.git
+
+Даем права на запись в папку .git:
+```php
+chmod -R 0777 .git
+```
+
+Идем в настройки репозитория: Settings > Webhooks & Services > Add webhook
+Payload URL: адрес вашего проекта
+Content type: application/x-www-form-urlencoded
+Secret: секретный ключ репозитория
+
+Сохраняем, заходим в созданный вебхук и смотрим последний ответ в секции Recent Deliveries.
+Смотрим на текст запроса, и берем оттуда repository id и repository name:
+
+```php
+...
+"repository": {
+     "id": 33492798,
+     "name": "agrocom",
+...
+```
+
+Сохраняем эти данные в app/config/github.php (а также Secret).
