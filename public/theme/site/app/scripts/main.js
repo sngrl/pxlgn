@@ -302,7 +302,6 @@ $(function() {
 		capcha: 'Неверно введён код'
 	},
  	submitHandler: function(form) {
- 		alert('[eq];');
      var _url = $(form).attr('action'),
          _data = $(form).serialize(),
          _method = $(form).attr('method')||'POST';
@@ -313,8 +312,14 @@ $(function() {
        url: _url,
        data: _data
  	 }).done(function(data){
+ 	 	
+ 	 	console.log(data);
+
  	 	if(data.status == true) {
        		//$('.js-form-success').html(data.responseText);
+
+
+       		
        		$('.success-fade').slideUp();
        		$('.form-fade').slideDown();
        	}
@@ -326,8 +331,6 @@ $(function() {
        }).always(function(){
        	$('.form-holder [type="submit"]').removeAttr('disabled');
        });
-
-       console.log('Бог в помощь!');
  	}
  })
 
