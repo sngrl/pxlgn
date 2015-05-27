@@ -85,6 +85,10 @@ $options = Config::get('app.settings.main');
                     <div class="slider">
                         <div class="main-fotorama fotorama">
                             @foreach ($slider as $slide)
+                                <?
+                                if ($slide->embed && !$slide->is_img('image'))
+                                    continue;
+                                ?>
                                 <div class="main-fotorana__item">
                                     @if ($slide->embed)
                                         {{ $slide->embed }}

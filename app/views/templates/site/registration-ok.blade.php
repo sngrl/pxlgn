@@ -7,6 +7,7 @@
 @extends(Helper::layout())
 <?
 $page_title = trans("interface.menu.play_for_free");
+$email = Input::get('email');
 ?>
 
 
@@ -27,8 +28,9 @@ $page_title = trans("interface.menu.play_for_free");
             <div class="congratulation-field">
                 <p>
                     {{ strtr(trans("interface.tpl.registration_success"), [
-                        '%link%' => isset($link) ? $link : '#',
+                        #'%link%' => isset($link) ? $link : '#',
                         #'%nickname%' => isset($nickname) ? $nickname : '&nbsp;',
+                        '%email%' => isset($email) ? $email : '',
                     ]) }}
                 </p>
                 <p>

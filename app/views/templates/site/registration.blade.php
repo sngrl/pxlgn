@@ -46,7 +46,7 @@
             <h3>
                 {{ trans("interface.tpl.or_create_new_account") }}
             </h3>
-            <form id="log-in-form" class="page">
+            <form action="{{ URL::route('app.api') }}" method="POST" id="log-in-form" class="page" data-success="{{ URL::route('app.registration-ok') }}">
                 <div class="main-fields">
                     <div class="e-mail">
                         <input id="e-mail" type="text" required name="email" form="log-in-form">
