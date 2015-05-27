@@ -197,4 +197,10 @@ class CaptchaController extends BaseController {
         }
         return $return;
     }
+
+
+    public static function clearCaptcha() {
+
+        unset($_SESSION['captcha_keystring']);
+    }
 }

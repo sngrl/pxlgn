@@ -199,7 +199,7 @@ class DicLib extends BaseController {
 
             $images = Photo::whereIn('id', $images_ids);
 
-            if (NULL != ($db_remember_timeout = Config::get('app.settings.main.db_remember_timeout')))
+            if (NULL != ($db_remember_timeout = Config::get('app.settings.main.db_remember_timeout')) && $db_remember_timeout > 0)
                 $images->remember($db_remember_timeout);
 
             $images = $images->get();
@@ -366,7 +366,7 @@ class DicLib extends BaseController {
 
             $objects = Gallery::whereIn('id', $ids)->with('photos');
 
-            if (NULL != ($db_remember_timeout = Config::get('app.settings.main.db_remember_timeout')))
+            if (NULL != ($db_remember_timeout = Config::get('app.settings.main.db_remember_timeout')) && $db_remember_timeout > 0)
                 $objects->remember($db_remember_timeout);
 
             $objects = $objects->get();

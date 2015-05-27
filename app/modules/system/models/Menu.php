@@ -44,12 +44,13 @@ class Menu extends Storage {
         if (is_null($menu_placement_value)) {
             $menu_placement = (new Storage)->where('module', 'menu_placement')->where('name', 'menu_placement');
 
-            if (NULL != ($db_remember_timeout = Config::get('app.settings.main.db_remember_timeout')))
+            if (NULL != ($db_remember_timeout = Config::get('app.settings.main.db_remember_timeout')) && $db_remember_timeout > 0)
                 $menu_placement->remember($db_remember_timeout);
 
             #$menu_placement = $menu_placement->firstOrNew(array('module' => 'menu_placement', 'name' => 'menu_placement'));
             $menu_placement = $menu_placement->first();
             $menu_placement_value = is_object($menu_placement) ? (array)json_decode($menu_placement->value, 1) : array();
+            #Helper::tad($menu_placement_value);
             Config::set('temp.menu_placement_value', $menu_placement_value);
         }
 
