@@ -318,11 +318,8 @@ $(function() {
  	 	if(data.status == true) {
  	 		alert(2);
        		//$('.js-form-success').html(data.responseText);
-
-
-       		
-       		$('.success-fade').slideUp();
-       		$('.form-fade').slideDown();
+       		$('.form-fade').slideUp();
+       		$('.success-fade').slideDown();
        	}
        	if(!data.status && data.responseText) {
 
