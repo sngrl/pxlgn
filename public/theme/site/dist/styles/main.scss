@@ -3323,13 +3323,6 @@ form.page {
 		display: none;
 	}
 
-#capcha-error, #keycode-error, #email-error, #agreement-error {
-	position: absolute;
-	color: #ff561b;
-	width: 100%;
-	display: block;
-}
-
 	.confirmation {
 		.stylish {
 			overflow: hidden;
@@ -3605,7 +3598,12 @@ form.page {
     border-right: 3px #000 solid;
 }
 
-
+#capcha-error, #keycode-error, #email-error, #agreement-error {
+	position: absolute;
+	color: #ff561b;
+	width: 100%;
+	display: block;
+}
 
 // .animation {
 // 	animation: appstore 1s steps(2); 
