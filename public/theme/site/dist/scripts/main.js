@@ -325,7 +325,7 @@ $(function() {
        	}
        	if(!data.status && data.responseText) {
 
-
+        // ЛОГИКА ДИСЛОКАЦИИ СООБЩЕНИЯ
        		
        		$('p.warning').show().html(data.responseText);
        	}
