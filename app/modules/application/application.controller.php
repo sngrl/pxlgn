@@ -43,6 +43,7 @@ class ApplicationController extends BaseController {
 
     public function getApi() {
 
+        session_start();
         $json_response = ['status' => FALSE];
 
         ## Входные данные
@@ -50,9 +51,19 @@ class ApplicationController extends BaseController {
         $input = Input::only(['api', 'email', 'pass']);
         #Helper::tad($input);
 
+        if (!@$input['api'])
+            $input['api'] = 'register';
+
         ## Проверка капчи
-        if (!$captcha_key || 0) {
+        $valid = CaptchaController::checkCaptcha($captcha_key, FALSE);
+        if (!$captcha_key || !$valid) {
             $json_response['text'] = trans("interface.api.bad_captcha");
+            $json_response['reason'] = 'bad_captcha';
+            $json_response['place'] = 'captcha';
+
+            if (Config::get('app.debug'))
+                $json_response['session'] = @print_r($_SESSION, 1);
+
             return Response::json($json_response);
         }
 
@@ -65,6 +76,12 @@ class ApplicationController extends BaseController {
 
         if (!$api_url || !$input['api_key']) {
             $json_response['text'] = 'Bad request parameters';
+            $json_response['reason'] = 'result_2';
+            $json_response['place'] = 'global';
+
+            if (Config::get('app.debug'))
+                $json_response['debug'] = 'api_url = ' . $api_url . ' | api_key = ' . $input['api_key'];
+
             return Response::json($json_response);
         }
 
@@ -85,8 +102,10 @@ class ApplicationController extends BaseController {
         $json_response['code'] = $result;
         if ($result == '1') {
             $json_response['status'] = TRUE;
+            CaptchaController::clearCaptcha();
         }
         $json_response['text'] = trans("interface.api.result." . $result);
+        $json_response['reason'] = 'result_' . $result;
         return Response::json($json_response);
     }
 

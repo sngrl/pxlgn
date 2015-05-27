@@ -5,6 +5,9 @@
  */
 ?>
 @extends(Helper::layout())
+<?
+$page_title = trans("interface.menu.play_for_free");
+?>
 
 
 @section('style')
@@ -25,14 +28,23 @@
                 <p>
                     {{ strtr(trans("interface.tpl.registration_success"), [
                         '%link%' => isset($link) ? $link : '#',
-                        '%nickname%' => isset($nickname) ? $nickname : '&nbsp;',
+                        #'%nickname%' => isset($nickname) ? $nickname : '&nbsp;',
                     ]) }}
                 </p>
                 <p>
                     {{ trans("interface.tpl.download_installer_now") }}
                 </p>
             </div>
-            <div class="button-download-big"><a><span>{{ trans("interface.tpl.installer_size") }}</span></a></div>
+            <div class="button-download-big">
+                <a>
+                    <span class="download-text">
+                        {{ trans("interface.menu.load_game") }}
+                    </span>
+                    <span class="download-size">
+                        {{ trans("interface.tpl.installer_size") }}
+                    </span>
+                </a>
+            </div>
         </div>
     </div>
 

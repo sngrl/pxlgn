@@ -3,6 +3,18 @@
  * TEMPLATE_IS_NOT_SETTABLE
  */
 ?>
+<script>
+    var api_errors = {
+        'accept_rules': '{{ trans("interface.api.accept_rules") }}',
+        'bad_captcha': '{{ trans("interface.api.bad_captcha") }}',
+        'bad_password': '{{ trans("interface.api.bad_password") }}',
+        'result_2': '{{ trans("interface.api.result.2") }}',
+        'result_3': '{{ trans("interface.api.result.3") }}',
+        'result_4': '{{ trans("interface.api.result.4") }}',
+        'result_7': '{{ trans("interface.api.result.7") }}'
+    };
+</script>
+
 
 <div class="footer">
     <div class="footer-block">
@@ -36,38 +48,40 @@
         <div class="form-body">
             <div class="form-fade">
                 <div class="form-block no-gradient">
-                    <form id="log-in-form">
+                    <form action="{{ URL::route('app.api') }}" method="POST" id="log-in-form">
                         <div class="main-fields">
                             <p class="info">
                                 {{ trans("interface.tpl.email") }}
                             </p>
                             <div class="e-mail">
                                 <input type="text" required name="email" form="log-in-form">
-                                <p class="warning">E-mail уже занят!</p>
+                                <p class="warning"></p>
                             </div>
                             <p class="info">
                                 {{ trans("interface.tpl.password") }}
                             </p>
                             <div class="pass">
-                                <input type="password" required name="password" form="log-in-form">
+                                <input type="password" required name="pass" form="log-in-form">
                                 <button class="spice"></button>
-                                <p class="warning">Слишком простой пароль</p>
+                                <p class="warning"></p>
                             </div>
                         </div>
                         <p class="info">
                             {{ trans("interface.tpl.enter_the_code") }}
                         </p>
                         <div class="capcha">
-                            <input type="text" required name="capcha" form="log-in-form" class="capcha-field">
+                            <input type="text" required name="keycode" form="log-in-form" class="capcha-field">
                             <div class="capcha-image">
-                                <div class="refresh"><a></a></div><img src="{{ Config::get('site.theme_path') }}/images/capcha.png">
+                                <div class="refresh"><a></a></div><img src="{{ URL::route('captcha_image', [session_name() => session_id(), 'w' => '99', 'h' => '39', 'hash' => time()]) }}">
                             </div>
-                            <p class="warning">Неверный код!</p>
+                            <p class="warning"></p>
                         </div>
                         <div class="agreement">
                             <input type="checkbox" required name="agreement" form="log-in-form" checked>
-                            <p class="listense">Я прочитал и принимаю <a href="#">пользовательское соглашение</a> и <a href="#">правила конфиденциальности</a></p>
-                            <p class="warning">Вы забыли принять пользовательское соглашение</p>
+                            <p class="listense">
+                                {{ trans("interface.tpl.i_read_the_rules") }}
+                            </p>
+                            <p class="warning"></p>
                         </div>
                         <div class="log-in-button-2">
                             <button type="submit">
@@ -88,19 +102,29 @@
             <div class="success-fade">
                 <div class="form-block">
                     <div class="success">
-                        <h3>Аккаунт <span>успешно создан</span></h3>
-                        <p class="congratulation">
-                            {{ strtr(trans("interface.tpl.registration_success"), [
-                                '%link%' => isset($link) ? $link : '#',
-                                '%nickname%' => isset($nickname) ? $nickname : '&nbsp;',
-                            ]) }}
-                        </p>
-                        <p class="verification"> На ваш e-mail <a href="#">werewombat15@gmail.com</a> <nobr>отправлено письмо со ссылкой. Перейдите</nobr> <nobr>по ссылке, чтобы зарегистрировать аккаунт</nobr> и получить приятный бонус в игре.</p>
+                        <h3>
+                            {{ trans("interface.tpl.account_created") }}
+                        </h3>
+                        {{ strtr(trans("interface.tpl.registration_success_popup"), [
+                            #'%link%' => isset($link) ? $link : '#',
+                            #'%nickname%' => isset($nickname) ? $nickname : '&nbsp;',
+                        ]) }}
                     </div>
                 </div>
                 <div class="form-block">
-                    <p class="download">Если вы еще не скачали пакет установки  игры, самое время сделать это сейчас.</p>
-                    <div class="download-button"> <a>Скачать игру <span>(540MB)</span></a></div>
+                    <p class="download">
+                        {{ trans("interface.tpl.download_installer_now") }}
+                    </p>
+                    <div class="download-button">
+                        <a>
+                            <span class="download-text">
+                                {{ trans("interface.menu.load_game") }}
+                            </span>
+                            <span class="download-size">
+                                {{ trans("interface.tpl.installer_size") }}
+                            </span>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="js-form-error">Ошибка!</div>

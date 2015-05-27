@@ -22,7 +22,16 @@
                 {{ trans("interface.menu.play_for_free") }}
             </h3>
             <div class="congratulation-field">
-                <div class="button-download-big"><a><span>{{ trans("interface.tpl.installer_size") }}</span></a></div>
+                <div class="button-download-big">
+                    <a>
+                        <span class="download-text">
+                            {{ trans("interface.menu.load_game") }}
+                        </span>
+                        <span class="download-size">
+                            {{ trans("interface.tpl.installer_size") }}
+                        </span>
+                    </a>
+                </div>
             </div>
         </div>
         @if (Config::get('app.settings.main.show_social_on_registration'))
@@ -45,7 +54,6 @@
                             {{ trans("interface.tpl.email") }}
                         </label>
                         <p class="warning">
-                            E-mail уже занят!
                         </p>
                         <p class="description">
                             {{ trans("interface.tpl.email_desc") }}
@@ -58,21 +66,21 @@
                         </label>
                         <button class="spice"></button>
                         <p class="warning">
-                            Слишком простой пароль
                         </p>
                         <p class="description">
                             {{ trans("interface.tpl.password_rules") }}
                         </p>
                     </div>
-                    <div class="nickname">
-                        <input id="nickname" type="text" required name="password" form="log-in-form">
-                        <label for="nickname">
-                            {{ trans("interface.tpl.name_in_the_game") }}
-                        </label>
-                        <p class="warning">
-                            Неподходящее имя
-                        </p>
-                    </div>
+                    @if (FALSE)
+                        <div class="nickname">
+                            <input id="nickname" type="text" required name="password" form="log-in-form">
+                            <label for="nickname">
+                                {{ trans("interface.tpl.name_in_the_game") }}
+                            </label>
+                            <p class="warning">
+                            </p>
+                        </div>
+                    @endif
                 </div>
                 <div class="capcha">
                     <input id="capcha" type="text" required name="keystring" form="log-in-form" class="capcha-field">
@@ -81,10 +89,9 @@
                     </label>
                     <div class="capcha-image">
                         <div class="refresh"><a></a></div>
-                        <img src="{{ URL::route('captcha_image', [session_name() => session_id(), 'w' => '99', 'h' => '39']) }}">
+                        <img src="{{ URL::route('captcha_image', [session_name() => session_id(), 'w' => '99', 'h' => '39', 'hash' => time()]) }}">
                     </div>
                     <p class="warning">
-                        Неверный код!
                     </p>
                 </div>
                 <div class="confirmation">
