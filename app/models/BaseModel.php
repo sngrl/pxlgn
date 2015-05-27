@@ -45,4 +45,9 @@ class BaseModel extends Eloquent {
     }
     */
 
+    public static function table() {
+        $instance = new static;
+
+        return $instance->getTable();
+    }
 }

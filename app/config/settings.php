@@ -83,6 +83,21 @@ return array(
                         'title' => 'Кол-во секунд для смены видео в сайдбаре',
                         'type' => 'text',
                     ),
+                    'db_remember_timeout' => array(
+                        'title' => 'Кол-во минут, на которое кешировать запросы к БД',
+                        'type' => 'text',
+                    ),
+
+                    ['group_title' => 'API'],
+
+                    'api_url' => array(
+                        'title' => 'API URL',
+                        'type' => 'text',
+                    ),
+                    'api_key' => array(
+                        'title' => 'API Key',
+                        'type' => 'text',
+                    ),
 
                 ),
             ];

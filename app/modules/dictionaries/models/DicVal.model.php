@@ -337,7 +337,13 @@ class DicVal extends BaseModel {
 
         $tbl_dicval = (new DicVal())->getTable();
         $tbl_dic_field_val = (new DicFieldVal())->getTable();
-        $rand_tbl_alias = md5(time() . rand(999999, 9999999));
+        #$rand_tbl_alias = md5(time() . rand(999999, 9999999));
+
+        ## For cache
+        $num = (int)Config::get('temp.rand_tbl_alias');
+        $rand_tbl_alias = 'rand_tbl_alias_' . (++$num);
+        Config::set('temp.rand_tbl_alias', $num);
+
         $query->join($tbl_dic_field_val . ' AS ' . $rand_tbl_alias, $rand_tbl_alias . '.dicval_id', '=', $tbl_dicval . '.id')
             ->where($rand_tbl_alias . '.key', '=', $key)
             ->where($rand_tbl_alias . '.value', $condition, $value)
@@ -365,7 +371,12 @@ class DicVal extends BaseModel {
 
         $tbl_dicval = (new DicVal())->getTable();
         $tbl_dic_field_val = (new DicFieldVal())->getTable();
-        $rand_tbl_alias = md5(time() . rand(999999, 9999999));
+        #$rand_tbl_alias = md5(time() . rand(999999, 9999999));
+
+        ## For cache
+        $num = (int)Config::get('temp.rand_tbl_alias');
+        $rand_tbl_alias = 'rand_tbl_alias_' . (++$num);
+        Config::set('temp.rand_tbl_alias', $num);
 
         /*
         $query->leftJoin($tbl_dic_field_val . ' AS ' . $rand_tbl_alias, $rand_tbl_alias . '.dicval_id', '=', $tbl_dicval . '.id')
@@ -374,6 +385,7 @@ class DicVal extends BaseModel {
         ;
         */
 
+        #/*
         $query
             ->leftJoin($tbl_dic_field_val . ' AS ' . $rand_tbl_alias, function ($join) use ($rand_tbl_alias, $tbl_dicval, $key) {
                 $join
@@ -387,6 +399,7 @@ class DicVal extends BaseModel {
             ->orderBy($rand_tbl_alias . '.value', $order_method)
             ->addSelect(DB::raw('`' . $rand_tbl_alias . '`.`value` AS ' . $key))
         ;
+        #*/
 
         return $query;
     }
@@ -448,7 +461,13 @@ class DicVal extends BaseModel {
 
         $tbl_dicval = (new DicVal())->getTable();
         $tbl_dic_field_val = (new DicFieldVal())->getTable();
-        $rand_tbl_alias = md5(time() . rand(999999, 9999999));
+        #$rand_tbl_alias = md5(time() . rand(999999, 9999999));
+
+        ## For cache
+        $num = (int)Config::get('temp.rand_tbl_alias');
+        $rand_tbl_alias = 'rand_tbl_alias_' . (++$num);
+        Config::set('temp.rand_tbl_alias', $num);
+
         $query
             ->addSelect(DB::raw('`' . $rand_tbl_alias . '`.`value` AS ' . $as_alias))
 
@@ -506,7 +525,13 @@ class DicVal extends BaseModel {
 
         $tbl_dicval = (new DicVal())->getTable();
         $tbl_dicvalrel = (new DicValRel())->getTable();
-        $rand_tbl_alias = md5(time() . rand(999999, 9999999));
+        #$rand_tbl_alias = md5(time() . rand(999999, 9999999));
+
+        ## For cache
+        $num = (int)Config::get('temp.rand_tbl_alias');
+        $rand_tbl_alias = 'rand_tbl_alias_' . (++$num);
+        Config::set('temp.rand_tbl_alias', $num);
+
         $query
             ->join($tbl_dicvalrel . ' AS ' . $rand_tbl_alias, function ($join) use ($rand_tbl_alias, $tbl_dicval, $tbl_dicvalrel, $field1, $field2, $value, $condition) {
 

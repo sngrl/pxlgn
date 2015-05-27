@@ -197,7 +197,12 @@ class DicLib extends BaseController {
         $images = [];
         if (count($images_ids)) {
 
-            $images = Photo::whereIn('id', $images_ids)->get();
+            $images = Photo::whereIn('id', $images_ids);
+
+            if (NULL != ($db_remember_timeout = Config::get('app.settings.main.db_remember_timeout')))
+                $images->remember($db_remember_timeout);
+
+            $images = $images->get();
             $images = self::modifyKeys($images, 'id');
             #Helper::tad($images);
         }
@@ -359,7 +364,12 @@ class DicLib extends BaseController {
         $objects = [];
         if (count($ids)) {
 
-            $objects = Gallery::whereIn('id', $ids)->with('photos')->get();
+            $objects = Gallery::whereIn('id', $ids)->with('photos');
+
+            if (NULL != ($db_remember_timeout = Config::get('app.settings.main.db_remember_timeout')))
+                $objects->remember($db_remember_timeout);
+
+            $objects = $objects->get();
             $objects = self::modifyKeys($objects, 'id');
             #Helper::tad($objects);
         }
