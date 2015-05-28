@@ -314,7 +314,7 @@ $(function() {
  	 }).done(function(data){
  	 	if(data.status == true) {
        		//$('.js-form-success').html(data.responseText);
-       		var emailOriginal = $('.e-mail input').html();
+       		var emailOriginal = $('.e-mail input').val();
 			var emailRipper = function() {
 				$('.success-fade .verification span').html(emailOriginal);
 			};
