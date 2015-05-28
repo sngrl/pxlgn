@@ -194,8 +194,8 @@ class PixelGunSidebar {
                         if (!$tmp->slug)
                             continue;
                         ?>
-                        {{--<div class="social-button-holder" data-img="{{ $tmp->is_img('image') ? $tmp->image->thumb() : '' }}"><a href="#" class="soc-{{ $tmp->slug }}"></a></div>--}}
-                        <div class="social-button-holder social-button-holder-{{ $tmp->slug }}"><a href="#" class="soc-{{ $tmp->slug }}"></a></div>
+                        <div class="social-button-holder" data-img="{{ $tmp->is_img('image') ? $tmp->image->thumb() : '' }}"><a href="#" class="soc-{{ $tmp->slug }}" style="background-image:url({{ $tmp->is_img('image') ? $tmp->image->thumb() : '' }})"></a></div>
+                        {{--<div class="social-button-holder social-button-holder-{{ $tmp->slug }}"><a href="#" class="soc-{{ $tmp->slug }}"></a></div>--}}
                     @endforeach
                 </div>
             </div>
