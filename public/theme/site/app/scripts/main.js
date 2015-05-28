@@ -264,12 +264,12 @@ $(function() {
 	// 	$('.success-fade').show();
 	// });
 
-	$('.download-button a').click(function(e){
-		e.preventDefault();
+	// $('.download-button a').click(function(e){
+	// 	e.preventDefault();
 
-		$('.form-fade').show();
-		$('.success-fade').hide();
-	});
+	// 	$('.form-fade').show();
+	// 	$('.success-fade').hide();
+	// });
 
 	//$('.app-store').
 
@@ -312,21 +312,42 @@ $(function() {
        url: _url,
        data: _data
  	 }).done(function(data){
- 	 	alert(1);
- 	 	console.log(data);
- 	 	alert(data.status)
  	 	if(data.status == true) {
- 	 		alert(2);
        		//$('.js-form-success').html(data.responseText);
+       		var emailOriginal = $('.e-mail input').html();
+			var emailRipper = function() {
+				$('.success-fade .verification span').html(emailOriginal);
+			};
+
+			emailRipper();
        		$('.form-fade').slideUp();
        		$('.success-fade').slideDown();
        	}
-       	if(!data.status && data.responseText) {
-
-        // ЛОГИКА ДИСЛОКАЦИИ СООБЩЕНИЯ
-       		
-       		$('p.warning').show().html(data.responseText);
+       	
+       	if(!data.status && data.reason == 'accept_rules') {
+       		$('#agreement-error').show().html(api_errors.accept_rules);
        	}
+
+       	if(!data.status && data.reason == 'bad_captcha') {
+       		$('#capcha-error').show().html(api_errors.bad_captcha);
+       	}
+
+       	if(!data.status && data.reason == 'bad_password') {
+       		$('#pass-error').show().html(api_errors.bad_password);
+       	}
+
+       	if(!data.status && data.reason == 'result_2') {
+       		$('.js-form-error').show().html(api_errors.result_2);
+       	}
+
+       	if(!data.status && data.reason == 'result_3') {
+       		$('#email-error').show().html(api_errors.result_3);
+       	}
+
+       	if(!data.status && data.reason == 'result_4') {
+       		$('#email-error').show().html(api_errors.result_4);
+       	}
+
        }).fail(function(data){
        	$('.js-form-error').show().html(api_errors.result_2);
        }).always(function(){
