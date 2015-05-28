@@ -331,7 +331,7 @@ class Dic extends BaseModel {
         ##
         if (count($with)) {
 
-            if (NULL != $db_remember_timeout) {
+            if (NULL != $db_remember_timeout && $db_remember_timeout > 0) {
 
                 $temp = [];
                 foreach ($with as $relation) {
