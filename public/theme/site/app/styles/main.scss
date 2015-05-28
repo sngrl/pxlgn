@@ -2837,8 +2837,15 @@ iframe {
 				display: block;
 				font-size: 16px;
 				font-family: 'miniregular';
-				right: 47px;
-				top: 44px;
+			}
+
+			span.download-text {
+				top: 32px;
+				left: 116px;
+				font-size: 29px;
+				letter-spacing: 0.6px;
+				color: #DEDEDD;
+				text-shadow: #43753F 1px 0px, #43753F 1px 1px, #43753F 0px 1px, #43753F -1px 1px, #43753F -1px 0px, #43753F -1px -1px, #43753F 0px -1px, #43753F 1px -1px, #43753F 0 0 2px, #43753F 0 0 2px, #43753F 0 0 2px, #43753F 0 0 2px, #43753F 0 0 2px, #43753F 0 0 2px, #43753F 0 0 2px, #43753F 0 0 2px;
 			}
 		}
 	}
