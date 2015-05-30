@@ -1093,10 +1093,9 @@ textarea:focus, input:focus, button:focus {
 	.main-menu {
 		display: block;
 		width: 1032px;
-		margin: 0 auto;
+		margin: 0px 0 32px -25px;
 		padding: 0;
 		height: 70px;
-		margin-bottom: 32px;
 		position: relative;
 
 		&:after {
@@ -2823,8 +2822,8 @@ iframe {
 		height: 114px;
 		background: url(../images/button-download.png);
 		margin: 0 auto;
-		  margin: 10px auto -10px;
-		  cursor: pointer;
+		margin: 10px auto -10px;
+		cursor: pointer;
 
 		a {
 			width: 100%;
@@ -2846,6 +2845,11 @@ iframe {
 				letter-spacing: 0.6px;
 				color: #DEDEDD;
 				text-shadow: #43753F 1px 0px, #43753F 1px 1px, #43753F 0px 1px, #43753F -1px 1px, #43753F -1px 0px, #43753F -1px -1px, #43753F 0px -1px, #43753F 1px -1px, #43753F 0 0 2px, #43753F 0 0 2px, #43753F 0 0 2px, #43753F 0 0 2px, #43753F 0 0 2px, #43753F 0 0 2px, #43753F 0 0 2px, #43753F 0 0 2px;
+			}
+
+			span.download-size {
+				bottom: 47px;
+				right: 50px;
 			}
 		}
 	}
@@ -3439,7 +3443,7 @@ form.page {
 			border: 0px;
 			width: 509px;
 			height: 114px;
-			font-size: 19px;
+			font-size: 33px;
 			font-family: 'miniregular';
 			background: none;
 			position: relative;
@@ -3451,6 +3455,26 @@ form.page {
 			top: 4px;
 			left: -3px;
 			position: relative;
+			letter-spacing: 1px;
+			box-sizing: border-box;
+			padding: 0px 0px 14px 5px;
+			color: #C90000;
+			text-shadow: #ffe400 1px 0,
+			#ffe400 1px 1px,
+			#ffe400 0 1px,
+			#ffe400 -1px 1px,
+			#ffe400 -1px 0,
+			#ffe400 -1px -1px,
+			#ffe400 0 -1px,
+			#ffe400 1px -1px,
+			#ffe400 0 0 2px,
+			#ffe400 0 0 2px,
+			#ffe400 0 0 2px,
+			#ffe400 0 0 2px,
+			#ffe400 0 0 2px,
+			#ffe400 0 0 2px,
+			#ffe400 0 0 2px,
+			#ffe400 0 0 2px;
 		}
 
 		}
