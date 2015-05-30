@@ -72,14 +72,14 @@
                         </p>
                     </div>
                     @if (FALSE)
-                        <div class="nickname">
+                       <!-- <div class="nickname">
                             <input id="nickname" type="text" required name="password" form="log-in-form">
                             <label for="nickname">
                                 {{ trans("interface.tpl.name_in_the_game") }}
                             </label>
                             <p class="warning">
                             </p>
-                        </div>
+                        </div> -->
                     @endif
                 </div>
                 <div class="capcha">
