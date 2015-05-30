@@ -3451,10 +3451,6 @@ form.page {
 			left: 0;
 			background: url(../images/button-create-3.png);
 			cursor: pointer;
-			&:active {
-			top: 4px;
-			left: -3px;
-			position: relative;
 			letter-spacing: 1px;
 			box-sizing: border-box;
 			padding: 0px 0px 14px 5px;
@@ -3475,6 +3471,10 @@ form.page {
 			#ffe400 0 0 2px,
 			#ffe400 0 0 2px,
 			#ffe400 0 0 2px;
+			&:active {
+			top: 4px;
+			left: -3px;
+			position: relative;
 		}
 
 		}
@@ -3634,6 +3634,16 @@ form.page {
 	color: #ff561b;
 	width: 100%;
 	display: block;
+}
+
+.registration-page-block #capcha-error, .registration-page-block #email-error, .registration-page-block #pass-error, .registration-page-block #agreement-error {
+	right: -260px;
+	position: absolute;
+	display: block;
+	left: auto;
+	width: 255px;
+	text-align: left;
+	color: #FFBE00;
 }
 
 // .animation {
