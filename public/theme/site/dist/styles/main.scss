@@ -3702,9 +3702,15 @@ label[for="e-mail"], label#password-error, label#submit-error label#capcha-error
 .pagination {
 	width: 100%;
 	text-align: center;
+	width: 100%;
+	display: block;
+	text-align: center;
+	margin: 0;
+	padding: 8px 0;
 }
 
 .pagination .pagen {
+	text-decoration: none;
 	width: 21px;
 	height: 21px;
 	color: #fff;
@@ -3713,7 +3719,14 @@ label[for="e-mail"], label#password-error, label#submit-error label#capcha-error
 	background: #051b37;
 }
 
+.pagination .pagen.active {
+	color: #000;
+	background: #58851e;
+	text-decoration: none;
+}
+
 .pagination .prev {
+	text-decoration: none;
 	&:after {
 		content: '';
 		display: block;
@@ -3721,12 +3734,13 @@ label[for="e-mail"], label#password-error, label#submit-error label#capcha-error
 		height: 15px;
 		position: absolute;
 		background: url(../images/bg-allnews-after2.png);
-		right: -25px;
+		left: -25px;
 		top: 2px;
 	}
 }
 
 .pagination .next {
+	text-decoration: none;
 	&:after {
 		content: '';
 		display: block;
