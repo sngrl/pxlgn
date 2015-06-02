@@ -392,10 +392,23 @@ class DicVal extends BaseModel {
                     ->on($rand_tbl_alias . '.dicval_id', '=', $tbl_dicval . '.id')
                     #->where($rand_tbl_alias . '.key', '=', DB::raw("'" . $key . "'"))
                     ->where($rand_tbl_alias . '.key', '=', $key)
-                    ->where($rand_tbl_alias . '.language', '=', Config::get('app.locale'))
-                    ->orWhere($rand_tbl_alias . '.language', '=', NULL)
+
+                    ##
+                    ## Вынесено за JOIN
+                    ##
+                    #->where($rand_tbl_alias . '.language', '=', Config::get('app.locale'))
+                    #->orWhere($rand_tbl_alias . '.language', '=', NULL)
                 ;
             })
+
+            ##
+            ## Чтобы "взять в скобки" условие языка - пришлось вынести сюда. ХЗ как отразится в будущем.
+            ##
+            ->where(function ($query) use ($rand_tbl_alias) {
+                $query->where($rand_tbl_alias . '.language', '=', Config::get('app.locale'));
+                $query->orWhere($rand_tbl_alias . '.language', '=', NULL);
+            })
+
             ->orderBy($rand_tbl_alias . '.value', $order_method)
             ->addSelect(DB::raw('`' . $rand_tbl_alias . '`.`value` AS ' . $key))
         ;
