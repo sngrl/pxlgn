@@ -133,6 +133,7 @@ $options = Config::get('app.settings.main');
                                 <a href="{{ $new->link }}" class="readmore">{{ trans("interface.tpl.read_more") }}</a>
                             @endif
                         </div>
+                        <div class="pagination"></div>
                     @endforeach
                 </div>
             @endif
