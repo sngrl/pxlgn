@@ -413,11 +413,11 @@ var capchaString = $('.capcha-image img').attr('src');
         
         $links.eq(0).click();
         
-        $('<a href="#" class="prev">«</a>').prependTo($paginator).click(function(e){
+        $('<a href="#" class="prev">Предыдущая</a>').prependTo($paginator).click(function(e){
             $links.filter('a.active').prev('a.pagen').click();
             e.preventDefault();
         });
-        $('<a href="#" class="next">»</a>').appendTo($paginator).click(function(e){
+        $('<a href="#" class="next">Следующая</a>').appendTo($paginator).click(function(e){
             $links.filter('a.active').next('a.pagen').click();
             e.preventDefault();
         });

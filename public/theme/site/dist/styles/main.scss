@@ -3698,3 +3698,43 @@ label[for="e-mail"], label#password-error, label#submit-error label#capcha-error
 // 		background-position: 0px 0px;
 // 	}
 // }
+
+.pagination {
+	width: 100%;
+	text-align: center;
+}
+
+.pagination .pagen {
+	width: 21px;
+	height: 21px;
+	color: #fff;
+	font-family: 'playregular';
+	text-align: center;
+	background: #051b37;
+}
+
+.pagination .prev {
+	&:after {
+		content: '';
+		display: block;
+		width: 9px;
+		height: 15px;
+		position: absolute;
+		background: url(../images/bg-allnews-after2.png);
+		right: -25px;
+		top: 2px;
+	}
+}
+
+.pagination .next {
+	&:after {
+		content: '';
+		display: block;
+		width: 9px;
+		height: 15px;
+		position: absolute;
+		background: url(../images/bg-allnews-after.png);
+		right: -25px;
+		top: 2px;
+	}
+}
