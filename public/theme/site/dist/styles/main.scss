@@ -3717,6 +3717,8 @@ label[for="e-mail"], label#password-error, label#submit-error label#capcha-error
 	font-family: 'playregular';
 	text-align: center;
 	background: #051b37;
+	display: inline-block;
+	margin-right: 2px;
 }
 
 .pagination .pagen.active {
@@ -3727,6 +3729,10 @@ label[for="e-mail"], label#password-error, label#submit-error label#capcha-error
 
 .pagination .prev {
 	text-decoration: none;
+	position: relative;
+	font-size: 15px;
+	color: #558acb;
+	margin-right: 37px;
 	&:after {
 		content: '';
 		display: block;
@@ -3734,13 +3740,17 @@ label[for="e-mail"], label#password-error, label#submit-error label#capcha-error
 		height: 15px;
 		position: absolute;
 		background: url(../images/bg-allnews-after2.png);
-		left: -25px;
+		left: -15px;
 		top: 2px;
 	}
 }
 
 .pagination .next {
 	text-decoration: none;
+	position: relative;
+	font-size: 15px;
+	color: #558acb;
+	margin-left: 35px;
 	&:after {
 		content: '';
 		display: block;
@@ -3748,7 +3758,7 @@ label[for="e-mail"], label#password-error, label#submit-error label#capcha-error
 		height: 15px;
 		position: absolute;
 		background: url(../images/bg-allnews-after.png);
-		right: -25px;
+		right: -15px;
 		top: 2px;
 	}
 }
