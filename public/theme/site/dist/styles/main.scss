@@ -3636,6 +3636,16 @@ form.page {
 	display: block;
 }
 
+label[for="e-mail"], label#password-error, label#submit-error label#capcha-error {
+	right: -210px;
+	font-size: 16px;
+	color: #AD1313;
+	left: auto;
+	width: 275px;
+	top: 13px;
+	text-align: left;
+}
+
 .registration-page-block #capcha-error, .registration-page-block #email-error, .registration-page-block #pass-error, .registration-page-block #agreement-error {
 	right: -260px;
 	position: absolute;
