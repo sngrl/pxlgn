@@ -275,7 +275,7 @@ $(function() {
 
 	// ВАЛИДАЦИЯ
 
-  $("#log-in-form").validate({
+  $("#log-in-form, #log-in-form2").validate({
 	rules: {
 		email: {
 			required: true,
@@ -307,6 +307,7 @@ $(function() {
          _method = $(form).attr('method')||'POST';
          $('.js-form-error').hide();
          $('.form-holder [type="submit"]').attr('disabled', 'disabled');
+         console.log(_data);
      $.ajax({
        type: _method,
        url: _url,

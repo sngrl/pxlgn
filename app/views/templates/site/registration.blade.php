@@ -53,7 +53,7 @@ $hide_play_now_button = true;
                 <div class="main-fields">
                     <div class="e-mail">
                         <input id="e-mail" type="text" required name="email" form="log-in-form">
-                        <label for="e-mail">
+                        <label for="e-mail" class="email-error">
                             {{ trans("interface.tpl.email") }}
                         </label>
                         <p class="warning">
@@ -100,10 +100,10 @@ $hide_play_now_button = true;
                 <div class="confirmation">
                     <div class="stylish">
                         <input type="checkbox" required name="submit" form="log-in-form">
-                    </div>
-                    <p>
+                        <p>
                         {{ trans("interface.tpl.i_read_the_rules") }}
-                    </p>
+                        </p>
+                    </div>
                 </div>
                 <div class="log-in-button-3">
                     <button type="submit">

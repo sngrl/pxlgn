@@ -49,20 +49,20 @@
         <div class="form-body">
             <div class="form-fade">
                 <div class="form-block no-gradient">
-                    <form action="{{ URL::route('app.api') }}" method="POST" id="log-in-form">
+                    <form action="{{ URL::route('app.api') }}" method="POST" id="log-in-form2">
                         <div class="main-fields">
                             <p class="info">
                                 {{ trans("interface.tpl.email") }}
                             </p>
                             <div class="e-mail">
-                                <input type="text" required name="email" form="log-in-form">
+                                <input type="text" required name="email" form="log-in-form2">
                                 <p class="warning"></p>
                             </div>
                             <p class="info">
                                 {{ trans("interface.tpl.password") }}
                             </p>
                             <div class="pass">
-                                <input type="password" required name="pass" form="log-in-form">
+                                <input type="password" required name="pass" form="log-in-form2">
                                 <button class="spice"></button>
                                 <p class="warning"></p>
                             </div>
@@ -71,14 +71,14 @@
                             {{ trans("interface.tpl.enter_the_code") }}
                         </p>
                         <div class="capcha">
-                            <input type="text" required name="keycode" form="log-in-form" class="capcha-field">
+                            <input type="text" required name="keycode" form="log-in-form2" class="capcha-field">
                             <div class="capcha-image">
                                 <div class="refresh"><a></a></div><img src="{{ URL::route('captcha_image', [session_name() => session_id(), 'w' => '99', 'h' => '39', 'hash' => time()]) }}">
                             </div>
                             <p class="warning"></p>
                         </div>
                         <div class="agreement">
-                            <input type="checkbox" required name="agreement" form="log-in-form" checked>
+                            <input type="checkbox" required name="agreement" form="log-in-form2" checked>
                             <p class="listense">
                                 {{ trans("interface.tpl.i_read_the_rules") }}
                             </p>
