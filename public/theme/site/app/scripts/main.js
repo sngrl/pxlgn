@@ -380,7 +380,7 @@ var capchaString = $('.capcha-image img').attr('src');
             return Math.ceil($items.size()/itemsOnPage);
         }
         
-        var $items = $('.news-block, .gallery-row-holder');
+        var $items = $('.news-block, .video-gallery .gallery-row-holder, .screenshoot-gallery .gallery-row-holder');
         var $paginator = $('.pagination');
         var itemsOnPage = 8;
         
