@@ -83,7 +83,7 @@
                     @endif
                 </div>
                 <div class="capcha">
-                    <input id="capcha" type="text" required name="keystring" form="log-in-form" class="capcha-field">
+                    <input id="capcha" type="text" required name="keycode" form="log-in-form" class="capcha-field">
                     <label for="capcha">
                         {{ trans("interface.tpl.enter_the_code") }}
                     </label>

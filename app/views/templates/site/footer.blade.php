@@ -5,6 +5,7 @@
 ?>
 <script>
     var api_errors = {
+        'required_field': '{{ trans("interface.api.required_field") }}',
         'accept_rules': '{{ trans("interface.api.accept_rules") }}',
         'bad_captcha': '{{ trans("interface.api.bad_captcha") }}',
         'bad_password': '{{ trans("interface.api.bad_password") }}',
