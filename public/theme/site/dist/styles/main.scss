@@ -3336,10 +3336,13 @@ form.page {
 
 	.confirmation {
 		.stylish {
-			overflow: hidden;
 			float: left;
 			margin-right: 10px;
 			margin-top: 2px;
+			position: relative;
+			left: 0;
+			top: 0;
+			width: 100%;
 
 			input {
 				cursor: pointer;
@@ -3349,6 +3352,8 @@ form.page {
 				display: block;
 				border: none;
 				box-shadow: none;
+				float: left;
+				margin-right: 10px;
 
 				&:checked:before {
 					background-position: 0px 0px;
@@ -3375,6 +3380,7 @@ form.page {
 			width: 385px;
 			color: #8fb5e9;
 			font-size: 14px;
+			margin: 0;
 
 			a {
 				color: #fff;
@@ -3636,7 +3642,7 @@ form.page {
 	display: block;
 }
 
-label[for="e-mail"], label#password-error, label#submit-error, label#capcha-error, .error {
+#e-mail-error, label#password-error, label#submit-error, label#capcha-error, label.error {
 	right: -275px;
 	font-size: 16px;
 	color: #AD1313;
@@ -3653,7 +3659,11 @@ label[for="e-mail"], label#password-error, label#submit-error, label#capcha-erro
 	left: auto;
 	width: 255px;
 	text-align: left;
-	color: #FFBE00;
+	color: #AD1313 !important;
+}
+
+input[disabled="disabled"], button[disabled="disabled"] {
+	opacity: .8;
 }
 
 // .animation {
