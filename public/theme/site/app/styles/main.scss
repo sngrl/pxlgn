@@ -3662,6 +3662,10 @@ form.page {
 	color: #AD1313 !important;
 }
 
+input[disabled="disabled"], button[disabled="disabled"] {
+	opacity: .8;
+}
+
 // .animation {
 // 	animation: appstore 1s steps(2); 
 // 	// animation-name: appstore;

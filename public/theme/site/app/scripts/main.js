@@ -308,19 +308,19 @@ $(function() {
          $('.js-form-error').hide();
          $('.form-holder [type="submit"]').attr('disabled', 'disabled');
          console.log(_data);
+         $(form).find('input, button').attr('disabled', 'disabled');
      $.ajax({
        type: _method,
        url: _url,
        data: _data
  	 }).done(function(data){
  	 	if(data.status == true) {
-       		//$('.js-form-success').html(data.responseText);
        		var emailOriginal = $('.e-mail input').val();
 			var emailRipper = function() {
 				$('.success-fade .verification span').html(emailOriginal);
 			};
-
 			emailRipper();
+			window.location.href = $(form).attr('data-success') + "?email=" + emailOriginal;
        		$('.form-fade').slideUp();
        		$('.success-fade').slideDown();
        	}
