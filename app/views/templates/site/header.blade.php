@@ -14,13 +14,15 @@ $options = Config::get('app.settings.main');
 
     <a href="{{ URL::route('mainpage', ['lang' => Config::get('app.locale')]) }}" class="logo"></a>
 
-    {{--{{ Helper::d(Config::get('temp')) }}--}}
-    @if (isset($options['show_play_button']) && $options['show_play_button'])
-        <a href="{{ URL::route('page', pageslug('registration')) }}" class="play-button">
-            <p>
-                {{ trans("interface.menu.play_for_free_header") }}
-            </p>
-        </a>
+    @if(!isset($hide_play_now_button) || !$hide_play_now_button)
+        {{--{{ Helper::d(Config::get('temp')) }}--}}
+        @if (isset($options['show_play_button']) && $options['show_play_button'])
+            <a href="{{ URL::route('page', pageslug('registration')) }}" class="play-button">
+                <p>
+                    {{ trans("interface.menu.play_for_free_header") }}
+                </p>
+            </a>
+        @endif
     @endif
 
 {{--    <div class="language-panel">

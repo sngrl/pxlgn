@@ -4,6 +4,9 @@
  * AVAILABLE_ONLY_IN_ADVANCED_MODE
  */
 ?>
+<?
+$hide_play_now_button = true;
+?>
 @extends(Helper::layout())
 
 
@@ -60,7 +63,7 @@
                         </p>
                     </div>
                     <div class="pass">
-                        <input type="password" required name="password" form="log-in-form">
+                        <input type="password" required name="pass" form="log-in-form">
                         <label for="password">
                             {{ trans("interface.tpl.password") }}
                         </label>
