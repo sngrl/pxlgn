@@ -380,7 +380,7 @@ var capchaString = $('.capcha-image img').attr('src');
             return Math.ceil($items.size()/itemsOnPage);
         }
         
-        var $items = $('.news-block, .video-gallery .gallery-row-holder, .screenshoot-gallery .gallery-row-holder');
+        var $items = $('.news-block, .video-gallery .gallery-row-holder.pag, .screenshoot-gallery .gallery-row-holder.pag');
         var $paginator = $('.pagination');
         var itemsOnPage = 8;
         
@@ -389,7 +389,7 @@ var capchaString = $('.capcha-image img').attr('src');
         $items.hide();
         
         for (i = 1; i <= pageCount; i++ ) {
-            $paginator.append('<a href="#" class="pagen">'+i+'</a>');
+            $paginator.append('<li><a href="#" class="pagen">'+i+'</a></li>');
         }
         
         var $links = $paginator.find('a.pagen');

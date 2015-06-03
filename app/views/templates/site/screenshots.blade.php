@@ -39,7 +39,7 @@ $screenshots = DicLib::loadImages($screenshots, ['image']);
                         if (!$screen->is_img('image'))
                             continue;
                         ?>
-                        <li class="gallery-row-holder">
+                        <li class="gallery-row-holder pag">
                             <a rel="screen-gall" href="{{ $screen->image->full() }}" class="gallery-block screenshoot fancybox">
                                 <div class="img-wrapper">
                                     <img src="{{ $screen->image->thumb() }}">
@@ -48,7 +48,7 @@ $screenshots = DicLib::loadImages($screenshots, ['image']);
                         </li>
                     @endforeach
                 </ul>
-                <div class="pagination"></div>
+                <ul class="pagination"></ul>
 
                 {{ $screenshots->links() }}
 

@@ -3719,6 +3719,11 @@ input[disabled="disabled"], button[disabled="disabled"] {
 	padding: 8px 0;
 }
 
+.pagination li {
+	display: inline-block;
+	list-style: none;
+}
+
 .pagination .pagen {
 	text-decoration: none;
 	width: 21px;
