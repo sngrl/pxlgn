@@ -3636,7 +3636,7 @@ form.page {
 	display: block;
 }
 
-label[for="e-mail"], label#password-error, label#submit-error label#capcha-error {
+label[for="e-mail"], label#password-error, label#submit-error label#capcha-error, .error {
 	right: -275px;
 	font-size: 16px;
 	color: #AD1313;
