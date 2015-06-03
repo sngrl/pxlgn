@@ -53,7 +53,7 @@ $video = DicLib::loadImages($video, ['image']);
                         </li>
                     @endforeach
                 </ul>
-
+                <div class="pagination"></div>
                 {{ $video->links() }}
 
             </div>

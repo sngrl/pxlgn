@@ -48,6 +48,7 @@ $screenshots = DicLib::loadImages($screenshots, ['image']);
                         </li>
                     @endforeach
                 </ul>
+                <div class="pagination"></div>
 
                 {{ $screenshots->links() }}
 

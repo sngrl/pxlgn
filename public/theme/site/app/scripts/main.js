@@ -306,9 +306,8 @@ $(function() {
          _data = $(form).serialize(),
          _method = $(form).attr('method')||'POST';
          $('.js-form-error').hide();
-         $('.form-holder [type="submit"]').attr('disabled', 'disabled');
-         console.log(_data);
-         $(form).find('input, button').attr('disabled', 'disabled');
+         // $('.form-holder [type="submit"]').attr('disabled', 'disabled');
+         // $(form).find('input, button').attr('disabled', 'disabled');
      $.ajax({
        type: _method,
        url: _url,
