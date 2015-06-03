@@ -832,12 +832,18 @@ textarea:focus, input:focus, button:focus {
 
 					.e-mail {
 						height: 50px;
+						position: relative;
+					}
+
+					.agreement {
+						position: relative;
 					}
 
 					.capcha {
 						height: 60px;
 						width: 364px;
 						margin: 6px 0 0 0;
+						position: relative;
 
 						.capcha-field {
 							width: 184px;
@@ -3640,6 +3646,20 @@ form.page {
 	color: #ff561b;
 	width: 100%;
 	display: block;
+}
+
+.login-form-background #capcha-error, .login-form-background #email-error, .login-form-background #agreement-error, .login-form-background #pass-error {
+	position: absolute;
+	color: #ff561b;
+	width: 100%;
+	display: block;
+	bottom: 0px;
+	top: initial;
+	left: 0px;
+}
+
+.login-form-background #keycode-error {
+	bottom: -5px;
 }
 
 #e-mail-error, label#password-error, label#submit-error, label#capcha-error, label.error {
