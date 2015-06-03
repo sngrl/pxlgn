@@ -3026,7 +3026,7 @@ iframe {
 			.gallery-row-holder {
 				float: left;
 				position: relative;
-				margin-right: 21px;
+				margin: 0 5px 20px 5px;
 
 				&:last-child {
 					margin-right: 0;
@@ -3636,6 +3636,16 @@ form.page {
 	display: block;
 }
 
+label[for="e-mail"], label#password-error, label#submit-error, label#capcha-error, .error {
+	right: -275px;
+	font-size: 16px;
+	color: #AD1313;
+	left: auto;
+	width: 275px;
+	top: 13px;
+	text-align: left;
+}
+
 .registration-page-block #capcha-error, .registration-page-block #email-error, .registration-page-block #pass-error, .registration-page-block #agreement-error {
 	right: -260px;
 	position: absolute;
@@ -3688,3 +3698,67 @@ form.page {
 // 		background-position: 0px 0px;
 // 	}
 // }
+
+.pagination {
+	width: 100%;
+	text-align: center;
+	width: 100%;
+	display: block;
+	text-align: center;
+	margin: 0;
+	padding: 8px 0;
+}
+
+.pagination .pagen {
+	text-decoration: none;
+	width: 21px;
+	height: 21px;
+	color: #fff;
+	font-family: 'playregular';
+	text-align: center;
+	background: #051b37;
+	display: inline-block;
+	margin-right: 2px;
+}
+
+.pagination .pagen.active {
+	color: #000;
+	background: #58851e;
+	text-decoration: none;
+}
+
+.pagination .prev {
+	text-decoration: none;
+	position: relative;
+	font-size: 15px;
+	color: #558acb;
+	margin-right: 37px;
+	&:after {
+		content: '';
+		display: block;
+		width: 9px;
+		height: 15px;
+		position: absolute;
+		background: url(../images/bg-allnews-after2.png);
+		left: -15px;
+		top: 2px;
+	}
+}
+
+.pagination .next {
+	text-decoration: none;
+	position: relative;
+	font-size: 15px;
+	color: #558acb;
+	margin-left: 35px;
+	&:after {
+		content: '';
+		display: block;
+		width: 9px;
+		height: 15px;
+		position: absolute;
+		background: url(../images/bg-allnews-after.png);
+		right: -15px;
+		top: 2px;
+	}
+}

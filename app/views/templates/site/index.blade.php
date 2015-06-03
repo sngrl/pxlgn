@@ -134,6 +134,7 @@ $options = Config::get('app.settings.main');
                             @endif
                         </div>
                     @endforeach
+                    <div class="pagination"></div>
                 </div>
             @endif
         </div>
