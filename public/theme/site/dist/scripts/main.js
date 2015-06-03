@@ -275,7 +275,7 @@ $(function() {
 
 	// ВАЛИДАЦИЯ
 
-  $("#log-in-form").validate({
+  $("#log-in-form, #log-in-form2").validate({
 	rules: {
 		email: {
 			required: true,
@@ -306,20 +306,20 @@ $(function() {
          _data = $(form).serialize(),
          _method = $(form).attr('method')||'POST';
          $('.js-form-error').hide();
-         $('.form-holder [type="submit"]').attr('disabled', 'disabled');
+         // $('.form-holder [type="submit"]').attr('disabled', 'disabled');
+         // $(form).find('input, button').attr('disabled', 'disabled');
      $.ajax({
        type: _method,
        url: _url,
        data: _data
  	 }).done(function(data){
  	 	if(data.status == true) {
-       		//$('.js-form-success').html(data.responseText);
        		var emailOriginal = $('.e-mail input').val();
 			var emailRipper = function() {
 				$('.success-fade .verification span').html(emailOriginal);
 			};
-
 			emailRipper();
+			window.location.href = $(form).attr('data-success') + "?email=" + emailOriginal;
        		$('.form-fade').slideUp();
        		$('.success-fade').slideDown();
        	}
@@ -380,7 +380,7 @@ var capchaString = $('.capcha-image img').attr('src');
             return Math.ceil($items.size()/itemsOnPage);
         }
         
-        var $items = $('.news-block, .video-gallery .gallery-row-holder, .screenshoot-gallery .gallery-row-holder');
+        var $items = $('.news-block, .video-gallery .gallery-row-holder.pag, .screenshoot-gallery .gallery-row-holder.pag');
         var $paginator = $('.pagination');
         var itemsOnPage = 8;
         
@@ -389,7 +389,7 @@ var capchaString = $('.capcha-image img').attr('src');
         $items.hide();
         
         for (i = 1; i <= pageCount; i++ ) {
-            $paginator.append('<a href="#" class="pagen">'+i+'</a>');
+            $paginator.append('<li><a href="#" class="pagen">'+i+'</a></li>');
         }
         
         var $links = $paginator.find('a.pagen');

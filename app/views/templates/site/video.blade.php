@@ -40,7 +40,7 @@ $video = DicLib::loadImages($video, ['image']);
                         if (!$vid->is_img('image') || !$vid->embed)
                             continue;
                         ?>
-                        <li class="gallery-row-holder">
+                        <li class="gallery-row-holder pag">
                             <a href="#embed" rel="video" class="gallery-block fancybox">
                                 <div class="img-wrapper">
                                     <img src="{{ $vid->image->thumb() }}">
@@ -53,7 +53,7 @@ $video = DicLib::loadImages($video, ['image']);
                         </li>
                     @endforeach
                 </ul>
-
+                <ul class="pagination"></ul>
                 {{ $video->links() }}
 
             </div>
