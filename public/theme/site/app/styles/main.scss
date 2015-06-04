@@ -3641,14 +3641,14 @@ form.page {
     border-right: 3px #000 solid;
 }
 
-#capcha-error, #keycode-error, #email-error, #agreement-error, #pass-error {
+#capcha-error, #keycode-error, #email-error,  #agreement-error, #pass-error {
 	position: absolute;
 	color: #ff561b;
 	width: 100%;
 	display: block;
 }
 
-.login-form-background #capcha-error, .login-form-background #email-error, .login-form-background #agreement-error, .login-form-background #pass-error {
+.login-form-background #email-error, .login-form-background #agreement-error, .login-form-background #pass-error {
 	position: absolute;
 	color: #ff561b;
 	width: 100%;
@@ -3656,6 +3656,20 @@ form.page {
 	bottom: 0px;
 	top: initial;
 	left: 0px;
+}
+
+.login-form-background #email-error2 {
+	position: absolute;
+	color: #ff561b;
+	width: 100%;
+	display: none;
+	bottom: 0px;
+	top: initial;
+	left: 0px;
+}
+
+.login-form-background #capcha-error {
+	bottom: -5px;
 }
 
 .login-form-background #keycode-error {

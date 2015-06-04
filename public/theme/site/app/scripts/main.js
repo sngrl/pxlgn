@@ -343,7 +343,7 @@ $(function() {
        	}
 
        	if(!data.status && data.reason == 'result_3') {
-       		$('#email-error').show().html(api_errors.result_3);
+       		$('#email-error2').show().html(api_errors.result_3);
        	}
 
        	if(!data.status && data.reason == 'result_4') {
