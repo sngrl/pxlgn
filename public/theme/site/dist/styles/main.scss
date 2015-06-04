@@ -3688,7 +3688,7 @@ form.page {
 	bottom: -5px;
 }
 
-#e-mail-error, label#password-error, label#submit-error, label#capcha-error, label.error {
+#e-mail-error, label#password-error, label#submit-error, label.error {
 	right: -275px;
 	font-size: 16px;
 	color: #AD1313;
@@ -3696,6 +3696,15 @@ form.page {
 	width: 275px;
 	top: 13px;
 	text-align: left;
+}
+label#capcha-error label#email-error2 {
+  right: -275px;
+  font-size: 16px;
+  color: #AD1313;
+  left: auto;
+  width: 275px;
+  top: 13px;
+  text-align: left;
 }
 
 .registration-page-block #capcha-error, .registration-page-block #email-error, .registration-page-block #pass-error, .registration-page-block #agreement-error {

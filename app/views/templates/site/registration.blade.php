@@ -98,7 +98,7 @@ $hide_play_now_button = true;
                     </div>
                     <p class="warning">
                     </p>
-                    <label id="capcha-error" class="error" for="capcha"></label>
+                    <label id="capcha-error" class="error" for="captcha"></label>
                 </div>
                 <div class="confirmation">
                     <div class="stylish">
