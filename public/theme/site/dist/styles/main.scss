@@ -1277,11 +1277,12 @@ textarea:focus, input:focus, button:focus {
 		}
 
 		.mobile {
-			width: 241px;
+			width: 240px;
 			height: 69px;
 			z-index: 1;
 			background: url(../images/animation/button-mobile.png);
 			margin-left: -13px;
+			top: -3px;
 
 			&:hover {
 
@@ -1291,8 +1292,8 @@ textarea:focus, input:focus, button:focus {
 
 				span {
 					position: relative;
-					top: 15px;
-					left: 60px;
+					top: 12px;
+					left: 67px;
 					font-size: 21px;
 				}
 			}

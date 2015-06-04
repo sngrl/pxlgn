@@ -347,7 +347,7 @@ $(function() {
        	}
 
        	if(!data.status && data.reason == 'result_4') {
-       		$('#email-error').show().html(api_errors.result_4);
+       		$('#email-error2').show().html(api_errors.result_4);
        	}
 
        }).fail(function(data){

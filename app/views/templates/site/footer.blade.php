@@ -57,7 +57,7 @@
                             <div class="e-mail">
                                 <input type="text" required name="email" form="log-in-form2">
                                 <p class="warning"></p>
-                                <label id="email-error2" class="error" for="keycode"></label>
+                                <label id="email-error2" class="error" for="email"></label>
                             </div>
                             <p class="info">
                                 {{ trans("interface.tpl.password") }}
