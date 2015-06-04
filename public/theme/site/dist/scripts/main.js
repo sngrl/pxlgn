@@ -319,7 +319,9 @@ $(function() {
 				$('.success-fade .verification span').html(emailOriginal);
 			};
 			emailRipper();
-			window.location.href = $(form).attr('data-success') + "?email=" + emailOriginal;
+			if($(form).attr('id') == 'log-in-form'){
+				window.location.href = $(form).attr('data-success') + "?email=" + emailOriginal;
+			}
        		$('.form-fade').slideUp();
        		$('.success-fade').slideDown();
        	}
@@ -329,7 +331,7 @@ $(function() {
        	}
 
        	if(!data.status && data.reason == 'bad_captcha') {
-       		$('#capcha-error').show().html(api_errors.bad_captcha);
+       		$('#capcha-error').show();
        	}
 
        	if(!data.status && data.reason == 'bad_password') {
