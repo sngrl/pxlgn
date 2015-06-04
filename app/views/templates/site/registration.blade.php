@@ -59,7 +59,7 @@ $hide_play_now_button = true;
                         <label for="e-mail" class="email-error"></label>
                         <p class="warning">
                         </p>
-                        <label id="email-error2" class="error" for="email"></label>
+                        <label id="email-error2" class="error email-forsed" for="email"></label>
                         <p class="description">
                             {{ trans("interface.tpl.email_desc") }}
                         </p>
@@ -98,7 +98,7 @@ $hide_play_now_button = true;
                     </div>
                     <p class="warning">
                     </p>
-                    <label id="capcha-error" class="error" for="captcha"></label>
+                    <label id="capcha-error" class="error .capcha-forsed" for="captcha"></label>
                 </div>
                 <div class="confirmation">
                     <div class="stylish">

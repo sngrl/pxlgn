@@ -1694,6 +1694,7 @@ textarea:focus, input:focus, button:focus {
 		left: 12px;
 
 		.news-block {
+			display: none;
 			overflow: hidden;
 			padding: 20px;
 			box-sizing: border-box;
@@ -3680,8 +3681,10 @@ form.page {
 	left: 0px;
 }
 
-.login-form-background #capcha-error {
-	bottom: -5px;
+.login-form-background #capcha-error.forsed-popup {
+	left: 0px;
+	bottom: -6px;
+	top: initial;
 }
 
 .login-form-background #keycode-error {
@@ -3697,15 +3700,6 @@ form.page {
 	top: 13px;
 	text-align: left;
 }
-label#capcha-error label#email-error2 {
-  right: -275px;
-  font-size: 16px;
-  color: #AD1313;
-  left: auto;
-  width: 275px;
-  top: 13px;
-  text-align: left;
-}
 
 .registration-page-block #capcha-error, .registration-page-block #email-error, .registration-page-block #pass-error, .registration-page-block #agreement-error {
 	right: -260px;
@@ -3715,6 +3709,16 @@ label#capcha-error label#email-error2 {
 	width: 255px;
 	text-align: left;
 	color: #AD1313 !important;
+}
+
+label#capcha-error.capcha-forsed label#email-error2.email-forsed {
+  right: -275px;
+  font-size: 16px;
+  color: #AD1313;
+  left: auto;
+  width: 275px;
+  top: 13px;
+  text-align: left;
 }
 
 input[disabled="disabled"], button[disabled="disabled"] {
@@ -3772,7 +3776,7 @@ input[disabled="disabled"], button[disabled="disabled"] {
 	text-align: center;
 	margin: 0;
 	padding: 8px 0;
-	position: relative;
+	position: absolute;
   	bottom: 0px;
 }
 

@@ -382,9 +382,9 @@ var capchaString = $('.capcha-image img').attr('src');
             return Math.ceil($items.size()/itemsOnPage);
         }
         
-        var $items = $('.news-block');
+        var $items = $('.news-block, .video-gallery .gallery-row-holder.pag, .screenshoot-gallery .gallery-row-holder.pag');
         var $paginator = $('.pagination');
-        var itemsOnPage = 4;
+        var itemsOnPage = parseInt($paginator.attr('data-items-on-page')) || 8;
         
         var pageCount = countLinks($items);
         
@@ -394,6 +394,22 @@ var capchaString = $('.capcha-image img').attr('src');
             $paginator.append('<li><a href="#" class="pagen">'+i+'</a></li>');
         }
         
+        var pagNav = function() {
+        	if($('.pagination').find('.pagen').length <= 1) {
+        		$('.pagination').hide();
+        	}
+        	if(!$('.pagen.active').parent().next().find('.pagen').length) {
+        		$('.pagination').find('.next').hide();
+        	} else {
+        		$('.pagination').find('.next').show();
+        	}
+        	if(!$('.pagen.active').parent().prev().find('.pagen').length) {
+        		$('.pagination').find('.prev').hide();
+        	} else {
+        		$('.pagination').find('.prev').show();
+        	}
+        }
+
         var $links = $paginator.find('a.pagen');
         
         $links.click(function(e){
@@ -401,7 +417,7 @@ var capchaString = $('.capcha-image img').attr('src');
                 $items.hide();
                 $links.removeClass('active');
                 $(this).addClass('active');
-                
+                pagNav();
                 var page = $links.index($(this))+1;
                 var startPos = ((page*itemsOnPage)-itemsOnPage+1);
                 var endPos = startPos+itemsOnPage-1;

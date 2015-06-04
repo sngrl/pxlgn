@@ -76,7 +76,7 @@
                             <div class="capcha-image">
                                 <div class="refresh"><a></a></div><img src="{{ URL::route('captcha_image', [session_name() => session_id(), 'w' => '99', 'h' => '39', 'hash' => time()]) }}">
                             </div>
-                            <label id="capcha-error" class="error" for="keycode"></label>
+                            <label id="capcha-error" class="error forsed-popup" for="keycode"></label>
                             <p class="warning"></p>
                         </div>
                         <div class="agreement">
