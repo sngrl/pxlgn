@@ -3644,11 +3644,20 @@ form.page {
     border-right: 3px #000 solid;
 }
 
-#capcha-error, #keycode-error, #email-error, #email-error2, #agreement-error, #pass-error {
+#capcha-error, #keycode-error, #email-error, #agreement-error, #pass-error {
 	position: absolute;
 	color: #ff561b;
 	width: 100%;
 	display: block;
+}
+
+#email-error2 {
+	display: block;
+	position: absolute;
+	left: initial;
+	width: 270px;
+	text-align: left;
+	top: 11px;
 }
 
 .login-form-background #email-error, .login-form-background #agreement-error, .login-form-background #pass-error {

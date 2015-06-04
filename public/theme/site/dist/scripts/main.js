@@ -331,7 +331,7 @@ $(function() {
        	}
 
        	if(!data.status && data.reason == 'bad_captcha') {
-       		$('#capcha-error').show();
+       		$('#capcha-error').show().html(api_errors.bad_capcha);
        	}
 
        	if(!data.status && data.reason == 'bad_password') {
