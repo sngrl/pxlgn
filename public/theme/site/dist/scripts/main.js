@@ -441,69 +441,69 @@ var capchaString = $('.capcha-image img').attr('src');
         });
     });
 // // // // // // // // // // // // // // // // // // // // // //
-$(function() {
-        function countLinks($items) {
-            return Math.ceil($items.size()/itemsOnPage);
-        }
+// $(function() {
+//         function countLinks($items) {
+//             return Math.ceil($items.size()/itemsOnPage);
+//         }
         
-        var $items = $('.video-gallery .gallery-row-holder.pag, .screenshoot-gallery .gallery-row-holder.pag');
-        var $paginator = $('.pagination2');
-        var itemsOnPage = 8;
+//         var $items = $('.video-gallery .gallery-row-holder.pag, .screenshoot-gallery .gallery-row-holder.pag');
+//         var $paginator = $('.pagination2');
+//         var itemsOnPage = 8;
         
-        var pageCount = countLinks($items);
+//         var pageCount = countLinks($items);
         
-        $items.hide();
+//         $items.hide();
         
-        for (i = 1; i <= pageCount; i++ ) {
-            $paginator.append('<li><a href="#" class="pagen">'+i+'</a></li>');
-        }
+//         for (i = 1; i <= pageCount; i++ ) {
+//             $paginator.append('<li><a href="#" class="pagen">'+i+'</a></li>');
+//         }
 
-        var pagNav = function() {
-        	if($('.pagination').find('.pagen').length <= 1) {
-        		$('.pagination').hide();
-        	}
-        	if(!$('.pagen.active').parent().next().find('.pagen').length) {
-        		$('.pagination').find('.next').hide();
-        	} else {
-        		$('.pagination').find('.next').show();
-        	}
-        	if(!$('.pagen.active').parent().prev().find('.pagen').length) {
-        		$('.pagination').find('.prev').hide();
-        	} else {
-        		$('.pagination').find('.prev').show();
-        	}
-        }
+//         var pagNav = function() {
+//         	if($('.pagination').find('.pagen').length <= 1) {
+//         		$('.pagination').hide();
+//         	}
+//         	if(!$('.pagen.active').parent().next().find('.pagen').length) {
+//         		$('.pagination').find('.next').hide();
+//         	} else {
+//         		$('.pagination').find('.next').show();
+//         	}
+//         	if(!$('.pagen.active').parent().prev().find('.pagen').length) {
+//         		$('.pagination').find('.prev').hide();
+//         	} else {
+//         		$('.pagination').find('.prev').show();
+//         	}
+//         }
         
-        var $links = $paginator.find('a.pagen');
+//         var $links = $paginator.find('a.pagen');
         
-        $links.click(function(e){
-            if (!$(this).is('.active')) {
-                $items.hide();
-                $links.removeClass('active');
-                $(this).addClass('active');
-                pagNav();
-                var page = $links.index($(this))+1;
-                var startPos = ((page*itemsOnPage)-itemsOnPage+1);
-                var endPos = startPos+itemsOnPage-1;
+//         $links.click(function(e){
+//             if (!$(this).is('.active')) {
+//                 $items.hide();
+//                 $links.removeClass('active');
+//                 $(this).addClass('active');
+//                 pagNav();
+//                 var page = $links.index($(this))+1;
+//                 var startPos = ((page*itemsOnPage)-itemsOnPage+1);
+//                 var endPos = startPos+itemsOnPage-1;
                 
-                for (i=startPos; i<=endPos; i++) {
-                    $items.eq(i-1).show();
-                }
-            }
-            e.preventDefault();
-        });
+//                 for (i=startPos; i<=endPos; i++) {
+//                     $items.eq(i-1).show();
+//                 }
+//             }
+//             e.preventDefault();
+//         });
         
-        $links.eq(0).click();
+//         $links.eq(0).click();
         
-        $('<li><a href="#" class="prev">Предыдущая</a></li>').prependTo($paginator).click(function(e){
-            $links.filter('a.active').closest('li').prev('li').find('a.pagen').click();
-            e.preventDefault();
-        });
-        $('<li><a href="#" class="next">Следующая</a></li>').appendTo($paginator).click(function(e){
-            $links.filter('a.active').closest('li').next('li').find('a.pagen').click();
-            e.preventDefault();
-        });
-        pagNav();
-    });
+//         $('<li><a href="#" class="prev">Предыдущая</a></li>').prependTo($paginator).click(function(e){
+//             $links.filter('a.active').closest('li').prev('li').find('a.pagen').click();
+//             e.preventDefault();
+//         });
+//         $('<li><a href="#" class="next">Следующая</a></li>').appendTo($paginator).click(function(e){
+//             $links.filter('a.active').closest('li').next('li').find('a.pagen').click();
+//             e.preventDefault();
+//         });
+//         pagNav();
+//     });
 
 });
