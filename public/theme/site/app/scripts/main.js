@@ -441,27 +441,6 @@ $(function() {
         for (i = 1; i <= pageCount; i++ ) {
             $paginator.append('<li><a href="#" class="pagen">'+i+'</a></li>');
         }
-        
-        var $links = $paginator.find('a.pagen');
-        
-        $links.click(function(e){
-            if (!$(this).is('.active')) {
-                $items.hide();
-                $links.removeClass('active');
-                $(this).addClass('active');
-                
-                var page = $links.index($(this))+1;
-                var startPos = ((page*itemsOnPage)-itemsOnPage+1);
-                var endPos = startPos+itemsOnPage-1;
-                
-                for (i=startPos; i<=endPos; i++) {
-                    $items.eq(i-1).show();
-                }
-            }
-            e.preventDefault();
-        });
-        
-        $links.eq(0).click();
 
         var pagNav = function() {
         	if($('.pagination').find('.pagen').length <= 1) {
@@ -479,14 +458,33 @@ $(function() {
         	}
         }
         
+        var $links = $paginator.find('a.pagen');
+        
+        $links.click(function(e){
+            if (!$(this).is('.active')) {
+                $items.hide();
+                $links.removeClass('active');
+                $(this).addClass('active');
+                pagNav();
+                var page = $links.index($(this))+1;
+                var startPos = ((page*itemsOnPage)-itemsOnPage+1);
+                var endPos = startPos+itemsOnPage-1;
+                
+                for (i=startPos; i<=endPos; i++) {
+                    $items.eq(i-1).show();
+                }
+            }
+            e.preventDefault();
+        });
+        
+        $links.eq(0).click();
+        
         $('<li><a href="#" class="prev">Предыдущая</a></li>').prependTo($paginator).click(function(e){
             $links.filter('a.active').closest('li').prev('li').find('a.pagen').click();
-            pagNav();
             e.preventDefault();
         });
         $('<li><a href="#" class="next">Следующая</a></li>').appendTo($paginator).click(function(e){
             $links.filter('a.active').closest('li').next('li').find('a.pagen').click();
-            pagNav();
             e.preventDefault();
         });
         pagNav();
