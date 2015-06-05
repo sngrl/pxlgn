@@ -429,7 +429,6 @@ var capchaString = $('.capcha-image img').attr('src');
             e.preventDefault();
         });
         
-        $links.eq(0).click();
         
         $('<li><a href="#" class="prev">Предыдущая</a></li>').prependTo($paginator).click(function(e){
             $links.filter('a.active').closest('li').prev('li').find('a.pagen').click();
@@ -439,5 +438,8 @@ var capchaString = $('.capcha-image img').attr('src');
             $links.filter('a.active').closest('li').next('li').find('a.pagen').click();
             e.preventDefault();
         });
+        
+        $links.eq(0).click();
+
     });
 });
