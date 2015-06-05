@@ -331,7 +331,7 @@ class Dic extends BaseModel {
         ##
         if (count($with)) {
 
-            if (NULL != $db_remember_timeout && $db_remember_timeout > 0) {
+            if (NULL != $db_remember_timeout && is_numeric($db_remember_timeout) && $db_remember_timeout > 0) {
 
                 $temp = [];
                 foreach ($with as $relation) {
@@ -348,7 +348,7 @@ class Dic extends BaseModel {
         ##
         ## Cache query
         ##
-        if (NULL != $db_remember_timeout)
+        if (NULL != $db_remember_timeout && is_numeric($db_remember_timeout) && $db_remember_timeout > 0)
             $values->remember($db_remember_timeout);
 
         $values = $paginate ? $values->paginate((int)$paginate) : $values->get();
