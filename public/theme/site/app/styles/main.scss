@@ -1108,7 +1108,7 @@ textarea:focus, input:focus, button:focus {
 			content: '';
 			position: absolute;
 			display: block;
-			width: 1012px;
+			width: 992px;
 			height: 46px;
 			top: -5px;
 			left: 17px;
@@ -1277,11 +1277,12 @@ textarea:focus, input:focus, button:focus {
 		}
 
 		.mobile {
-			width: 241px;
+			width: 240px;
 			height: 69px;
 			z-index: 1;
 			background: url(../images/animation/button-mobile.png);
 			margin-left: -13px;
+			top: -3px;
 
 			&:hover {
 
@@ -1291,8 +1292,8 @@ textarea:focus, input:focus, button:focus {
 
 				span {
 					position: relative;
-					top: 15px;
-					left: 60px;
+					top: 12px;
+					left: 67px;
 					font-size: 21px;
 				}
 			}
@@ -1684,6 +1685,7 @@ textarea:focus, input:focus, button:focus {
 
 	.news-feed {
 		width: 693px;
+		min-height: 450px;
 		position: relative;
 		border: 3px #000 solid;
 		border-top: none;
@@ -3642,11 +3644,20 @@ form.page {
     border-right: 3px #000 solid;
 }
 
-#capcha-error, #keycode-error, #email-error,  #agreement-error, #pass-error {
+#capcha-error, #keycode-error, #email-error, #agreement-error, #pass-error {
 	position: absolute;
 	color: #ff561b;
 	width: 100%;
 	display: block;
+}
+
+#email-error2 {
+	display: block;
+	position: absolute;
+	left: initial;
+	width: 270px;
+	text-align: left;
+	top: 11px;
 }
 
 .login-form-background #email-error, .login-form-background #agreement-error, .login-form-background #pass-error {
@@ -3669,15 +3680,17 @@ form.page {
 	left: 0px;
 }
 
-.login-form-background #capcha-error {
-	bottom: -5px;
+.login-form-background #capcha-error.forsed-popup {
+	left: 0px;
+	bottom: -6px;
+	top: initial;
 }
 
 .login-form-background #keycode-error {
 	bottom: -5px;
 }
 
-#e-mail-error, label#password-error, label#submit-error, label#capcha-error, label.error {
+#e-mail-error, label#password-error, label#submit-error, label.error {
 	right: -275px;
 	font-size: 16px;
 	color: #AD1313;
@@ -3695,6 +3708,16 @@ form.page {
 	width: 255px;
 	text-align: left;
 	color: #AD1313 !important;
+}
+
+label#capcha-error.capcha-forsed label#email-error2.email-forsed {
+  right: -275px;
+  font-size: 16px;
+  color: #AD1313;
+  left: auto;
+  width: 275px;
+  top: 13px;
+  text-align: left;
 }
 
 input[disabled="disabled"], button[disabled="disabled"] {
@@ -3752,7 +3775,7 @@ input[disabled="disabled"], button[disabled="disabled"] {
 	text-align: center;
 	margin: 0;
 	padding: 8px 0;
-	position: relative;
+	position: absolute;
   	bottom: 0px;
 }
 
