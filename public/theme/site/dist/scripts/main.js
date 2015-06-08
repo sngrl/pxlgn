@@ -234,10 +234,10 @@ $(function() {
 	
 	// ПОКАЗАТЬ-СКРЫТЬ ПАРОЛЬ
 
-	$('#log-in-form button.spice, #log-in-form2 button.spice').click(function(e){
+	$('form button.spice').click(function(e){
 		e.preventDefault();
 
-		var $input = $('#log-in-form .pass input');
+		var $input = $('form .pass input');
 		var _type = $input.attr('type');
 
 		if (_type == 'password') {
@@ -245,7 +245,7 @@ $(function() {
 		} else if (_type == 'text') {
 			$input.attr('type', 'password');
 		}
-		$('form.page button.spice, form#log-in-form2 button.spice').toggleClass( "spice-pressed" );
+		$('form button.spice').toggleClass( "spice-pressed" );
 	});
 
 	// РАБОТА ФОРМЫ
