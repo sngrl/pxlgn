@@ -1,0 +1,188 @@
+IPS Community Suite
+(c) Invision Power Services, Inc.
+
+Invision Power Services, Inc. is grateful to the following projects, whose work
+has been used throughout the IPS Community Suite to add style, flair and functionality
+to our product.
+
+AES implementation in PHP
+	Last Updated: 22 July 2014
+	Website: http://www.movable-type.co.uk/scripts/aes-php.html
+	License: http://creativecommons.org/licenses/by/3.0/
+
+Buzz.js
+	Included version: 1.1.8
+	Website: http://buzz.jaysalvat.com/
+	License: http://opensource.org/licenses/MIT
+
+CKEditor
+	Included version: 4.4.7
+	Website: http://ckeditor.com
+	License: http://www.gnu.org/copyleft/lesser.html
+
+Codemirror (with XML, JavaScript, CSS, HTMLMixed, C-like and PHP modes and search and searchcursor addons)
+	Included version: 4.13
+	Website: http://codemirror.net
+	License: http://codemirror.net/LICENSE
+
+Cropper
+	Included version: 0.8
+	Website: https://github.com/fengyuanchen/cropper
+	License: http://opensource.org/licenses/MIT
+	
+FontAwesome
+	Included version: 4.3.0
+	Website: http://fortawesome.github.com/Font-Awesome
+	License: http://fortawesome.github.com/Font-Awesome/#license
+
+Google Charts
+	Website: https://developers.google.com/chart/
+
+google-code-prettify
+	Included version: 4 March 2013
+	Website: http://code.google.com/p/google-code-prettify/
+	License: http://www.apache.org/licenses/LICENSE-2.0
+
+history.js
+	Included version: 1.8b2
+	Website: https://github.com/browserstate/history.js
+	License: https://github.com/browserstate/history.js#license
+	
+HTMLPurifier
+	Included version: 4.6.0
+	Website: http://htmlpurifier.org
+	License: http://www.gnu.org/copyleft/lesser.html
+
+IcoMoon
+	Website: https://icomoon.io/
+	License: http://creativecommons.org/licenses/by/4.0/
+	
+jQuery
+	Included version: 1.11.2
+	Website: http://jquery.com
+	License: http://jquery.org/license
+
+jQuery dotdotdot
+	Included version: 1.6.16
+	Website: dotdotdot.frebsite.nl
+	License: http://opensource.org/licenses/MIT
+
+jquery.hotkeys.js
+	Website: https://github.com/jeresig/jquery.hotkeys
+	License: http://opensource.org/licenses/MIT
+	
+jQuery imagesLoaded plugin
+	Included version: 2.1.2 (3.x API isn't compatible with IPS4 at this time)
+	Website: http://desandro.github.io/imagesloaded/
+	License: http://opensource.org/licenses/MIT
+
+jQuery.menuaim.js
+	Website: https://github.com/kamens/jQuery-menu-aim
+	License: http://opensource.org/licenses/MIT
+
+jQuery.rangyinputs.js
+	Included version: 1.2.0
+	Website: https://github.com/timdown/rangyinputs
+	License: http://opensource.org/licenses/MIT
+	
+jQuery slimScroll
+	Included version: 1.3.0
+	Website: http://rocha.la/jQuery-slimScroll
+	License: http://opensource.org/licenses/MIT
+
+jQuery UI (core.js, widget.js, mouse.js, position.js, draggable.js, droppable.js, resizable.js, sortable.js, datepicker.js, progressbar.js)
+	Included version: 1.11.3
+	Website: http://jqueryui.com
+	License: http://jquery.org/license
+
+jQuery UI TouchPunch
+	Included version: 0.2.3
+	Website: http://touchpunch.furf.com/
+	License: http://opensource.org/licenses/MIT
+	
+JSColor
+	Included version: 1.4.4
+	Website: http://jscolor.com
+	License: http://www.gnu.org/copyleft/lesser.html
+
+jsTimezoneDetect
+	Included version: 1.0.5
+	Website: http://pellepim.bitbucket.org/jstz/
+	License: http://www.opensource.org/licenses/mit-license.php
+
+Minify
+	Included Version: 2.1.7
+	Website: http://code.google.com/p/minify/
+	License: http://opensource.org/licenses/BSD-3-Clause
+
+Mustache.js
+	Included version: 1.0.0
+	Website: http://github.com/janl/mustache.js
+	License: http://opensource.org/licenses/MIT
+
+Normalize.css
+	Included version: 3.0.2
+	Website: http://necolas.github.io/normalize.css/
+	License: http://opensource.org/licenses/MIT
+
+parseUri
+	Included version: 1.2.2
+	Website: http://blog.stevenlevithan.com/archives/parseuri
+	License: http://opensource.org/licenses/MIT
+
+Payment Method Icons
+	Website: http://www.dreamstale.com/free-download-payment-method-vector-icons/
+	License: http://creativecommons.org/licenses/by/3.0/
+	
+PEAR Mail
+	Included version: 1.2.0
+	Website: http://pear.php.net/package/Mail
+	License: http://www.opensource.org/licenses/bsd-license.php
+
+PHP Diff Implementation
+	Included version: 11 Feb 2013
+	Website: http://code.stephenmorley.org/php/diff-implementation/
+	License: http://creativecommons.org/publicdomain/zero/1.0/legalcode
+	
+phpQuery
+	Included Version: 0.9.5
+	Website: https://code.google.com/p/phpquery
+	License: http://opensource.org/licenses/mit-license.php
+
+Plupload
+	Included version: 2.1.2
+	Website: http://www.plupload.com
+	License: http://www.plupload.com/license/plupload_commercial_oem.txt
+	Modifications: https://github.com/moxiecode/moxie/pull/67/files
+
+pop3.class.inc
+	Included version: 1.17
+	Website: http://www.phpclasses.org/package/1120-PHP-Communicating-with-a-POP3-mail-server.html
+	License: http://opensource.org/licenses/GPL-1.0
+
+Preloaders.net
+	Website: http://preloaders.net/
+	
+TCPDF
+	Included version: 6.2.4
+	Website: http://www.tcpdf.org
+	License: http://www.gnu.org/copyleft/lesser.html
+
+Underscore.js
+	Included version: 1.7.0
+	Website: http://underscorejs.org
+	License: https://github.com/documentcloud/underscore/blob/master/LICENSE
+
+Video.js
+	Included version: 4.11.4
+	Website: http://www.videojs.com/
+	License: https://github.com/videojs/video.js/blob/master/LICENSE
+
+world-flags-sprite
+	Website: https://github.com/lafeber/world-flags-sprite/
+	License: https://github.com/lafeber/world-flags-sprite/blob/master/LICENSE
+
+XRegExp (with addons)
+	Included Version: 2.0.0
+	Website: http://xregexp.com
+	License: http://mit-license.org
