@@ -16,6 +16,8 @@ class AdminSettingsController extends BaseController {
 
         Route::group(array('before' => 'auth', 'prefix' => $prefix . "/" . $class::$group), function() use ($class, $entity) {
 
+            Route::post('cache/drop', array('as' => 'drop_cache', 'uses' => $class.'@dropCache'));
+
             Route::post('update', array('as' => $class::$group . '.' . $class::$name . '.update', 'uses' => $class.'@update'));
 
             Route::resource($class::$name, $class,
@@ -33,7 +35,12 @@ class AdminSettingsController extends BaseController {
             );
         });
 
-        $settings = Cache::get('cms.settings');
+        if (Cache::has('cms.settings')) {
+            $settings = Cache::get('cms.settings');
+        } else {
+            $settings = Storage::where('module', 'system')->where('name', 'settings')->pluck('value');
+            $settings = json_decode($settings, true);
+        }
         Config::set('app.settings', $settings);
 
         #$temp = Config::get('app.settings.main');
@@ -185,6 +192,12 @@ class AdminSettingsController extends BaseController {
 		return Response::json($json_request, 200);
 	}
 
+
+    public function dropCache() {
+
+        Cache::flush();
+        echo "Cache flushed.";
+    }
 }
 
 
