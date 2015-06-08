@@ -1,0 +1,17 @@
+<ips:template parameters="$queries, $url, $message=NULL" />
+<h1 class='ipsType_veryLarge'>Please manually run the following queries before continuing:</h1>
+<hr class='ipsHr'>
+<br>
+{{if $message}}
+	<p class="ipsMessage ipsMessage_warning">{$message|raw}</p>
+{{endif}}
+<ul class='ipsField_fieldList'>
+{{foreach $queries as $query}}
+	<li>
+		<pre>{$query}{{if mb_substr( $query, -1 ) != ';'}};{{endif}}</pre>
+	</li>
+{{endforeach}}
+</ul>
+<div class="ipsAreaBackground ipsPad ipsType_center">
+	<a href="{$url}" data-action="redirectContinue" class="ipsButton ipsButton_alternate">{lang="continue"}</a>
+</div>

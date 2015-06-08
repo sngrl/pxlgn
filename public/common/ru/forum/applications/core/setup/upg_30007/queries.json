@@ -1,0 +1,22 @@
+[
+    {
+        "method": "delete",
+        "params": [
+            "core_sys_conf_settings",
+            [
+                "conf_key=?",
+                "number_format"
+            ]
+        ]
+    },
+    {
+        "method": "delete",
+        "params": [
+            "core_sys_conf_settings",
+            [
+                "conf_key=?",
+                "decimal_seperator"
+            ]
+        ]
+    }
+]

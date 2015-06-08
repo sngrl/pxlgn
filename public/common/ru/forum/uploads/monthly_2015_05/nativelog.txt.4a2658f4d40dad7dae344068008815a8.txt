@@ -1,0 +1,13 @@
+########################################################
+Native Launcher Version: 51
+Operating System: Windows 8.1
+Application Hash: b06079c75cb616544a6dbf83108db9a3265e1242
+Java Version: 1.8.0_25
+x64: 1
+Starting download of: https://launchermeta.mojang.com/mc/launcher.json
+Created pFile
+Content length is 00981CD8
+Got 200 from server
+Download successful
+Started application ".\runtime\jre-x64\1.8.0_25\bin\java.exe" -cp "game\launcher.jar" net.minecraft.launcher.Main
+Application still running, assuming all's fine.
