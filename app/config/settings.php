@@ -99,6 +99,13 @@ return array(
                         'type' => 'text',
                     ),
 
+                    ['group_title' => 'Прочее'],
+
+                    'tpl_footer_counters' => array(
+                        'title' => 'Код невидимых счетчиков (Я.Метрика, Google Analytics и т.д.)',
+                        'type' => 'textarea',
+                    ),
+
                 ),
             ];
 

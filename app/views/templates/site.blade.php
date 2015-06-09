@@ -48,5 +48,7 @@
 @section('scripts')
 @show
 
+{{ Config::get('app.settings.main.tpl_footer_counters') }}
+
 </body>
 </html>
