@@ -9,12 +9,12 @@ class AdminSystemController extends BaseController {
 
     ## Routing rules of module
     public static function returnRoutes($prefix = null) {
-        /*
+        #/*
         $class = __CLASS__;
         Route::group(array('before' => 'auth', 'prefix' => $prefix), function() use ($class) {
-        	Route::controller($class::$group, $class);
+            Route::get($class::$group . '/phpinfo', array('as' => 'system.phpinfo', 'uses' => $class.'@getPhpInfo'));
         });
-        */
+        #*/
     }
 
     ## Actions of module (for distribution rights of users)
@@ -115,5 +115,14 @@ class AdminSystemController extends BaseController {
 	public function __construct(){
         #
 	}
-    
+
+
+    public function getPhpInfo() {
+
+        if (!Allow::superuser())
+            App::abort(404);
+
+        phpinfo();
+        die;
+    }
 }

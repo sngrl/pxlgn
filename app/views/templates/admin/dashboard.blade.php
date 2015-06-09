@@ -8,7 +8,15 @@
 
                 <h1>Добро пожаловать в Egg CMS!</h1>
                 <p>Воспользуйтесь меню для перехода к нужному модулю.</p>
-                <form action="{{ URL::route('drop_cache') }}" method="POST" target="_blank"><input type="submit" value="Очистить кэш"></form>
+                <p>
+                    <form action="{{ URL::route('drop_cache') }}" method="POST" target="_blank"><input type="submit" value="Очистить кэш" class="btn btn-default"></form>
+                </p>
+
+                @if (Allow::superuser())
+                    <p>
+                        <a href="{{ URL::route('system.phpinfo') }}" target="_blank" class="btn btn-default">phpinfo()</a>
+                    </p>
+                @endif
 
             </div>
         </div>
