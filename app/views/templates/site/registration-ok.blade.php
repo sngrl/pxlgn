@@ -37,16 +37,18 @@ $email = Input::get('email');
                     {{ trans("interface.tpl.download_installer_now") }}
                 </p>
             </div>
-            <div class="button-download-big">
-                <a>
-                    <span class="download-text">
-                        {{ trans("interface.menu.load_game") }}
-                    </span>
-                    <span class="download-size">
-                        {{ trans("interface.tpl.installer_size") }}
-                    </span>
-                </a>
-            </div>
+            @if (Config::get('app.settings.main.show_download_block_after_registration'))
+                <div class="button-download-big">
+                    <a>
+                        <span class="download-text">
+                            {{ trans("interface.menu.load_game") }}
+                        </span>
+                        <span class="download-size">
+                            {{ trans("interface.tpl.installer_size") }}
+                        </span>
+                    </a>
+                </div>
+            @endif
         </div>
     </div>
 

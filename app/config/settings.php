@@ -68,6 +68,12 @@ return array(
                         'type' => 'checkbox',
                         'label_class' => 'normal_checkbox',
                     ),
+                    'show_download_block_after_registration' => array(
+                        'no_label' => true,
+                        'title' => 'Показывать блок "Скачать игру" после успешной регистрации',
+                        'type' => 'checkbox',
+                        'label_class' => 'normal_checkbox',
+                    ),
 
                     ['group_title' => 'Тайминги'],
 

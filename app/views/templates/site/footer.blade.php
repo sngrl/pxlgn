@@ -114,21 +114,23 @@
                         ]) }}
                     </div>
                 </div>
-                <div class="form-block">
-                    <p class="download">
-                        {{ trans("interface.tpl.download_installer_now") }}
-                    </p>
-                    <div class="download-button">
-                        <a>
-                            <span class="download-text">
-                                {{ trans("interface.menu.load_game") }}
-                            </span>
-                            <span class="download-size">
-                                {{ trans("interface.tpl.installer_size") }}
-                            </span>
-                        </a>
+                @if (Config::get('app.settings.main.show_download_block_after_registration'))
+                    <div class="form-block">
+                        <p class="download">
+                            {{ trans("interface.tpl.download_installer_now") }}
+                        </p>
+                        <div class="download-button">
+                            <a>
+                                <span class="download-text">
+                                    {{ trans("interface.menu.load_game") }}
+                                </span>
+                                <span class="download-size">
+                                    {{ trans("interface.tpl.installer_size") }}
+                                </span>
+                            </a>
+                        </div>
                     </div>
-                </div>
+                @endif
             </div>
             <div class="js-form-error">Ошибка!</div>
         </div>
