@@ -41,7 +41,7 @@ class ApplicationController extends BaseController {
     }
 
 
-    public function getApi() {
+    public function getApi($locale) {
 
         session_start();
         $json_response = ['status' => FALSE];
@@ -84,6 +84,9 @@ class ApplicationController extends BaseController {
 
             return Response::json($json_response);
         }
+
+        ## Отправка в запросе текущей локали
+        $input['locale'] = $locale;
 
         ## Отправка запроса на сервер Pixel Gun 3D
         $result = curl_get_content($api_url, $input);
