@@ -1,16 +1,12 @@
-Tue, 09 Jun 2015 09:51:22 +0000 (Severity: 1)
-127.0.0.1 - http://pixel.dev/en/forum/
-IPS\Db\Exception
-1049: Unknown database 'pixelgun3d'
-#0 D:\home\dev\pixel\public\common\en\forum\system\Session\Front.php(115): IPS\_Db::i()
-#1 [internal function]: IPS\Session\_Front->read('vrgb7086iid5neq...')
-#2 D:\home\dev\pixel\public\common\en\forum\system\Session\Session.php(91): session_start()
-#3 D:\home\dev\pixel\public\common\en\forum\system\Member\Member.php(124): IPS\_Session::i()
-#4 D:\home\dev\pixel\public\common\en\forum\system\Theme\Theme.php(231): IPS\_Member::loggedIn()
-#5 D:\home\dev\pixel\public\common\en\forum\system\Dispatcher\Standard.php(50): IPS\_Theme::i()
-#6 D:\home\dev\pixel\public\common\en\forum\system\Dispatcher\Front.php(442): IPS\Dispatcher\_Standard::baseCss()
-#7 D:\home\dev\pixel\public\common\en\forum\system\Dispatcher\Front.php(51): IPS\Dispatcher\_Front::baseCss()
-#8 D:\home\dev\pixel\public\common\en\forum\system\Dispatcher\Dispatcher.php(86): IPS\Dispatcher\_Front->init()
-#9 D:\home\dev\pixel\public\common\en\forum\index.php(13): IPS\_Dispatcher::i()
-#10 {main}
+Tue, 09 Jun 2015 09:53:47 +0000 (Severity: 2)
+178.76.195.226 - http://pixel.dev.grapheme.ru/en/forum/admin/?adsess=qsqj3aesjpi0s0t36osktkahc5&app=core&module=customization&controller=themes&id=1&do=saveTemplate
+UnderflowException
+0: 
+#0 /var/www/dev.grapheme.ru/pixel/public/common/en/forum/applications/core/modules/admin/customization/themes.php(2210): IPS\_Theme->saveCss(Array)
+#1 [internal function]: IPS\core\modules\admin\customization\_themes->saveTemplate()
+#2 /var/www/dev.grapheme.ru/pixel/public/common/en/forum/system/Dispatcher/Controller.php(85): call_user_func(Array)
+#3 /var/www/dev.grapheme.ru/pixel/public/common/en/forum/system/Node/Controller.php(63): IPS\Dispatcher\_Controller->execute()
+#4 /var/www/dev.grapheme.ru/pixel/public/common/en/forum/system/Dispatcher/Dispatcher.php(129): IPS\Node\_Controller->execute()
+#5 /var/www/dev.grapheme.ru/pixel/public/common/en/forum/admin/index.php(13): IPS\_Dispatcher->run()
+#6 {main}
 ------------------------------------------------------------------------
