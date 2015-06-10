@@ -216,7 +216,7 @@ class PixelGunSidebar {
                     if (!$tmp->slug)
                         continue;
                     ?>
-                    <div class="{{ $tmp->slug }}-holder" data-img="{{ $tmp->is_img('image') ? $tmp->image->thumb() : '' }}"><a href="#" class="{{ $tmp->slug }}"><span>{{ StringView::force($tmp->intro) }}</span></a></div>
+                    <div class="{{ $tmp->slug }}-holder" data-img="{{ $tmp->is_img('image') ? $tmp->image->thumb() : '' }}"><a href="{{ $tmp->link }}" class="{{ $tmp->slug }}"><span>{{ StringView::force($tmp->intro) }}</span></a></div>
                 @endforeach
             </div>
 <?
