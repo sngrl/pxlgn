@@ -120,7 +120,7 @@
                             {{ trans("interface.tpl.download_installer_now") }}
                         </p>
                         <div class="download-button">
-                            <a>
+                            <a href="{{ Config::get('app.settings.main.download_game_link') }}">
                                 <span class="download-text">
                                     {{ trans("interface.menu.load_game") }}
                                 </span>
