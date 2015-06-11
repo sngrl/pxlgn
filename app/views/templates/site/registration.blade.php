@@ -26,7 +26,7 @@ $hide_play_now_button = true;
             </h3>
             <div class="congratulation-field">
                 <div class="button-download-big">
-                    <a>
+                    <a href="{{ Config::get('app.settings.main.download_game_link') }}">
                         <span class="download-text">
                             {{ trans("interface.menu.load_game") }}
                         </span>
